@@ -1,0 +1,1 @@
+sourceset_dependencies = '{":silk-network:dokkaHtmlPartial/main":[],":silk-game:dokkaHtmlPartial/main":[],":silk-nbt:dokkaHtmlPartial/main":[],":silk-commands:dokkaHtmlPartial/main":[],":silk-igui:dokkaHtmlPartial/main":[],":silk-persistence:dokkaHtmlPartial/main":[],":silk-core:dokkaHtmlPartial/main":[]}'
