@@ -1,0 +1,120 @@
+<!doctype html>
+<html>
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1" charset="UTF-8">
+    <title>silk-compose</title>
+<link href="../images/logo-icon.svg" rel="icon" type="image/svg"><script>var pathToRoot = "../";</script>    <script>const storage = localStorage.getItem("dokka-dark-mode")
+const savedDarkMode = storage ? JSON.parse(storage) : false
+if(savedDarkMode === true){
+    document.getElementsByTagName("html")[0].classList.add("theme-dark")
+}</script>
+<script type="text/javascript" src="../scripts/sourceset_dependencies.js" async></script>
+<link href="../styles/style.css" rel="Stylesheet">
+<link href="../styles/jetbrains-mono.css" rel="Stylesheet">
+<link href="../styles/main.css" rel="Stylesheet">
+<link href="../styles/prism.css" rel="Stylesheet">
+<link href="../styles/logo-styles.css" rel="Stylesheet">
+<script type="text/javascript" src="../scripts/clipboard.js" async></script>
+<script type="text/javascript" src="../scripts/navigation-loader.js" async></script>
+<script type="text/javascript" src="../scripts/platform-content-handler.js" async></script>
+<script type="text/javascript" src="../scripts/main.js" defer></script>
+<script type="text/javascript" src="../scripts/prism.js" async></script></head>
+<body>
+<div class="navigation-wrapper" id="navigation-wrapper">
+    <div id="leftToggler"><span class="icon-toggler"></span></div>
+    <div class="library-name">
+<a href="../index.html">
+<span>silk-compose</span>            </a>    </div>
+    <div>1.0.0
+    </div>
+    <div class="pull-right d-flex">
+        <button id="theme-toggle-button"><span id="theme-toggle"></span></button>
+        <div id="searchBar"></div>
+    </div>
+</div>
+<div id="container">
+    <div id="leftColumn">
+        <div id="sideMenu"></div>
+    </div>
+    <div id="main">
+<div class="main-content" id="content" pageids="silk-compose::////PointingToDeclaration//2003394862">
+  <div class="breadcrumbs"></div>
+  <div class="cover ">
+    <h1 class="cover"><span><span>silk-compose</span></span></h1>
+    <div class="platform-hinted UnderCoverText" data-platform-hinted="data-platform-hinted"><div class="content sourceset-depenent-content" data-active="" data-togglable=":silk-compose:dokkaHtmlPartial/main"><p class="paragraph">Adds server-side Compose support to the game. This allows you to create any gui you want, without any limitations - using a modern UI toolkit.</p><h3 class=""> Dependency</h3><div class="sample-container"><pre><code class="block lang-kt" theme="idea">modImplementation("net.silkmc:silk-compose:1.0.0")</code></pre><span class="top-right-position"><span class="copy-icon"></span><div class="copy-popup-wrapper popup-to-left"><span class="copy-popup-icon"></span><span>Content copied to clipboard</span></div></span></div><p class="paragraph">The Compose dependency is bundled with fabrikmc-compose, you don't have to include it yourself.</p><h2 class=""> Usage</h2><p class="paragraph">You can open a server-side compose gui and show it to a player using the <a href="net.silkmc.silk.compose/display-composable.html">player.displayComposable</a> function:</p><div class="sample-container"><pre><code class="block lang-kotlin" theme="idea">player.displayComposable(8, 6) {<br>    YourComposableFunction()<br>}<br><br>@Composable<br>fun YourComposableFunction() {<br>    Button(<br>        onClick = { logInfo("clicked button") }<br>    ) {<br>        Text("Click me")<br>    }<br>}</code></pre><span class="top-right-position"><span class="copy-icon"></span><div class="copy-popup-wrapper popup-to-left"><span class="copy-popup-icon"></span><span>Content copied to clipboard</span></div></span></div><p class="paragraph">and that's it, you now have access to the world of Compose in Minecraft.</p><p class="paragraph">You can now have a look at the <strong>UI</strong> package (below) to see custom composable functions provided by fabrikmc-compose.</p><h2 class=""> Compose docs</h2><p class="paragraph">There are docs at <a href="https://developer.android.com/jetpack/compose/documentation">Android Developer Website</a> and you can find desktop specific documentation at the <a href="https://github.com/JetBrains/compose-jb">compose-jb</a> repository. Additionally, there is a  <a href="https://foso.github.io/Jetpack-Compose-Playground/">community maintained playground</a>. For each Compose module, you can also find very useful API docs, e.g. <a href="https://developer.android.com/reference/kotlin/androidx/compose/material3/package-summary">the ones for Material 3</a>.</p></div></div>
+  </div>
+  <h2 class="">Packages</h2>
+  <div class="table"><a data-name="36952237%2FPackages%2F2003394862" anchor-label="net.silkmc.silk.compose" id="36952237%2FPackages%2F2003394862" data-filterable-set=":silk-compose:dokkaHtmlPartial/main"></a>
+    <div class="table-row" data-filterable-current=":silk-compose:dokkaHtmlPartial/main" data-filterable-set=":silk-compose:dokkaHtmlPartial/main">
+      <div>
+        <div class="main-subrow ">
+          <div class=""><span class="inline-flex">
+              <div><a href="net.silkmc.silk.compose/index.html">net.silkmc.silk.compose</a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="36952237%2FPackages%2F2003394862"></span>
+                <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+              </span></span></div>
+          <div class="pull-right"></div>
+        </div>
+        <div><span class="brief-comment"><a data-name="36952237%2FPackages%2F2003394862" anchor-label="net.silkmc.silk.compose" id="36952237%2FPackages%2F2003394862" data-filterable-set=":silk-compose:dokkaHtmlPartial/main"></a>
+            <p class="paragraph">Implementation of Compose scenes for Minecraft</p>
+          </span></div>
+      </div>
+    </div>
+<a data-name="-15140830%2FPackages%2F2003394862" anchor-label="net.silkmc.silk.compose.color" id="-15140830%2FPackages%2F2003394862" data-filterable-set=":silk-compose:dokkaHtmlPartial/main"></a>
+    <div class="table-row" data-filterable-current=":silk-compose:dokkaHtmlPartial/main" data-filterable-set=":silk-compose:dokkaHtmlPartial/main">
+      <div>
+        <div class="main-subrow ">
+          <div class=""><span class="inline-flex">
+              <div><a href="net.silkmc.silk.compose.color/index.html">net.silkmc.silk.compose.color</a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-15140830%2FPackages%2F2003394862"></span>
+                <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+              </span></span></div>
+          <div class="pull-right"></div>
+        </div>
+        <div><span class="brief-comment"><a data-name="-15140830%2FPackages%2F2003394862" anchor-label="net.silkmc.silk.compose.color" id="-15140830%2FPackages%2F2003394862" data-filterable-set=":silk-compose:dokkaHtmlPartial/main"></a>
+            <p class="paragraph">Color utilities for working with map colors</p>
+          </span></div>
+      </div>
+    </div>
+<a data-name="954553625%2FPackages%2F2003394862" anchor-label="net.silkmc.silk.compose.icons" id="954553625%2FPackages%2F2003394862" data-filterable-set=":silk-compose:dokkaHtmlPartial/main"></a>
+    <div class="table-row" data-filterable-current=":silk-compose:dokkaHtmlPartial/main" data-filterable-set=":silk-compose:dokkaHtmlPartial/main">
+      <div>
+        <div class="main-subrow ">
+          <div class=""><span class="inline-flex">
+              <div><a href="net.silkmc.silk.compose.icons.html">net.silkmc.silk.compose.icons</a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="954553625%2FPackages%2F2003394862"></span>
+                <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+              </span></span></div>
+          <div class="pull-right"></div>
+        </div>
+        <div><span class="brief-comment"><a data-name="954553625%2FPackages%2F2003394862" anchor-label="net.silkmc.silk.compose.icons" id="954553625%2FPackages%2F2003394862" data-filterable-set=":silk-compose:dokkaHtmlPartial/main"></a>
+            <p class="paragraph">Contains generated constants for Minecraft icons</p>
+          </span></div>
+      </div>
+    </div>
+<a data-name="-1951363591%2FPackages%2F2003394862" anchor-label="net.silkmc.silk.compose.ui" id="-1951363591%2FPackages%2F2003394862" data-filterable-set=":silk-compose:dokkaHtmlPartial/main"></a>
+    <div class="table-row" data-filterable-current=":silk-compose:dokkaHtmlPartial/main" data-filterable-set=":silk-compose:dokkaHtmlPartial/main">
+      <div>
+        <div class="main-subrow ">
+          <div class=""><span class="inline-flex">
+              <div><a href="net.silkmc.silk.compose.ui/index.html">net.silkmc.silk.compose.ui</a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1951363591%2FPackages%2F2003394862"></span>
+                <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+              </span></span></div>
+          <div class="pull-right"></div>
+        </div>
+        <div><span class="brief-comment"><a data-name="-1951363591%2FPackages%2F2003394862" anchor-label="net.silkmc.silk.compose.ui" id="-1951363591%2FPackages%2F2003394862" data-filterable-set=":silk-compose:dokkaHtmlPartial/main"></a>
+            <p class="paragraph">UI components (composable functions) useful for Minecraft guis</p>
+          </span></div>
+      </div>
+    </div>
+  </div>
+</div>
+      <div class="footer">
+        <span class="go-to-top-icon"><a href="#content" id="go-to-top-link"></a></span><span>© 2022 Copyright</span><span class="pull-right"><span>Generated by </span><a href="https://github.com/Kotlin/dokka"><span>dokka</span><span class="padded-icon"></span></a></span>
+      </div>
+    </div>
+</div>
+
+</body></html>
+

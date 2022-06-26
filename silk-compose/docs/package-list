@@ -1,0 +1,8 @@
+$dokka.format:html-v1
+$dokka.linkExtension:html
+$dokka.location:net.silkmc.silk.compose.icons////PointingToDeclaration/silk-compose/net.silkmc.silk.compose.icons.html
+module:silk-compose
+net.silkmc.silk.compose
+net.silkmc.silk.compose.color
+net.silkmc.silk.compose.icons
+net.silkmc.silk.compose.ui

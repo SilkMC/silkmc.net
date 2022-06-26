@@ -1,0 +1,1 @@
+sourceset_dependencies = '{":silk-compose:dokkaHtmlPartial/main":[]}'
