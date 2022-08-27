@@ -1,0 +1,635 @@
+<!doctype html>
+<html>
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1" charset="UTF-8">
+    <title>SideboardScoreboard</title>
+<link href="../../../images/logo-icon.svg" rel="icon" type="image/svg"><script>var pathToRoot = "../../../";</script>    <script>const storage = localStorage.getItem("dokka-dark-mode")
+const savedDarkMode = storage ? JSON.parse(storage) : false
+if(savedDarkMode === true){
+    document.getElementsByTagName("html")[0].classList.add("theme-dark")
+}</script>
+<script type="text/javascript" src="../../../scripts/sourceset_dependencies.js" async></script>
+<link href="../../../styles/style.css" rel="Stylesheet">
+<link href="../../../styles/jetbrains-mono.css" rel="Stylesheet">
+<link href="../../../styles/main.css" rel="Stylesheet">
+<link href="../../../styles/prism.css" rel="Stylesheet">
+<link href="../../../styles/logo-styles.css" rel="Stylesheet">
+<script type="text/javascript" src="../../../scripts/clipboard.js" async></script>
+<script type="text/javascript" src="../../../scripts/navigation-loader.js" async></script>
+<script type="text/javascript" src="../../../scripts/platform-content-handler.js" async></script>
+<script type="text/javascript" src="../../../scripts/main.js" defer></script>
+<script type="text/javascript" src="../../../scripts/prism.js" async></script></head>
+<body>
+<div class="navigation-wrapper" id="navigation-wrapper">
+    <div id="leftToggler"><span class="icon-toggler"></span></div>
+    <div class="library-name">
+<a href="../../../index.html">
+<span>silk</span>            </a>    </div>
+    <div>
+    </div>
+    <div class="pull-right d-flex">
+        <button id="theme-toggle-button"><span id="theme-toggle"></span></button>
+        <div id="searchBar"></div>
+    </div>
+</div>
+<div id="container">
+    <div id="leftColumn">
+        <div id="sideMenu"></div>
+    </div>
+    <div id="main">
+<div class="main-content" id="content" pageids="silk-game::net.silkmc.silk.game.sideboard.internal/SideboardScoreboard///PointingToDeclaration//-1451631312">
+  <div class="breadcrumbs"><a href="../../index.html">silk-game</a><span class="delimiter">/</span><a href="../index.html">net.silkmc.silk.game.sideboard.internal</a><span class="delimiter">/</span><a href="index.html">SideboardScoreboard</a></div>
+  <div class="cover ">
+    <h1 class="cover"><span>Sideboard</span><wbr><span><span>Scoreboard</span></span></h1>
+    <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-depenent-content" data-active="" data-togglable=":silk-game:dokkaHtmlPartial/main"><div class="symbol monospace"><span class="token keyword">class </span><a href="index.html">SideboardScoreboard</a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">name<span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html">String</a><span class="token punctuation">, </span></span><span class="parameter ">displayName<span class="token operator">: </span><span data-unresolved-link="net.minecraft.network.chat/Component///PointingToDeclaration/">Component</span></span></span><span class="token punctuation">)</span> : <span data-unresolved-link="net.minecraft.world.scores/Scoreboard///PointingToDeclaration/">Scoreboard</span><span class="top-right-position"><span class="copy-icon"></span><div class="copy-popup-wrapper popup-to-left"><span class="copy-popup-icon"></span><span>Content copied to clipboard</span></div></span></div><p class="paragraph">A server side scoreboard which is only displayed to a selected collection of players. This implementation is used by the <a href="../../net.silkmc.silk.game.sideboard/-sideboard/index.html">net.silkmc.silk.game.sideboard.Sideboard</a> api.</p><p class="paragraph">The packet implementation of this class is not completed, thus it is internal for now.</p><p class="paragraph">Have a look at <span data-unresolved-link="net.minecraft.server/ServerScoreboard///PointingToDeclaration/">net.minecraft.server.ServerScoreboard</span> for a complete packet implementation.</p></div></div>
+  </div>
+  <div class="tabbedcontent">
+    <div class="tabs-section" tabs-section="tabs-section"><button class="section-tab" data-active="" data-togglable="Types">Types</button><button class="section-tab" data-togglable="Constructors">Constructors</button><button class="section-tab" data-togglable="Functions">Functions</button></div>
+    <div class="tabs-section-body">
+      <h2 class="tabbedcontent">Constructors</h2>
+      <div class="table" data-togglable="Constructors"><a data-name="-1009404442%2FConstructors%2F-1451631312" anchor-label="SideboardScoreboard" id="-1009404442%2FConstructors%2F-1451631312" data-filterable-set=":silk-game:dokkaHtmlPartial/main"></a>
+        <div class="table-row" data-filterable-current=":silk-game:dokkaHtmlPartial/main" data-filterable-set=":silk-game:dokkaHtmlPartial/main">
+          <div class="main-subrow keyValue TabbedContent">
+            <div class=""><span class="inline-flex">
+                <div><a href="-sideboard-scoreboard.html"><span>Sideboard</span><wbr><span><span>Scoreboard</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1009404442%2FConstructors%2F-1451631312"></span>
+                  <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                </span></span></div>
+            <div>
+              <div class="title">
+                <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-depenent-content" data-active="" data-togglable=":silk-game:dokkaHtmlPartial/main"><div class="symbol monospace"><span class="token keyword"></span><span class="token keyword">fun </span><a href="-sideboard-scoreboard.html"><span class="token function">SideboardScoreboard</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">name<span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html">String</a><span class="token punctuation">, </span></span><span class="parameter ">displayName<span class="token operator">: </span><span data-unresolved-link="net.minecraft.network.chat/Component///PointingToDeclaration/">Component</span></span></span><span class="token punctuation">)</span><span class="top-right-position"><span class="copy-icon"></span><div class="copy-popup-wrapper popup-to-left"><span class="copy-popup-icon"></span><span>Content copied to clipboard</span></div></span></div></div></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <h2 class="">Types</h2>
+      <div class="table" data-togglable="Types"><a data-name="-1648004018%2FClasslikes%2F-1451631312" anchor-label="Companion" id="-1648004018%2FClasslikes%2F-1451631312" data-filterable-set=":silk-game:dokkaHtmlPartial/main"></a>
+        <div class="table-row" data-filterable-current=":silk-game:dokkaHtmlPartial/main" data-filterable-set=":silk-game:dokkaHtmlPartial/main">
+          <div class="main-subrow keyValue ">
+            <div class=""><span class="inline-flex">
+                <div><a href="-companion/index.html"><span><span>Companion</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1648004018%2FClasslikes%2F-1451631312"></span>
+                  <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                </span></span></div>
+            <div>
+              <div class="title">
+                <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-depenent-content" data-active="" data-togglable=":silk-game:dokkaHtmlPartial/main"><div class="symbol monospace"><span class="token keyword">object </span><a href="-companion/index.html">Companion</a><span class="top-right-position"><span class="copy-icon"></span><div class="copy-popup-wrapper popup-to-left"><span class="copy-popup-icon"></span><span>Content copied to clipboard</span></div></span></div></div></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <h2 class="">Functions</h2>
+      <div class="table" data-togglable="Functions"><a data-name="-1576656168%2FFunctions%2F-1451631312" anchor-label="addObjective" id="-1576656168%2FFunctions%2F-1451631312" data-filterable-set=":silk-game:dokkaHtmlPartial/main"></a>
+        <div class="table-row" data-filterable-current=":silk-game:dokkaHtmlPartial/main" data-filterable-set=":silk-game:dokkaHtmlPartial/main">
+          <div class="main-subrow keyValue ">
+            <div class=""><span class="inline-flex">
+                <div><a href="index.html#-1576656168%2FFunctions%2F-1451631312"><span>add</span><wbr><span><span>Objective</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1576656168%2FFunctions%2F-1451631312"></span>
+                  <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                </span></span></div>
+            <div>
+              <div class="title">
+                <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-depenent-content" data-active="" data-togglable=":silk-game:dokkaHtmlPartial/main"><div class="symbol monospace"><span class="token keyword">open </span><span class="token keyword"></span><span class="token keyword">fun </span><a href="index.html#-1576656168%2FFunctions%2F-1451631312"><span class="token function">addObjective</span></a><span class="token punctuation">(</span><span class="parameters wrapped"><span class="parameter indented">&nbsp;&nbsp;&nbsp;&nbsp;string<span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html">String</a><span class="token punctuation">, </span></span><span class="parameter indented">&nbsp;&nbsp;&nbsp;&nbsp;objectiveCriteria<span class="token operator">: </span><span data-unresolved-link="net.minecraft.world.scores.criteria/ObjectiveCriteria///PointingToDeclaration/">ObjectiveCriteria</span><span class="token punctuation">, </span></span><span class="parameter indented">&nbsp;&nbsp;&nbsp;&nbsp;component<span class="token operator">: </span><span data-unresolved-link="net.minecraft.network.chat/Component///PointingToDeclaration/">Component</span><span class="token punctuation">, </span></span><span class="parameter indented">&nbsp;&nbsp;&nbsp;&nbsp;renderType<span class="token operator">: </span><span data-unresolved-link="net.minecraft.world.scores.criteria/ObjectiveCriteria.RenderType///PointingToDeclaration/">ObjectiveCriteria.RenderType</span></span></span><span class="token punctuation">)</span><span class="token operator">: </span><span data-unresolved-link="net.minecraft.world.scores/Objective///PointingToDeclaration/">Objective</span><span class="top-right-position"><span class="copy-icon"></span><div class="copy-popup-wrapper popup-to-left"><span class="copy-popup-icon"></span><span>Content copied to clipboard</span></div></span></div></div></div>
+              </div>
+            </div>
+          </div>
+        </div>
+<a data-name="120379563%2FFunctions%2F-1451631312" anchor-label="addPlayerTeam" id="120379563%2FFunctions%2F-1451631312" data-filterable-set=":silk-game:dokkaHtmlPartial/main"></a>
+        <div class="table-row" data-filterable-current=":silk-game:dokkaHtmlPartial/main" data-filterable-set=":silk-game:dokkaHtmlPartial/main">
+          <div class="main-subrow keyValue ">
+            <div class=""><span class="inline-flex">
+                <div><a href="index.html#120379563%2FFunctions%2F-1451631312"><span>add</span><wbr><span>Player</span><wbr><span><span>Team</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="120379563%2FFunctions%2F-1451631312"></span>
+                  <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                </span></span></div>
+            <div>
+              <div class="title">
+                <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-depenent-content" data-active="" data-togglable=":silk-game:dokkaHtmlPartial/main"><div class="symbol monospace"><span class="token keyword">open </span><span class="token keyword"></span><span class="token keyword">fun </span><a href="index.html#120379563%2FFunctions%2F-1451631312"><span class="token function">addPlayerTeam</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">string<span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html">String</a></span></span><span class="token punctuation">)</span><span class="token operator">: </span><span data-unresolved-link="net.minecraft.world.scores/PlayerTeam///PointingToDeclaration/">PlayerTeam</span><span class="top-right-position"><span class="copy-icon"></span><div class="copy-popup-wrapper popup-to-left"><span class="copy-popup-icon"></span><span>Content copied to clipboard</span></div></span></div></div></div>
+              </div>
+            </div>
+          </div>
+        </div>
+<a data-name="1046347421%2FFunctions%2F-1451631312" anchor-label="addPlayerToTeam" id="1046347421%2FFunctions%2F-1451631312" data-filterable-set=":silk-game:dokkaHtmlPartial/main"></a>
+        <div class="table-row" data-filterable-current=":silk-game:dokkaHtmlPartial/main" data-filterable-set=":silk-game:dokkaHtmlPartial/main">
+          <div class="main-subrow keyValue ">
+            <div class=""><span class="inline-flex">
+                <div><a href="add-player-to-team.html"><span>add</span><wbr><span>Player</span><wbr><span>To</span><wbr><span><span>Team</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1046347421%2FFunctions%2F-1451631312"></span>
+                  <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                </span></span></div>
+            <div>
+              <div class="title">
+                <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-depenent-content" data-active="" data-togglable=":silk-game:dokkaHtmlPartial/main"><div class="symbol monospace"><span class="token keyword">open </span><span class="token keyword">override </span><span class="token keyword">fun </span><a href="add-player-to-team.html"><span class="token function">addPlayerToTeam</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">playerName<span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html">String</a><span class="token punctuation">, </span></span><span class="parameter ">team<span class="token operator">: </span><span data-unresolved-link="net.minecraft.world.scores/PlayerTeam///PointingToDeclaration/">PlayerTeam</span></span></span><span class="token punctuation">)</span><span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-boolean/index.html">Boolean</a><span class="top-right-position"><span class="copy-icon"></span><div class="copy-popup-wrapper popup-to-left"><span class="copy-popup-icon"></span><span>Content copied to clipboard</span></div></span></div></div></div>
+              </div>
+            </div>
+          </div>
+        </div>
+<a data-name="1518742034%2FFunctions%2F-1451631312" anchor-label="displayToPlayer" id="1518742034%2FFunctions%2F-1451631312" data-filterable-set=":silk-game:dokkaHtmlPartial/main"></a>
+        <div class="table-row" data-filterable-current=":silk-game:dokkaHtmlPartial/main" data-filterable-set=":silk-game:dokkaHtmlPartial/main">
+          <div class="main-subrow keyValue ">
+            <div class=""><span class="inline-flex">
+                <div><a href="display-to-player.html"><span>display</span><wbr><span>To</span><wbr><span><span>Player</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1518742034%2FFunctions%2F-1451631312"></span>
+                  <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                </span></span></div>
+            <div>
+              <div class="title">
+                <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-depenent-content" data-active="" data-togglable=":silk-game:dokkaHtmlPartial/main"><div class="symbol monospace"><span class="token keyword"></span><span class="token keyword">fun </span><a href="display-to-player.html"><span class="token function">displayToPlayer</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">player<span class="token operator">: </span><span data-unresolved-link="net.minecraft.server.level/ServerPlayer///PointingToDeclaration/">ServerPlayer</span></span></span><span class="token punctuation">)</span><span class="top-right-position"><span class="copy-icon"></span><div class="copy-popup-wrapper popup-to-left"><span class="copy-popup-icon"></span><span>Content copied to clipboard</span></div></span></div></div></div>
+              </div>
+            </div>
+          </div>
+        </div>
+<a data-name="-1708147577%2FFunctions%2F-1451631312" anchor-label="entityRemoved" id="-1708147577%2FFunctions%2F-1451631312" data-filterable-set=":silk-game:dokkaHtmlPartial/main"></a>
+        <div class="table-row" data-filterable-current=":silk-game:dokkaHtmlPartial/main" data-filterable-set=":silk-game:dokkaHtmlPartial/main">
+          <div class="main-subrow keyValue ">
+            <div class=""><span class="inline-flex">
+                <div><a href="index.html#-1708147577%2FFunctions%2F-1451631312"><span>entity</span><wbr><span><span>Removed</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1708147577%2FFunctions%2F-1451631312"></span>
+                  <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                </span></span></div>
+            <div>
+              <div class="title">
+                <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-depenent-content" data-active="" data-togglable=":silk-game:dokkaHtmlPartial/main"><div class="symbol monospace"><span class="token keyword">open </span><span class="token keyword"></span><span class="token keyword">fun </span><a href="index.html#-1708147577%2FFunctions%2F-1451631312"><span class="token function">entityRemoved</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">entity<span class="token operator">: </span><span data-unresolved-link="net.minecraft.world.entity/Entity///PointingToDeclaration/">Entity</span></span></span><span class="token punctuation">)</span><span class="top-right-position"><span class="copy-icon"></span><div class="copy-popup-wrapper popup-to-left"><span class="copy-popup-icon"></span><span>Content copied to clipboard</span></div></span></div></div></div>
+              </div>
+            </div>
+          </div>
+        </div>
+<a data-name="-1281347049%2FFunctions%2F-1451631312" anchor-label="forAllObjectives" id="-1281347049%2FFunctions%2F-1451631312" data-filterable-set=":silk-game:dokkaHtmlPartial/main"></a>
+        <div class="table-row" data-filterable-current=":silk-game:dokkaHtmlPartial/main" data-filterable-set=":silk-game:dokkaHtmlPartial/main">
+          <div class="main-subrow keyValue ">
+            <div class=""><span class="inline-flex">
+                <div><a href="index.html#-1281347049%2FFunctions%2F-1451631312"><span>for</span><wbr><span>All</span><wbr><span><span>Objectives</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1281347049%2FFunctions%2F-1451631312"></span>
+                  <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                </span></span></div>
+            <div>
+              <div class="title">
+                <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-depenent-content" data-active="" data-togglable=":silk-game:dokkaHtmlPartial/main"><div class="symbol monospace"><span class="token keyword"></span><span class="token keyword">fun </span><a href="index.html#-1281347049%2FFunctions%2F-1451631312"><span class="token function">forAllObjectives</span></a><span class="token punctuation">(</span><span class="parameters wrapped"><span class="parameter indented">&nbsp;&nbsp;&nbsp;&nbsp;objectiveCriteria<span class="token operator">: </span><span data-unresolved-link="net.minecraft.world.scores.criteria/ObjectiveCriteria///PointingToDeclaration/">ObjectiveCriteria</span><span class="token punctuation">, </span></span><span class="parameter indented">&nbsp;&nbsp;&nbsp;&nbsp;string<span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html">String</a><span class="token punctuation">, </span></span><span class="parameter indented">&nbsp;&nbsp;&nbsp;&nbsp;consumer<span class="token operator">: </span><a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/Consumer.html">Consumer</a><span class="token operator">&lt;</span><span class="token keyword"></span><span data-unresolved-link="net.minecraft.world.scores/Score///PointingToDeclaration/">Score</span><span class="token operator">&gt;</span></span></span><span class="token punctuation">)</span><span class="top-right-position"><span class="copy-icon"></span><div class="copy-popup-wrapper popup-to-left"><span class="copy-popup-icon"></span><span>Content copied to clipboard</span></div></span></div></div></div>
+              </div>
+            </div>
+          </div>
+        </div>
+<a data-name="-1908880727%2FFunctions%2F-1451631312" anchor-label="getDisplayObjective" id="-1908880727%2FFunctions%2F-1451631312" data-filterable-set=":silk-game:dokkaHtmlPartial/main"></a>
+        <div class="table-row" data-filterable-current=":silk-game:dokkaHtmlPartial/main" data-filterable-set=":silk-game:dokkaHtmlPartial/main">
+          <div class="main-subrow keyValue ">
+            <div class=""><span class="inline-flex">
+                <div><a href="index.html#-1908880727%2FFunctions%2F-1451631312"><span>get</span><wbr><span>Display</span><wbr><span><span>Objective</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1908880727%2FFunctions%2F-1451631312"></span>
+                  <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                </span></span></div>
+            <div>
+              <div class="title">
+                <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-depenent-content" data-active="" data-togglable=":silk-game:dokkaHtmlPartial/main"><div class="symbol monospace"><div class="block"><div class="block"><span class="token annotation">@</span><span data-unresolved-link="org.jetbrains.annotations/Nullable///PointingToDeclaration/"><span class="token annotation">Nullable</span></span></div></div><span class="token keyword">open </span><span class="token keyword"></span><span class="token keyword">fun </span><a href="index.html#-1908880727%2FFunctions%2F-1451631312"><span class="token function">getDisplayObjective</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">i<span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-int/index.html">Int</a></span></span><span class="token punctuation">)</span><span class="token operator">: </span><span data-unresolved-link="net.minecraft.world.scores/Objective///PointingToDeclaration/">Objective</span><span class="token operator">?</span><span class="top-right-position"><span class="copy-icon"></span><div class="copy-popup-wrapper popup-to-left"><span class="copy-popup-icon"></span><span>Content copied to clipboard</span></div></span></div></div></div>
+              </div>
+            </div>
+          </div>
+        </div>
+<a data-name="1960315550%2FFunctions%2F-1451631312" anchor-label="getObjective" id="1960315550%2FFunctions%2F-1451631312" data-filterable-set=":silk-game:dokkaHtmlPartial/main"></a>
+        <div class="table-row" data-filterable-current=":silk-game:dokkaHtmlPartial/main" data-filterable-set=":silk-game:dokkaHtmlPartial/main">
+          <div class="main-subrow keyValue ">
+            <div class=""><span class="inline-flex">
+                <div><a href="index.html#1960315550%2FFunctions%2F-1451631312"><span>get</span><wbr><span><span>Objective</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1960315550%2FFunctions%2F-1451631312"></span>
+                  <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                </span></span></div>
+            <div>
+              <div class="title">
+                <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-depenent-content" data-active="" data-togglable=":silk-game:dokkaHtmlPartial/main"><div class="symbol monospace"><div class="block"><div class="block"><span class="token annotation">@</span><span data-unresolved-link="org.jetbrains.annotations/Nullable///PointingToDeclaration/"><span class="token annotation">Nullable</span></span></div></div><span class="token keyword">open </span><span class="token keyword"></span><span class="token keyword">fun </span><a href="index.html#1960315550%2FFunctions%2F-1451631312"><span class="token function">getObjective</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter "><span><span class="token annotation">@</span><span data-unresolved-link="org.jetbrains.annotations/Nullable///PointingToDeclaration/"><span class="token annotation">Nullable</span></span>&nbsp;</span>string<span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html">String</a><span class="token operator">?</span></span></span><span class="token punctuation">)</span><span class="token operator">: </span><span data-unresolved-link="net.minecraft.world.scores/Objective///PointingToDeclaration/">Objective</span><span class="token operator">?</span><span class="top-right-position"><span class="copy-icon"></span><div class="copy-popup-wrapper popup-to-left"><span class="copy-popup-icon"></span><span>Content copied to clipboard</span></div></span></div></div></div>
+              </div>
+            </div>
+          </div>
+        </div>
+<a data-name="345503763%2FFunctions%2F-1451631312" anchor-label="getObjectiveNames" id="345503763%2FFunctions%2F-1451631312" data-filterable-set=":silk-game:dokkaHtmlPartial/main"></a>
+        <div class="table-row" data-filterable-current=":silk-game:dokkaHtmlPartial/main" data-filterable-set=":silk-game:dokkaHtmlPartial/main">
+          <div class="main-subrow keyValue ">
+            <div class=""><span class="inline-flex">
+                <div><a href="index.html#345503763%2FFunctions%2F-1451631312"><span>get</span><wbr><span>Objective</span><wbr><span><span>Names</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="345503763%2FFunctions%2F-1451631312"></span>
+                  <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                </span></span></div>
+            <div>
+              <div class="title">
+                <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-depenent-content" data-active="" data-togglable=":silk-game:dokkaHtmlPartial/main"><div class="symbol monospace"><span class="token keyword">open </span><span class="token keyword"></span><span class="token keyword">fun </span><a href="index.html#345503763%2FFunctions%2F-1451631312"><span class="token function">getObjectiveNames</span></a><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin.collections/-mutable-collection/index.html">MutableCollection</a><span class="token operator">&lt;</span><span class="token keyword"></span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html">String</a><span class="token operator">&gt;</span><span class="top-right-position"><span class="copy-icon"></span><div class="copy-popup-wrapper popup-to-left"><span class="copy-popup-icon"></span><span>Content copied to clipboard</span></div></span></div></div></div>
+              </div>
+            </div>
+          </div>
+        </div>
+<a data-name="389629992%2FFunctions%2F-1451631312" anchor-label="getObjectives" id="389629992%2FFunctions%2F-1451631312" data-filterable-set=":silk-game:dokkaHtmlPartial/main"></a>
+        <div class="table-row" data-filterable-current=":silk-game:dokkaHtmlPartial/main" data-filterable-set=":silk-game:dokkaHtmlPartial/main">
+          <div class="main-subrow keyValue ">
+            <div class=""><span class="inline-flex">
+                <div><a href="index.html#389629992%2FFunctions%2F-1451631312"><span>get</span><wbr><span><span>Objectives</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="389629992%2FFunctions%2F-1451631312"></span>
+                  <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                </span></span></div>
+            <div>
+              <div class="title">
+                <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-depenent-content" data-active="" data-togglable=":silk-game:dokkaHtmlPartial/main"><div class="symbol monospace"><span class="token keyword">open </span><span class="token keyword"></span><span class="token keyword">fun </span><a href="index.html#389629992%2FFunctions%2F-1451631312"><span class="token function">getObjectives</span></a><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin.collections/-mutable-collection/index.html">MutableCollection</a><span class="token operator">&lt;</span><span class="token keyword"></span><span data-unresolved-link="net.minecraft.world.scores/Objective///PointingToDeclaration/">Objective</span><span class="token operator">&gt;</span><span class="top-right-position"><span class="copy-icon"></span><div class="copy-popup-wrapper popup-to-left"><span class="copy-popup-icon"></span><span>Content copied to clipboard</span></div></span></div></div></div>
+              </div>
+            </div>
+          </div>
+        </div>
+<a data-name="1980001574%2FFunctions%2F-1451631312" anchor-label="getOrCreateObjective" id="1980001574%2FFunctions%2F-1451631312" data-filterable-set=":silk-game:dokkaHtmlPartial/main"></a>
+        <div class="table-row" data-filterable-current=":silk-game:dokkaHtmlPartial/main" data-filterable-set=":silk-game:dokkaHtmlPartial/main">
+          <div class="main-subrow keyValue ">
+            <div class=""><span class="inline-flex">
+                <div><a href="index.html#1980001574%2FFunctions%2F-1451631312"><span>get</span><wbr><span>Or</span><wbr><span>Create</span><wbr><span><span>Objective</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1980001574%2FFunctions%2F-1451631312"></span>
+                  <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                </span></span></div>
+            <div>
+              <div class="title">
+                <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-depenent-content" data-active="" data-togglable=":silk-game:dokkaHtmlPartial/main"><div class="symbol monospace"><span class="token keyword">open </span><span class="token keyword"></span><span class="token keyword">fun </span><a href="index.html#1980001574%2FFunctions%2F-1451631312"><span class="token function">getOrCreateObjective</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">string<span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html">String</a></span></span><span class="token punctuation">)</span><span class="token operator">: </span><span data-unresolved-link="net.minecraft.world.scores/Objective///PointingToDeclaration/">Objective</span><span class="top-right-position"><span class="copy-icon"></span><div class="copy-popup-wrapper popup-to-left"><span class="copy-popup-icon"></span><span>Content copied to clipboard</span></div></span></div></div></div>
+              </div>
+            </div>
+          </div>
+        </div>
+<a data-name="1735058023%2FFunctions%2F-1451631312" anchor-label="getOrCreatePlayerScore" id="1735058023%2FFunctions%2F-1451631312" data-filterable-set=":silk-game:dokkaHtmlPartial/main"></a>
+        <div class="table-row" data-filterable-current=":silk-game:dokkaHtmlPartial/main" data-filterable-set=":silk-game:dokkaHtmlPartial/main">
+          <div class="main-subrow keyValue ">
+            <div class=""><span class="inline-flex">
+                <div><a href="index.html#1735058023%2FFunctions%2F-1451631312"><span>get</span><wbr><span>Or</span><wbr><span>Create</span><wbr><span>Player</span><wbr><span><span>Score</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1735058023%2FFunctions%2F-1451631312"></span>
+                  <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                </span></span></div>
+            <div>
+              <div class="title">
+                <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-depenent-content" data-active="" data-togglable=":silk-game:dokkaHtmlPartial/main"><div class="symbol monospace"><span class="token keyword">open </span><span class="token keyword"></span><span class="token keyword">fun </span><a href="index.html#1735058023%2FFunctions%2F-1451631312"><span class="token function">getOrCreatePlayerScore</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">string<span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html">String</a><span class="token punctuation">, </span></span><span class="parameter ">objective<span class="token operator">: </span><span data-unresolved-link="net.minecraft.world.scores/Objective///PointingToDeclaration/">Objective</span></span></span><span class="token punctuation">)</span><span class="token operator">: </span><span data-unresolved-link="net.minecraft.world.scores/Score///PointingToDeclaration/">Score</span><span class="top-right-position"><span class="copy-icon"></span><div class="copy-popup-wrapper popup-to-left"><span class="copy-popup-icon"></span><span>Content copied to clipboard</span></div></span></div></div></div>
+              </div>
+            </div>
+          </div>
+        </div>
+<a data-name="-893235010%2FFunctions%2F-1451631312" anchor-label="getPlayerScores" id="-893235010%2FFunctions%2F-1451631312" data-filterable-set=":silk-game:dokkaHtmlPartial/main"></a>
+        <div class="table-row" data-filterable-current=":silk-game:dokkaHtmlPartial/main" data-filterable-set=":silk-game:dokkaHtmlPartial/main">
+          <div class="main-subrow keyValue ">
+            <div class=""><span class="inline-flex">
+                <div><a href="index.html#-1931081436%2FFunctions%2F-1451631312"><span>get</span><wbr><span>Player</span><wbr><span><span>Scores</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-893235010%2FFunctions%2F-1451631312"></span>
+                  <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                </span></span></div>
+            <div>
+              <div class="title">
+                <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-depenent-content" data-active="" data-togglable=":silk-game:dokkaHtmlPartial/main"><div class="symbol monospace"><span class="token keyword">open </span><span class="token keyword"></span><span class="token keyword">fun </span><a href="index.html#-1931081436%2FFunctions%2F-1451631312"><span class="token function">getPlayerScores</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">string<span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html">String</a></span></span><span class="token punctuation">)</span><span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin.collections/-mutable-map/index.html">MutableMap</a><span class="token operator">&lt;</span><span class="token keyword"></span><span data-unresolved-link="net.minecraft.world.scores/Objective///PointingToDeclaration/">Objective</span><span class="token punctuation">, </span><span class="token keyword"></span><span data-unresolved-link="net.minecraft.world.scores/Score///PointingToDeclaration/">Score</span><span class="token operator">&gt;</span><span class="top-right-position"><span class="copy-icon"></span><div class="copy-popup-wrapper popup-to-left"><span class="copy-popup-icon"></span><span>Content copied to clipboard</span></div></span></div><div class="symbol monospace"><span class="token keyword">open </span><span class="token keyword"></span><span class="token keyword">fun </span><a href="index.html#-1853337306%2FFunctions%2F-1451631312"><span class="token function">getPlayerScores</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">objective<span class="token operator">: </span><span data-unresolved-link="net.minecraft.world.scores/Objective///PointingToDeclaration/">Objective</span></span></span><span class="token punctuation">)</span><span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin.collections/-mutable-collection/index.html">MutableCollection</a><span class="token operator">&lt;</span><span class="token keyword"></span><span data-unresolved-link="net.minecraft.world.scores/Score///PointingToDeclaration/">Score</span><span class="token operator">&gt;</span><span class="top-right-position"><span class="copy-icon"></span><div class="copy-popup-wrapper popup-to-left"><span class="copy-popup-icon"></span><span>Content copied to clipboard</span></div></span></div></div></div>
+              </div>
+            </div>
+          </div>
+        </div>
+<a data-name="880748827%2FFunctions%2F-1451631312" anchor-label="getPlayersTeam" id="880748827%2FFunctions%2F-1451631312" data-filterable-set=":silk-game:dokkaHtmlPartial/main"></a>
+        <div class="table-row" data-filterable-current=":silk-game:dokkaHtmlPartial/main" data-filterable-set=":silk-game:dokkaHtmlPartial/main">
+          <div class="main-subrow keyValue ">
+            <div class=""><span class="inline-flex">
+                <div><a href="index.html#880748827%2FFunctions%2F-1451631312"><span>get</span><wbr><span>Players</span><wbr><span><span>Team</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="880748827%2FFunctions%2F-1451631312"></span>
+                  <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                </span></span></div>
+            <div>
+              <div class="title">
+                <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-depenent-content" data-active="" data-togglable=":silk-game:dokkaHtmlPartial/main"><div class="symbol monospace"><div class="block"><div class="block"><span class="token annotation">@</span><span data-unresolved-link="org.jetbrains.annotations/Nullable///PointingToDeclaration/"><span class="token annotation">Nullable</span></span></div></div><span class="token keyword">open </span><span class="token keyword"></span><span class="token keyword">fun </span><a href="index.html#880748827%2FFunctions%2F-1451631312"><span class="token function">getPlayersTeam</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">string<span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html">String</a></span></span><span class="token punctuation">)</span><span class="token operator">: </span><span data-unresolved-link="net.minecraft.world.scores/PlayerTeam///PointingToDeclaration/">PlayerTeam</span><span class="token operator">?</span><span class="top-right-position"><span class="copy-icon"></span><div class="copy-popup-wrapper popup-to-left"><span class="copy-popup-icon"></span><span>Content copied to clipboard</span></div></span></div></div></div>
+              </div>
+            </div>
+          </div>
+        </div>
+<a data-name="-2035101344%2FFunctions%2F-1451631312" anchor-label="getPlayerTeam" id="-2035101344%2FFunctions%2F-1451631312" data-filterable-set=":silk-game:dokkaHtmlPartial/main"></a>
+        <div class="table-row" data-filterable-current=":silk-game:dokkaHtmlPartial/main" data-filterable-set=":silk-game:dokkaHtmlPartial/main">
+          <div class="main-subrow keyValue ">
+            <div class=""><span class="inline-flex">
+                <div><a href="index.html#-2035101344%2FFunctions%2F-1451631312"><span>get</span><wbr><span>Player</span><wbr><span><span>Team</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-2035101344%2FFunctions%2F-1451631312"></span>
+                  <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                </span></span></div>
+            <div>
+              <div class="title">
+                <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-depenent-content" data-active="" data-togglable=":silk-game:dokkaHtmlPartial/main"><div class="symbol monospace"><div class="block"><div class="block"><span class="token annotation">@</span><span data-unresolved-link="org.jetbrains.annotations/Nullable///PointingToDeclaration/"><span class="token annotation">Nullable</span></span></div></div><span class="token keyword">open </span><span class="token keyword"></span><span class="token keyword">fun </span><a href="index.html#-2035101344%2FFunctions%2F-1451631312"><span class="token function">getPlayerTeam</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">string<span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html">String</a></span></span><span class="token punctuation">)</span><span class="token operator">: </span><span data-unresolved-link="net.minecraft.world.scores/PlayerTeam///PointingToDeclaration/">PlayerTeam</span><span class="token operator">?</span><span class="top-right-position"><span class="copy-icon"></span><div class="copy-popup-wrapper popup-to-left"><span class="copy-popup-icon"></span><span>Content copied to clipboard</span></div></span></div></div></div>
+              </div>
+            </div>
+          </div>
+        </div>
+<a data-name="1403687203%2FFunctions%2F-1451631312" anchor-label="getPlayerTeams" id="1403687203%2FFunctions%2F-1451631312" data-filterable-set=":silk-game:dokkaHtmlPartial/main"></a>
+        <div class="table-row" data-filterable-current=":silk-game:dokkaHtmlPartial/main" data-filterable-set=":silk-game:dokkaHtmlPartial/main">
+          <div class="main-subrow keyValue ">
+            <div class=""><span class="inline-flex">
+                <div><a href="index.html#1403687203%2FFunctions%2F-1451631312"><span>get</span><wbr><span>Player</span><wbr><span><span>Teams</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1403687203%2FFunctions%2F-1451631312"></span>
+                  <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                </span></span></div>
+            <div>
+              <div class="title">
+                <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-depenent-content" data-active="" data-togglable=":silk-game:dokkaHtmlPartial/main"><div class="symbol monospace"><span class="token keyword">open </span><span class="token keyword"></span><span class="token keyword">fun </span><a href="index.html#1403687203%2FFunctions%2F-1451631312"><span class="token function">getPlayerTeams</span></a><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin.collections/-mutable-collection/index.html">MutableCollection</a><span class="token operator">&lt;</span><span class="token keyword"></span><span data-unresolved-link="net.minecraft.world.scores/PlayerTeam///PointingToDeclaration/">PlayerTeam</span><span class="token operator">&gt;</span><span class="top-right-position"><span class="copy-icon"></span><div class="copy-popup-wrapper popup-to-left"><span class="copy-popup-icon"></span><span>Content copied to clipboard</span></div></span></div></div></div>
+              </div>
+            </div>
+          </div>
+        </div>
+<a data-name="-511820531%2FFunctions%2F-1451631312" anchor-label="getTeamNames" id="-511820531%2FFunctions%2F-1451631312" data-filterable-set=":silk-game:dokkaHtmlPartial/main"></a>
+        <div class="table-row" data-filterable-current=":silk-game:dokkaHtmlPartial/main" data-filterable-set=":silk-game:dokkaHtmlPartial/main">
+          <div class="main-subrow keyValue ">
+            <div class=""><span class="inline-flex">
+                <div><a href="index.html#-511820531%2FFunctions%2F-1451631312"><span>get</span><wbr><span>Team</span><wbr><span><span>Names</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-511820531%2FFunctions%2F-1451631312"></span>
+                  <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                </span></span></div>
+            <div>
+              <div class="title">
+                <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-depenent-content" data-active="" data-togglable=":silk-game:dokkaHtmlPartial/main"><div class="symbol monospace"><span class="token keyword">open </span><span class="token keyword"></span><span class="token keyword">fun </span><a href="index.html#-511820531%2FFunctions%2F-1451631312"><span class="token function">getTeamNames</span></a><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin.collections/-mutable-collection/index.html">MutableCollection</a><span class="token operator">&lt;</span><span class="token keyword"></span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html">String</a><span class="token operator">&gt;</span><span class="top-right-position"><span class="copy-icon"></span><div class="copy-popup-wrapper popup-to-left"><span class="copy-popup-icon"></span><span>Content copied to clipboard</span></div></span></div></div></div>
+              </div>
+            </div>
+          </div>
+        </div>
+<a data-name="1412190362%2FFunctions%2F-1451631312" anchor-label="getTrackedPlayers" id="1412190362%2FFunctions%2F-1451631312" data-filterable-set=":silk-game:dokkaHtmlPartial/main"></a>
+        <div class="table-row" data-filterable-current=":silk-game:dokkaHtmlPartial/main" data-filterable-set=":silk-game:dokkaHtmlPartial/main">
+          <div class="main-subrow keyValue ">
+            <div class=""><span class="inline-flex">
+                <div><a href="index.html#1412190362%2FFunctions%2F-1451631312"><span>get</span><wbr><span>Tracked</span><wbr><span><span>Players</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1412190362%2FFunctions%2F-1451631312"></span>
+                  <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                </span></span></div>
+            <div>
+              <div class="title">
+                <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-depenent-content" data-active="" data-togglable=":silk-game:dokkaHtmlPartial/main"><div class="symbol monospace"><span class="token keyword">open </span><span class="token keyword"></span><span class="token keyword">fun </span><a href="index.html#1412190362%2FFunctions%2F-1451631312"><span class="token function">getTrackedPlayers</span></a><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin.collections/-mutable-collection/index.html">MutableCollection</a><span class="token operator">&lt;</span><span class="token keyword"></span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html">String</a><span class="token operator">&gt;</span><span class="top-right-position"><span class="copy-icon"></span><div class="copy-popup-wrapper popup-to-left"><span class="copy-popup-icon"></span><span>Content copied to clipboard</span></div></span></div></div></div>
+              </div>
+            </div>
+          </div>
+        </div>
+<a data-name="1898890529%2FFunctions%2F-1451631312" anchor-label="hasObjective" id="1898890529%2FFunctions%2F-1451631312" data-filterable-set=":silk-game:dokkaHtmlPartial/main"></a>
+        <div class="table-row" data-filterable-current=":silk-game:dokkaHtmlPartial/main" data-filterable-set=":silk-game:dokkaHtmlPartial/main">
+          <div class="main-subrow keyValue ">
+            <div class=""><span class="inline-flex">
+                <div><a href="index.html#1898890529%2FFunctions%2F-1451631312"><span>has</span><wbr><span><span>Objective</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1898890529%2FFunctions%2F-1451631312"></span>
+                  <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                </span></span></div>
+            <div>
+              <div class="title">
+                <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-depenent-content" data-active="" data-togglable=":silk-game:dokkaHtmlPartial/main"><div class="symbol monospace"><span class="token keyword">open </span><span class="token keyword"></span><span class="token keyword">fun </span><a href="index.html#1898890529%2FFunctions%2F-1451631312"><span class="token function">hasObjective</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">string<span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html">String</a></span></span><span class="token punctuation">)</span><span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-boolean/index.html">Boolean</a><span class="top-right-position"><span class="copy-icon"></span><div class="copy-popup-wrapper popup-to-left"><span class="copy-popup-icon"></span><span>Content copied to clipboard</span></div></span></div></div></div>
+              </div>
+            </div>
+          </div>
+        </div>
+<a data-name="674747916%2FFunctions%2F-1451631312" anchor-label="hasPlayerScore" id="674747916%2FFunctions%2F-1451631312" data-filterable-set=":silk-game:dokkaHtmlPartial/main"></a>
+        <div class="table-row" data-filterable-current=":silk-game:dokkaHtmlPartial/main" data-filterable-set=":silk-game:dokkaHtmlPartial/main">
+          <div class="main-subrow keyValue ">
+            <div class=""><span class="inline-flex">
+                <div><a href="index.html#674747916%2FFunctions%2F-1451631312"><span>has</span><wbr><span>Player</span><wbr><span><span>Score</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="674747916%2FFunctions%2F-1451631312"></span>
+                  <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                </span></span></div>
+            <div>
+              <div class="title">
+                <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-depenent-content" data-active="" data-togglable=":silk-game:dokkaHtmlPartial/main"><div class="symbol monospace"><span class="token keyword">open </span><span class="token keyword"></span><span class="token keyword">fun </span><a href="index.html#674747916%2FFunctions%2F-1451631312"><span class="token function">hasPlayerScore</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">string<span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html">String</a><span class="token punctuation">, </span></span><span class="parameter ">objective<span class="token operator">: </span><span data-unresolved-link="net.minecraft.world.scores/Objective///PointingToDeclaration/">Objective</span></span></span><span class="token punctuation">)</span><span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-boolean/index.html">Boolean</a><span class="top-right-position"><span class="copy-icon"></span><div class="copy-popup-wrapper popup-to-left"><span class="copy-popup-icon"></span><span>Content copied to clipboard</span></div></span></div></div></div>
+              </div>
+            </div>
+          </div>
+        </div>
+<a data-name="-245057707%2FFunctions%2F-1451631312" anchor-label="hideFromPlayer" id="-245057707%2FFunctions%2F-1451631312" data-filterable-set=":silk-game:dokkaHtmlPartial/main"></a>
+        <div class="table-row" data-filterable-current=":silk-game:dokkaHtmlPartial/main" data-filterable-set=":silk-game:dokkaHtmlPartial/main">
+          <div class="main-subrow keyValue ">
+            <div class=""><span class="inline-flex">
+                <div><a href="hide-from-player.html"><span>hide</span><wbr><span>From</span><wbr><span><span>Player</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-245057707%2FFunctions%2F-1451631312"></span>
+                  <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                </span></span></div>
+            <div>
+              <div class="title">
+                <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-depenent-content" data-active="" data-togglable=":silk-game:dokkaHtmlPartial/main"><div class="symbol monospace"><span class="token keyword"></span><span class="token keyword">fun </span><a href="hide-from-player.html"><span class="token function">hideFromPlayer</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">player<span class="token operator">: </span><span data-unresolved-link="net.minecraft.server.level/ServerPlayer///PointingToDeclaration/">ServerPlayer</span></span></span><span class="token punctuation">)</span><span class="top-right-position"><span class="copy-icon"></span><div class="copy-popup-wrapper popup-to-left"><span class="copy-popup-icon"></span><span>Content copied to clipboard</span></div></span></div></div></div>
+              </div>
+            </div>
+          </div>
+        </div>
+<a data-name="-1069392862%2FFunctions%2F-1451631312" anchor-label="onObjectiveAdded" id="-1069392862%2FFunctions%2F-1451631312" data-filterable-set=":silk-game:dokkaHtmlPartial/main"></a>
+        <div class="table-row" data-filterable-current=":silk-game:dokkaHtmlPartial/main" data-filterable-set=":silk-game:dokkaHtmlPartial/main">
+          <div class="main-subrow keyValue ">
+            <div class=""><span class="inline-flex">
+                <div><a href="index.html#-1069392862%2FFunctions%2F-1451631312"><span>on</span><wbr><span>Objective</span><wbr><span><span>Added</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1069392862%2FFunctions%2F-1451631312"></span>
+                  <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                </span></span></div>
+            <div>
+              <div class="title">
+                <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-depenent-content" data-active="" data-togglable=":silk-game:dokkaHtmlPartial/main"><div class="symbol monospace"><span class="token keyword">open </span><span class="token keyword"></span><span class="token keyword">fun </span><a href="index.html#-1069392862%2FFunctions%2F-1451631312"><span class="token function">onObjectiveAdded</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">objective<span class="token operator">: </span><span data-unresolved-link="net.minecraft.world.scores/Objective///PointingToDeclaration/">Objective</span></span></span><span class="token punctuation">)</span><span class="top-right-position"><span class="copy-icon"></span><div class="copy-popup-wrapper popup-to-left"><span class="copy-popup-icon"></span><span>Content copied to clipboard</span></div></span></div></div></div>
+              </div>
+            </div>
+          </div>
+        </div>
+<a data-name="1185139502%2FFunctions%2F-1451631312" anchor-label="onObjectiveChanged" id="1185139502%2FFunctions%2F-1451631312" data-filterable-set=":silk-game:dokkaHtmlPartial/main"></a>
+        <div class="table-row" data-filterable-current=":silk-game:dokkaHtmlPartial/main" data-filterable-set=":silk-game:dokkaHtmlPartial/main">
+          <div class="main-subrow keyValue ">
+            <div class=""><span class="inline-flex">
+                <div><a href="index.html#1185139502%2FFunctions%2F-1451631312"><span>on</span><wbr><span>Objective</span><wbr><span><span>Changed</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1185139502%2FFunctions%2F-1451631312"></span>
+                  <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                </span></span></div>
+            <div>
+              <div class="title">
+                <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-depenent-content" data-active="" data-togglable=":silk-game:dokkaHtmlPartial/main"><div class="symbol monospace"><span class="token keyword">open </span><span class="token keyword"></span><span class="token keyword">fun </span><a href="index.html#1185139502%2FFunctions%2F-1451631312"><span class="token function">onObjectiveChanged</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">objective<span class="token operator">: </span><span data-unresolved-link="net.minecraft.world.scores/Objective///PointingToDeclaration/">Objective</span></span></span><span class="token punctuation">)</span><span class="top-right-position"><span class="copy-icon"></span><div class="copy-popup-wrapper popup-to-left"><span class="copy-popup-icon"></span><span>Content copied to clipboard</span></div></span></div></div></div>
+              </div>
+            </div>
+          </div>
+        </div>
+<a data-name="-1921370878%2FFunctions%2F-1451631312" anchor-label="onObjectiveRemoved" id="-1921370878%2FFunctions%2F-1451631312" data-filterable-set=":silk-game:dokkaHtmlPartial/main"></a>
+        <div class="table-row" data-filterable-current=":silk-game:dokkaHtmlPartial/main" data-filterable-set=":silk-game:dokkaHtmlPartial/main">
+          <div class="main-subrow keyValue ">
+            <div class=""><span class="inline-flex">
+                <div><a href="index.html#-1921370878%2FFunctions%2F-1451631312"><span>on</span><wbr><span>Objective</span><wbr><span><span>Removed</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1921370878%2FFunctions%2F-1451631312"></span>
+                  <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                </span></span></div>
+            <div>
+              <div class="title">
+                <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-depenent-content" data-active="" data-togglable=":silk-game:dokkaHtmlPartial/main"><div class="symbol monospace"><span class="token keyword">open </span><span class="token keyword"></span><span class="token keyword">fun </span><a href="index.html#-1921370878%2FFunctions%2F-1451631312"><span class="token function">onObjectiveRemoved</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">objective<span class="token operator">: </span><span data-unresolved-link="net.minecraft.world.scores/Objective///PointingToDeclaration/">Objective</span></span></span><span class="token punctuation">)</span><span class="top-right-position"><span class="copy-icon"></span><div class="copy-popup-wrapper popup-to-left"><span class="copy-popup-icon"></span><span>Content copied to clipboard</span></div></span></div></div></div>
+              </div>
+            </div>
+          </div>
+        </div>
+<a data-name="-260350740%2FFunctions%2F-1451631312" anchor-label="onPlayerRemoved" id="-260350740%2FFunctions%2F-1451631312" data-filterable-set=":silk-game:dokkaHtmlPartial/main"></a>
+        <div class="table-row" data-filterable-current=":silk-game:dokkaHtmlPartial/main" data-filterable-set=":silk-game:dokkaHtmlPartial/main">
+          <div class="main-subrow keyValue ">
+            <div class=""><span class="inline-flex">
+                <div><a href="index.html#-260350740%2FFunctions%2F-1451631312"><span>on</span><wbr><span>Player</span><wbr><span><span>Removed</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-260350740%2FFunctions%2F-1451631312"></span>
+                  <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                </span></span></div>
+            <div>
+              <div class="title">
+                <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-depenent-content" data-active="" data-togglable=":silk-game:dokkaHtmlPartial/main"><div class="symbol monospace"><span class="token keyword">open </span><span class="token keyword"></span><span class="token keyword">fun </span><a href="index.html#-260350740%2FFunctions%2F-1451631312"><span class="token function">onPlayerRemoved</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">string<span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html">String</a></span></span><span class="token punctuation">)</span><span class="top-right-position"><span class="copy-icon"></span><div class="copy-popup-wrapper popup-to-left"><span class="copy-popup-icon"></span><span>Content copied to clipboard</span></div></span></div></div></div>
+              </div>
+            </div>
+          </div>
+        </div>
+<a data-name="-668293131%2FFunctions%2F-1451631312" anchor-label="onPlayerScoreRemoved" id="-668293131%2FFunctions%2F-1451631312" data-filterable-set=":silk-game:dokkaHtmlPartial/main"></a>
+        <div class="table-row" data-filterable-current=":silk-game:dokkaHtmlPartial/main" data-filterable-set=":silk-game:dokkaHtmlPartial/main">
+          <div class="main-subrow keyValue ">
+            <div class=""><span class="inline-flex">
+                <div><a href="index.html#-668293131%2FFunctions%2F-1451631312"><span>on</span><wbr><span>Player</span><wbr><span>Score</span><wbr><span><span>Removed</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-668293131%2FFunctions%2F-1451631312"></span>
+                  <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                </span></span></div>
+            <div>
+              <div class="title">
+                <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-depenent-content" data-active="" data-togglable=":silk-game:dokkaHtmlPartial/main"><div class="symbol monospace"><span class="token keyword">open </span><span class="token keyword"></span><span class="token keyword">fun </span><a href="index.html#-668293131%2FFunctions%2F-1451631312"><span class="token function">onPlayerScoreRemoved</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">string<span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html">String</a><span class="token punctuation">, </span></span><span class="parameter ">objective<span class="token operator">: </span><span data-unresolved-link="net.minecraft.world.scores/Objective///PointingToDeclaration/">Objective</span></span></span><span class="token punctuation">)</span><span class="top-right-position"><span class="copy-icon"></span><div class="copy-popup-wrapper popup-to-left"><span class="copy-popup-icon"></span><span>Content copied to clipboard</span></div></span></div></div></div>
+              </div>
+            </div>
+          </div>
+        </div>
+<a data-name="116990303%2FFunctions%2F-1451631312" anchor-label="onScoreChanged" id="116990303%2FFunctions%2F-1451631312" data-filterable-set=":silk-game:dokkaHtmlPartial/main"></a>
+        <div class="table-row" data-filterable-current=":silk-game:dokkaHtmlPartial/main" data-filterable-set=":silk-game:dokkaHtmlPartial/main">
+          <div class="main-subrow keyValue ">
+            <div class=""><span class="inline-flex">
+                <div><a href="on-score-changed.html"><span>on</span><wbr><span>Score</span><wbr><span><span>Changed</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="116990303%2FFunctions%2F-1451631312"></span>
+                  <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                </span></span></div>
+            <div>
+              <div class="title">
+                <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-depenent-content" data-active="" data-togglable=":silk-game:dokkaHtmlPartial/main"><div class="symbol monospace"><span class="token keyword">open </span><span class="token keyword">override </span><span class="token keyword">fun </span><a href="on-score-changed.html"><span class="token function">onScoreChanged</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">score<span class="token operator">: </span><span data-unresolved-link="net.minecraft.world.scores/Score///PointingToDeclaration/">Score</span></span></span><span class="token punctuation">)</span><span class="top-right-position"><span class="copy-icon"></span><div class="copy-popup-wrapper popup-to-left"><span class="copy-popup-icon"></span><span>Content copied to clipboard</span></div></span></div></div></div>
+              </div>
+            </div>
+          </div>
+        </div>
+<a data-name="-1708447998%2FFunctions%2F-1451631312" anchor-label="onTeamAdded" id="-1708447998%2FFunctions%2F-1451631312" data-filterable-set=":silk-game:dokkaHtmlPartial/main"></a>
+        <div class="table-row" data-filterable-current=":silk-game:dokkaHtmlPartial/main" data-filterable-set=":silk-game:dokkaHtmlPartial/main">
+          <div class="main-subrow keyValue ">
+            <div class=""><span class="inline-flex">
+                <div><a href="on-team-added.html"><span>on</span><wbr><span>Team</span><wbr><span><span>Added</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1708447998%2FFunctions%2F-1451631312"></span>
+                  <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                </span></span></div>
+            <div>
+              <div class="title">
+                <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-depenent-content" data-active="" data-togglable=":silk-game:dokkaHtmlPartial/main"><div class="symbol monospace"><span class="token keyword">open </span><span class="token keyword">override </span><span class="token keyword">fun </span><a href="on-team-added.html"><span class="token function">onTeamAdded</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">team<span class="token operator">: </span><span data-unresolved-link="net.minecraft.world.scores/PlayerTeam///PointingToDeclaration/">PlayerTeam</span></span></span><span class="token punctuation">)</span><span class="top-right-position"><span class="copy-icon"></span><div class="copy-popup-wrapper popup-to-left"><span class="copy-popup-icon"></span><span>Content copied to clipboard</span></div></span></div></div></div>
+              </div>
+            </div>
+          </div>
+        </div>
+<a data-name="-608301258%2FFunctions%2F-1451631312" anchor-label="onTeamChanged" id="-608301258%2FFunctions%2F-1451631312" data-filterable-set=":silk-game:dokkaHtmlPartial/main"></a>
+        <div class="table-row" data-filterable-current=":silk-game:dokkaHtmlPartial/main" data-filterable-set=":silk-game:dokkaHtmlPartial/main">
+          <div class="main-subrow keyValue ">
+            <div class=""><span class="inline-flex">
+                <div><a href="on-team-changed.html"><span>on</span><wbr><span>Team</span><wbr><span><span>Changed</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-608301258%2FFunctions%2F-1451631312"></span>
+                  <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                </span></span></div>
+            <div>
+              <div class="title">
+                <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-depenent-content" data-active="" data-togglable=":silk-game:dokkaHtmlPartial/main"><div class="symbol monospace"><span class="token keyword">open </span><span class="token keyword">override </span><span class="token keyword">fun </span><a href="on-team-changed.html"><span class="token function">onTeamChanged</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">team<span class="token operator">: </span><span data-unresolved-link="net.minecraft.world.scores/PlayerTeam///PointingToDeclaration/">PlayerTeam</span></span></span><span class="token punctuation">)</span><span class="top-right-position"><span class="copy-icon"></span><div class="copy-popup-wrapper popup-to-left"><span class="copy-popup-icon"></span><span>Content copied to clipboard</span></div></span></div></div></div>
+              </div>
+            </div>
+          </div>
+        </div>
+<a data-name="-629539823%2FFunctions%2F-1451631312" anchor-label="onTeamRemoved" id="-629539823%2FFunctions%2F-1451631312" data-filterable-set=":silk-game:dokkaHtmlPartial/main"></a>
+        <div class="table-row" data-filterable-current=":silk-game:dokkaHtmlPartial/main" data-filterable-set=":silk-game:dokkaHtmlPartial/main">
+          <div class="main-subrow keyValue ">
+            <div class=""><span class="inline-flex">
+                <div><a href="index.html#-629539823%2FFunctions%2F-1451631312"><span>on</span><wbr><span>Team</span><wbr><span><span>Removed</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-629539823%2FFunctions%2F-1451631312"></span>
+                  <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                </span></span></div>
+            <div>
+              <div class="title">
+                <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-depenent-content" data-active="" data-togglable=":silk-game:dokkaHtmlPartial/main"><div class="symbol monospace"><span class="token keyword">open </span><span class="token keyword"></span><span class="token keyword">fun </span><a href="index.html#-629539823%2FFunctions%2F-1451631312"><span class="token function">onTeamRemoved</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">playerTeam<span class="token operator">: </span><span data-unresolved-link="net.minecraft.world.scores/PlayerTeam///PointingToDeclaration/">PlayerTeam</span></span></span><span class="token punctuation">)</span><span class="top-right-position"><span class="copy-icon"></span><div class="copy-popup-wrapper popup-to-left"><span class="copy-popup-icon"></span><span>Content copied to clipboard</span></div></span></div></div></div>
+              </div>
+            </div>
+          </div>
+        </div>
+<a data-name="-111970807%2FFunctions%2F-1451631312" anchor-label="removeObjective" id="-111970807%2FFunctions%2F-1451631312" data-filterable-set=":silk-game:dokkaHtmlPartial/main"></a>
+        <div class="table-row" data-filterable-current=":silk-game:dokkaHtmlPartial/main" data-filterable-set=":silk-game:dokkaHtmlPartial/main">
+          <div class="main-subrow keyValue ">
+            <div class=""><span class="inline-flex">
+                <div><a href="index.html#-111970807%2FFunctions%2F-1451631312"><span>remove</span><wbr><span><span>Objective</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-111970807%2FFunctions%2F-1451631312"></span>
+                  <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                </span></span></div>
+            <div>
+              <div class="title">
+                <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-depenent-content" data-active="" data-togglable=":silk-game:dokkaHtmlPartial/main"><div class="symbol monospace"><span class="token keyword">open </span><span class="token keyword"></span><span class="token keyword">fun </span><a href="index.html#-111970807%2FFunctions%2F-1451631312"><span class="token function">removeObjective</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">objective<span class="token operator">: </span><span data-unresolved-link="net.minecraft.world.scores/Objective///PointingToDeclaration/">Objective</span></span></span><span class="token punctuation">)</span><span class="top-right-position"><span class="copy-icon"></span><div class="copy-popup-wrapper popup-to-left"><span class="copy-popup-icon"></span><span>Content copied to clipboard</span></div></span></div></div></div>
+              </div>
+            </div>
+          </div>
+        </div>
+<a data-name="1388214693%2FFunctions%2F-1451631312" anchor-label="removePlayerFromTeam" id="1388214693%2FFunctions%2F-1451631312" data-filterable-set=":silk-game:dokkaHtmlPartial/main"></a>
+        <div class="table-row" data-filterable-current=":silk-game:dokkaHtmlPartial/main" data-filterable-set=":silk-game:dokkaHtmlPartial/main">
+          <div class="main-subrow keyValue ">
+            <div class=""><span class="inline-flex">
+                <div><a href="index.html#-1055811218%2FFunctions%2F-1451631312"><span>remove</span><wbr><span>Player</span><wbr><span>From</span><wbr><span><span>Team</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1388214693%2FFunctions%2F-1451631312"></span>
+                  <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                </span></span></div>
+            <div>
+              <div class="title">
+                <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-depenent-content" data-active="" data-togglable=":silk-game:dokkaHtmlPartial/main"><div class="symbol monospace"><span class="token keyword">open </span><span class="token keyword"></span><span class="token keyword">fun </span><a href="index.html#-1055811218%2FFunctions%2F-1451631312"><span class="token function">removePlayerFromTeam</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">string<span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html">String</a></span></span><span class="token punctuation">)</span><span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-boolean/index.html">Boolean</a><span class="top-right-position"><span class="copy-icon"></span><div class="copy-popup-wrapper popup-to-left"><span class="copy-popup-icon"></span><span>Content copied to clipboard</span></div></span></div><div class="symbol monospace"><span class="token keyword">open </span><span class="token keyword">override </span><span class="token keyword">fun </span><a href="remove-player-from-team.html"><span class="token function">removePlayerFromTeam</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">playerName<span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html">String</a><span class="token punctuation">, </span></span><span class="parameter ">team<span class="token operator">: </span><span data-unresolved-link="net.minecraft.world.scores/PlayerTeam///PointingToDeclaration/">PlayerTeam</span></span></span><span class="token punctuation">)</span><span class="top-right-position"><span class="copy-icon"></span><div class="copy-popup-wrapper popup-to-left"><span class="copy-popup-icon"></span><span>Content copied to clipboard</span></div></span></div></div></div>
+              </div>
+            </div>
+          </div>
+        </div>
+<a data-name="-184110651%2FFunctions%2F-1451631312" anchor-label="removePlayerTeam" id="-184110651%2FFunctions%2F-1451631312" data-filterable-set=":silk-game:dokkaHtmlPartial/main"></a>
+        <div class="table-row" data-filterable-current=":silk-game:dokkaHtmlPartial/main" data-filterable-set=":silk-game:dokkaHtmlPartial/main">
+          <div class="main-subrow keyValue ">
+            <div class=""><span class="inline-flex">
+                <div><a href="index.html#-184110651%2FFunctions%2F-1451631312"><span>remove</span><wbr><span>Player</span><wbr><span><span>Team</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-184110651%2FFunctions%2F-1451631312"></span>
+                  <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                </span></span></div>
+            <div>
+              <div class="title">
+                <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-depenent-content" data-active="" data-togglable=":silk-game:dokkaHtmlPartial/main"><div class="symbol monospace"><span class="token keyword">open </span><span class="token keyword"></span><span class="token keyword">fun </span><a href="index.html#-184110651%2FFunctions%2F-1451631312"><span class="token function">removePlayerTeam</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">playerTeam<span class="token operator">: </span><span data-unresolved-link="net.minecraft.world.scores/PlayerTeam///PointingToDeclaration/">PlayerTeam</span></span></span><span class="token punctuation">)</span><span class="top-right-position"><span class="copy-icon"></span><div class="copy-popup-wrapper popup-to-left"><span class="copy-popup-icon"></span><span>Content copied to clipboard</span></div></span></div></div></div>
+              </div>
+            </div>
+          </div>
+        </div>
+<a data-name="1217003842%2FFunctions%2F-1451631312" anchor-label="resetPlayerScore" id="1217003842%2FFunctions%2F-1451631312" data-filterable-set=":silk-game:dokkaHtmlPartial/main"></a>
+        <div class="table-row" data-filterable-current=":silk-game:dokkaHtmlPartial/main" data-filterable-set=":silk-game:dokkaHtmlPartial/main">
+          <div class="main-subrow keyValue ">
+            <div class=""><span class="inline-flex">
+                <div><a href="index.html#1217003842%2FFunctions%2F-1451631312"><span>reset</span><wbr><span>Player</span><wbr><span><span>Score</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1217003842%2FFunctions%2F-1451631312"></span>
+                  <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                </span></span></div>
+            <div>
+              <div class="title">
+                <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-depenent-content" data-active="" data-togglable=":silk-game:dokkaHtmlPartial/main"><div class="symbol monospace"><span class="token keyword">open </span><span class="token keyword"></span><span class="token keyword">fun </span><a href="index.html#1217003842%2FFunctions%2F-1451631312"><span class="token function">resetPlayerScore</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">string<span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html">String</a><span class="token punctuation">, </span></span><span class="parameter "><span><span class="token annotation">@</span><span data-unresolved-link="org.jetbrains.annotations/Nullable///PointingToDeclaration/"><span class="token annotation">Nullable</span></span>&nbsp;</span>objective<span class="token operator">: </span><span data-unresolved-link="net.minecraft.world.scores/Objective///PointingToDeclaration/">Objective</span><span class="token operator">?</span></span></span><span class="token punctuation">)</span><span class="top-right-position"><span class="copy-icon"></span><div class="copy-popup-wrapper popup-to-left"><span class="copy-popup-icon"></span><span>Content copied to clipboard</span></div></span></div></div></div>
+              </div>
+            </div>
+          </div>
+        </div>
+<a data-name="1699908507%2FFunctions%2F-1451631312" anchor-label="setDisplayObjective" id="1699908507%2FFunctions%2F-1451631312" data-filterable-set=":silk-game:dokkaHtmlPartial/main"></a>
+        <div class="table-row" data-filterable-current=":silk-game:dokkaHtmlPartial/main" data-filterable-set=":silk-game:dokkaHtmlPartial/main">
+          <div class="main-subrow keyValue ">
+            <div class=""><span class="inline-flex">
+                <div><a href="index.html#1699908507%2FFunctions%2F-1451631312"><span>set</span><wbr><span>Display</span><wbr><span><span>Objective</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1699908507%2FFunctions%2F-1451631312"></span>
+                  <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                </span></span></div>
+            <div>
+              <div class="title">
+                <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-depenent-content" data-active="" data-togglable=":silk-game:dokkaHtmlPartial/main"><div class="symbol monospace"><span class="token keyword">open </span><span class="token keyword"></span><span class="token keyword">fun </span><a href="index.html#1699908507%2FFunctions%2F-1451631312"><span class="token function">setDisplayObjective</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">i<span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-int/index.html">Int</a><span class="token punctuation">, </span></span><span class="parameter "><span><span class="token annotation">@</span><span data-unresolved-link="org.jetbrains.annotations/Nullable///PointingToDeclaration/"><span class="token annotation">Nullable</span></span>&nbsp;</span>objective<span class="token operator">: </span><span data-unresolved-link="net.minecraft.world.scores/Objective///PointingToDeclaration/">Objective</span><span class="token operator">?</span></span></span><span class="token punctuation">)</span><span class="top-right-position"><span class="copy-icon"></span><div class="copy-popup-wrapper popup-to-left"><span class="copy-popup-icon"></span><span>Content copied to clipboard</span></div></span></div></div></div>
+              </div>
+            </div>
+          </div>
+        </div>
+<a data-name="78917885%2FFunctions%2F-1451631312" anchor-label="setPlayerScore" id="78917885%2FFunctions%2F-1451631312" data-filterable-set=":silk-game:dokkaHtmlPartial/main"></a>
+        <div class="table-row" data-filterable-current=":silk-game:dokkaHtmlPartial/main" data-filterable-set=":silk-game:dokkaHtmlPartial/main">
+          <div class="main-subrow keyValue ">
+            <div class=""><span class="inline-flex">
+                <div><a href="set-player-score.html"><span>set</span><wbr><span>Player</span><wbr><span><span>Score</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="78917885%2FFunctions%2F-1451631312"></span>
+                  <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                </span></span></div>
+            <div>
+              <div class="title">
+                <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-depenent-content" data-active="" data-togglable=":silk-game:dokkaHtmlPartial/main"><div class="symbol monospace"><span class="token keyword"></span><span class="token keyword">fun </span><a href="set-player-score.html"><span class="token function">setPlayerScore</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">player<span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html">String</a><span class="token punctuation">, </span></span><span class="parameter ">score<span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-int/index.html">Int</a></span></span><span class="token punctuation">)</span><span class="top-right-position"><span class="copy-icon"></span><div class="copy-popup-wrapper popup-to-left"><span class="copy-popup-icon"></span><span>Content copied to clipboard</span></div></span></div></div></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      <div class="footer">
+        <span class="go-to-top-icon"><a href="#content" id="go-to-top-link"></a></span><span>© 2022 Copyright</span><span class="pull-right"><span>Generated by </span><a href="https://github.com/Kotlin/dokka"><span>dokka</span><span class="padded-icon"></span></a></span>
+      </div>
+    </div>
+</div>
+
+</body></html>
+

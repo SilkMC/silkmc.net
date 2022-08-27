@@ -1,0 +1,272 @@
+<!doctype html>
+<html>
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1" charset="UTF-8">
+    <title>net.silkmc.silk.core.event</title>
+<link href="../../images/logo-icon.svg" rel="icon" type="image/svg"><script>var pathToRoot = "../../";</script>    <script>const storage = localStorage.getItem("dokka-dark-mode")
+const savedDarkMode = storage ? JSON.parse(storage) : false
+if(savedDarkMode === true){
+    document.getElementsByTagName("html")[0].classList.add("theme-dark")
+}</script>
+<script type="text/javascript" src="../../scripts/sourceset_dependencies.js" async></script>
+<link href="../../styles/style.css" rel="Stylesheet">
+<link href="../../styles/jetbrains-mono.css" rel="Stylesheet">
+<link href="../../styles/main.css" rel="Stylesheet">
+<link href="../../styles/prism.css" rel="Stylesheet">
+<link href="../../styles/logo-styles.css" rel="Stylesheet">
+<script type="text/javascript" src="../../scripts/clipboard.js" async></script>
+<script type="text/javascript" src="../../scripts/navigation-loader.js" async></script>
+<script type="text/javascript" src="../../scripts/platform-content-handler.js" async></script>
+<script type="text/javascript" src="../../scripts/main.js" defer></script>
+<script type="text/javascript" src="../../scripts/prism.js" async></script></head>
+<body>
+<div class="navigation-wrapper" id="navigation-wrapper">
+    <div id="leftToggler"><span class="icon-toggler"></span></div>
+    <div class="library-name">
+<a href="../../index.html">
+<span>silk</span>            </a>    </div>
+    <div>
+    </div>
+    <div class="pull-right d-flex">
+        <button id="theme-toggle-button"><span id="theme-toggle"></span></button>
+        <div id="searchBar"></div>
+    </div>
+</div>
+<div id="container">
+    <div id="leftColumn">
+        <div id="sideMenu"></div>
+    </div>
+    <div id="main">
+<div class="main-content" id="content" pageids="silk-core::net.silkmc.silk.core.event////PointingToDeclaration//1209998627">
+  <div class="breadcrumbs"><a href="../index.html">silk-core</a><span class="delimiter">/</span><a href="index.html">net.silkmc.silk.core.event</a></div>
+  <div class="cover ">
+    <h1 class="cover"><span><span>Package</span></span> <span>net.</span><wbr><span>silkmc.</span><wbr><span>silk.</span><wbr><span>core.</span><wbr><span>event</span></h1>
+  </div>
+  <div class="tabbedcontent">
+    <div class="tabs-section" tabs-section="tabs-section"><button class="section-tab" data-active="" data-togglable="Types">Types</button><button class="section-tab" data-togglable="Properties">Properties</button></div>
+    <div class="tabs-section-body">
+      <h2 class="">Types</h2>
+      <div class="table" data-togglable="Types"><a data-name="-420628042%2FClasslikes%2F1209998627" anchor-label="AsyncEvent" id="-420628042%2FClasslikes%2F1209998627" data-filterable-set=":silk-core:dokkaHtmlPartial/main"></a>
+        <div class="table-row" data-filterable-current=":silk-core:dokkaHtmlPartial/main" data-filterable-set=":silk-core:dokkaHtmlPartial/main">
+          <div class="main-subrow keyValue ">
+            <div class=""><span class="inline-flex">
+                <div><a href="-async-event/index.html"><span>Async</span><wbr><span><span>Event</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-420628042%2FClasslikes%2F1209998627"></span>
+                  <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                </span></span></div>
+            <div>
+              <div class="title">
+                <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-depenent-content" data-active="" data-togglable=":silk-core:dokkaHtmlPartial/main"><div class="symbol monospace"><span class="token keyword">open </span><span class="token keyword">class </span><a href="-async-event/index.html">AsyncEvent</a><span class="token operator">&lt;</span><span class="token keyword"></span><a href="-async-event/index.html">T</a><span class="token punctuation">, </span><span class="token keyword"></span><a href="-async-event/index.html">S</a><span class="token operator"> : </span><a href="-event-scope/index.html">EventScope</a><span class="token operator">&gt;</span><span class="token punctuation">(</span><span class="parameters "><span class="parameter "><span class="token keyword">val </span>clientSide<span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-boolean/index.html">Boolean</a><span class="token punctuation">, </span></span><span class="parameter ">scopeSupplier<span class="token operator">: </span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token operator"> -&gt; </span><span class="token keyword"></span><a href="-async-event/index.html">S</a></span></span><span class="token punctuation">)</span> : <a href="-event/index.html">Event</a><span class="token operator">&lt;</span><span class="token keyword"></span><a href="-async-event/index.html">T</a><span class="token punctuation">, </span><span class="token keyword"></span><a href="-async-event/index.html">S</a><span class="token operator">&gt; </span><span class="top-right-position"><span class="copy-icon"></span><div class="copy-popup-wrapper popup-to-left"><span class="copy-popup-icon"></span><span>Content copied to clipboard</span></div></span></div><div class="brief "><p class="paragraph">The same as <a href="-event/index.html">Event</a> but with additional async collectors (via a flow). This allows you to listen to the event asynchronously in a totally different <span data-unresolved-link="kotlinx.coroutines/CoroutineScope///PointingToDeclaration/">CoroutineScope</span>, and unregister via cancellation of that scope. To create an event of this type, have a look at the <a href="-event/-companion/sync-async.html">Event.syncAsync</a> and <a href="-event/-companion/sync-async-immutable.html">Event.syncAsyncImmutable</a> functions.</p></div></div></div>
+              </div>
+            </div>
+          </div>
+        </div>
+<a data-name="1306250584%2FClasslikes%2F1209998627" anchor-label="EntityEvents" id="1306250584%2FClasslikes%2F1209998627" data-filterable-set=":silk-core:dokkaHtmlPartial/main"></a>
+        <div class="table-row" data-filterable-current=":silk-core:dokkaHtmlPartial/main" data-filterable-set=":silk-core:dokkaHtmlPartial/main">
+          <div class="main-subrow keyValue ">
+            <div class=""><span class="inline-flex">
+                <div><a href="-entity-events/index.html"><span>Entity</span><wbr><span><span>Events</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1306250584%2FClasslikes%2F1209998627"></span>
+                  <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                </span></span></div>
+            <div>
+              <div class="title">
+                <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-depenent-content" data-active="" data-togglable=":silk-core:dokkaHtmlPartial/main"><div class="symbol monospace"><span class="token keyword">object </span><a href="-entity-events/index.html">EntityEvents</a><span class="top-right-position"><span class="copy-icon"></span><div class="copy-popup-wrapper popup-to-left"><span class="copy-popup-icon"></span><span>Content copied to clipboard</span></div></span></div></div></div>
+              </div>
+            </div>
+          </div>
+        </div>
+<a data-name="-1415127116%2FClasslikes%2F1209998627" anchor-label="Event" id="-1415127116%2FClasslikes%2F1209998627" data-filterable-set=":silk-core:dokkaHtmlPartial/main"></a>
+        <div class="table-row" data-filterable-current=":silk-core:dokkaHtmlPartial/main" data-filterable-set=":silk-core:dokkaHtmlPartial/main">
+          <div class="main-subrow keyValue ">
+            <div class=""><span class="inline-flex">
+                <div><a href="-event/index.html"><span><span>Event</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1415127116%2FClasslikes%2F1209998627"></span>
+                  <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                </span></span></div>
+            <div>
+              <div class="title">
+                <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-depenent-content" data-active="" data-togglable=":silk-core:dokkaHtmlPartial/main"><div class="symbol monospace"><span class="token keyword">open </span><span class="token keyword">class </span><a href="-event/index.html">Event</a><span class="token operator">&lt;</span><span class="token keyword"></span><a href="-event/index.html">T</a><span class="token punctuation">, </span><span class="token keyword"></span><a href="-event/index.html">S</a><span class="token operator"> : </span><a href="-event-scope/index.html">EventScope</a><span class="token operator">&gt;</span><span class="token punctuation">(</span><span class="parameters "><span class="parameter "><span class="token keyword">val </span>scopeSupplier<span class="token operator">: </span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token operator"> -&gt; </span><span class="token keyword"></span><a href="-event/index.html">S</a></span></span><span class="token punctuation">)</span><span class="top-right-position"><span class="copy-icon"></span><div class="copy-popup-wrapper popup-to-left"><span class="copy-popup-icon"></span><span>Content copied to clipboard</span></div></span></div><div class="brief "><p class="paragraph">The base event implementation with synchronous listeners. To create a new event of this type, have a look at the <a href="-event/-companion/only-sync.html">onlySync</a> and <a href="-event/-companion/only-sync-immutable.html">onlySyncImmutable</a> functions in the <code class="lang-kotlin">companion object</code>.</p></div></div></div>
+              </div>
+            </div>
+          </div>
+        </div>
+<a data-name="-1995041936%2FClasslikes%2F1209998627" anchor-label="EventPriority" id="-1995041936%2FClasslikes%2F1209998627" data-filterable-set=":silk-core:dokkaHtmlPartial/main"></a>
+        <div class="table-row" data-filterable-current=":silk-core:dokkaHtmlPartial/main" data-filterable-set=":silk-core:dokkaHtmlPartial/main">
+          <div class="main-subrow keyValue ">
+            <div class=""><span class="inline-flex">
+                <div><a href="-event-priority/index.html"><span>Event</span><wbr><span><span>Priority</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1995041936%2FClasslikes%2F1209998627"></span>
+                  <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                </span></span></div>
+            <div>
+              <div class="title">
+                <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-depenent-content" data-active="" data-togglable=":silk-core:dokkaHtmlPartial/main"><div class="symbol monospace"><span class="token keyword">enum </span><a href="-event-priority/index.html">EventPriority</a> : <a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-enum/index.html">Enum</a><span class="token operator">&lt;</span><span class="token keyword"></span><a href="-event-priority/index.html">EventPriority</a><span class="token operator">&gt; </span><span class="top-right-position"><span class="copy-icon"></span><div class="copy-popup-wrapper popup-to-left"><span class="copy-popup-icon"></span><span>Content copied to clipboard</span></div></span></div><div class="brief "><p class="paragraph">Enum constants representing a priority which an event listener may have over other event listeners. The priority goes from <a href="-event-priority/-f-i-r-s-t/index.html">FIRST</a> (executed before everything else) to <a href="-event-priority/-l-a-s-t/index.html">LAST</a> (executed after everything else has finished).</p></div></div></div>
+              </div>
+            </div>
+          </div>
+        </div>
+<a data-name="-1000385541%2FClasslikes%2F1209998627" anchor-label="Events" id="-1000385541%2FClasslikes%2F1209998627" data-filterable-set=":silk-core:dokkaHtmlPartial/main"></a>
+        <div class="table-row" data-filterable-current=":silk-core:dokkaHtmlPartial/main" data-filterable-set=":silk-core:dokkaHtmlPartial/main">
+          <div class="main-subrow keyValue ">
+            <div class=""><span class="inline-flex">
+                <div><a href="-events/index.html"><span><span>Events</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1000385541%2FClasslikes%2F1209998627"></span>
+                  <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                </span></span></div>
+            <div>
+              <div class="title">
+                <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-depenent-content" data-active="" data-togglable=":silk-core:dokkaHtmlPartial/main"><div class="symbol monospace"><span class="token keyword">object </span><a href="-events/index.html">Events</a><span class="top-right-position"><span class="copy-icon"></span><div class="copy-popup-wrapper popup-to-left"><span class="copy-popup-icon"></span><span>Content copied to clipboard</span></div></span></div><div class="brief "><p class="paragraph">The base object for discovering events, check the extensions values of this object.</p></div></div></div>
+              </div>
+            </div>
+          </div>
+        </div>
+<a data-name="2145295066%2FClasslikes%2F1209998627" anchor-label="EventScope" id="2145295066%2FClasslikes%2F1209998627" data-filterable-set=":silk-core:dokkaHtmlPartial/main"></a>
+        <div class="table-row" data-filterable-current=":silk-core:dokkaHtmlPartial/main" data-filterable-set=":silk-core:dokkaHtmlPartial/main">
+          <div class="main-subrow keyValue ">
+            <div class=""><span class="inline-flex">
+                <div><a href="-event-scope/index.html"><span>Event</span><wbr><span><span>Scope</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="2145295066%2FClasslikes%2F1209998627"></span>
+                  <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                </span></span></div>
+            <div>
+              <div class="title">
+                <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-depenent-content" data-active="" data-togglable=":silk-core:dokkaHtmlPartial/main"><div class="symbol monospace"><span class="token keyword">interface </span><a href="-event-scope/index.html">EventScope</a><span class="top-right-position"><span class="copy-icon"></span><div class="copy-popup-wrapper popup-to-left"><span class="copy-popup-icon"></span><span>Content copied to clipboard</span></div></span></div><div class="brief "><p class="paragraph">An event scope can provide additional information and / or functions to event handlers without the event itself having to implement these features. The prime example for this is cancellation, see <a href="-event-scope/-cancellable/index.html">Cancellable</a>.</p></div></div></div>
+              </div>
+            </div>
+          </div>
+        </div>
+<a data-name="301419909%2FClasslikes%2F1209998627" anchor-label="EventScopeProperty" id="301419909%2FClasslikes%2F1209998627" data-filterable-set=":silk-core:dokkaHtmlPartial/main"></a>
+        <div class="table-row" data-filterable-current=":silk-core:dokkaHtmlPartial/main" data-filterable-set=":silk-core:dokkaHtmlPartial/main">
+          <div class="main-subrow keyValue ">
+            <div class=""><span class="inline-flex">
+                <div><a href="-event-scope-property/index.html"><span>Event</span><wbr><span>Scope</span><wbr><span><span>Property</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="301419909%2FClasslikes%2F1209998627"></span>
+                  <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                </span></span></div>
+            <div>
+              <div class="title">
+                <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-depenent-content" data-active="" data-togglable=":silk-core:dokkaHtmlPartial/main"><div class="symbol monospace"><span class="token keyword">class </span><a href="-event-scope-property/index.html">EventScopeProperty</a><span class="token operator">&lt;</span><span class="token keyword"></span><a href="-event-scope-property/index.html">V</a><span class="token operator">&gt;</span><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">value<span class="token operator">: </span><a href="-event-scope-property/index.html">V</a></span></span><span class="token punctuation">)</span><span class="top-right-position"><span class="copy-icon"></span><div class="copy-popup-wrapper popup-to-left"><span class="copy-popup-icon"></span><span>Content copied to clipboard</span></div></span></div></div></div>
+              </div>
+            </div>
+          </div>
+        </div>
+<a data-name="-164983317%2FClasslikes%2F1209998627" anchor-label="ListenerInstance" id="-164983317%2FClasslikes%2F1209998627" data-filterable-set=":silk-core:dokkaHtmlPartial/main"></a>
+        <div class="table-row" data-filterable-current=":silk-core:dokkaHtmlPartial/main" data-filterable-set=":silk-core:dokkaHtmlPartial/main">
+          <div class="main-subrow keyValue ">
+            <div class=""><span class="inline-flex">
+                <div><a href="-listener-instance/index.html"><span>Listener</span><wbr><span><span>Instance</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-164983317%2FClasslikes%2F1209998627"></span>
+                  <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                </span></span></div>
+            <div>
+              <div class="title">
+                <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-depenent-content" data-active="" data-togglable=":silk-core:dokkaHtmlPartial/main"><div class="symbol monospace"><span class="token keyword">class </span><a href="-listener-instance/index.html">ListenerInstance</a><span class="token operator">&lt;</span><span class="token keyword"></span><a href="-listener-instance/index.html">L</a><span class="token operator">&gt;</span><span class="token punctuation">(</span><span class="parameters wrapped"><span class="parameter indented">&nbsp;&nbsp;&nbsp;&nbsp;lock<span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-any/index.html">Any</a><span class="token punctuation">, </span></span><span class="parameter indented">&nbsp;&nbsp;&nbsp;&nbsp;listener<span class="token operator">: </span><a href="-listener-instance/index.html">L</a><span class="token punctuation">, </span></span><span class="parameter indented">&nbsp;&nbsp;&nbsp;&nbsp;list<span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin.collections/-mutable-list/index.html">MutableList</a><span class="token operator">&lt;</span><span class="token keyword"></span><a href="-listener-instance/index.html">L</a><span class="token operator">&gt;</span></span></span><span class="token punctuation">)</span><span class="top-right-position"><span class="copy-icon"></span><div class="copy-popup-wrapper popup-to-left"><span class="copy-popup-icon"></span><span>Content copied to clipboard</span></div></span></div><div class="brief "><p class="paragraph">A simple instance class keeping track of a registered listener and making it possible to unregister it later.</p></div></div></div>
+              </div>
+            </div>
+          </div>
+        </div>
+<a data-name="-176752146%2FClasslikes%2F1209998627" anchor-label="MutableEventScope" id="-176752146%2FClasslikes%2F1209998627" data-filterable-set=":silk-core:dokkaHtmlPartial/main"></a>
+        <div class="table-row" data-filterable-current=":silk-core:dokkaHtmlPartial/main" data-filterable-set=":silk-core:dokkaHtmlPartial/main">
+          <div class="main-subrow keyValue ">
+            <div class=""><span class="inline-flex">
+                <div><a href="-mutable-event-scope/index.html"><span>Mutable</span><wbr><span>Event</span><wbr><span><span>Scope</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-176752146%2FClasslikes%2F1209998627"></span>
+                  <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                </span></span></div>
+            <div>
+              <div class="title">
+                <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-depenent-content" data-active="" data-togglable=":silk-core:dokkaHtmlPartial/main"><div class="symbol monospace"><span class="token keyword">object </span><a href="-mutable-event-scope/index.html">MutableEventScope</a><span class="top-right-position"><span class="copy-icon"></span><div class="copy-popup-wrapper popup-to-left"><span class="copy-popup-icon"></span><span>Content copied to clipboard</span></div></span></div><div class="brief "><p class="paragraph">A marker which can be passed to event handlers to make the event scope mutable. Functions which mutate the scope will require this marker in the context.</p></div></div></div>
+              </div>
+            </div>
+          </div>
+        </div>
+<a data-name="1417918106%2FClasslikes%2F1209998627" anchor-label="PlayerEvents" id="1417918106%2FClasslikes%2F1209998627" data-filterable-set=":silk-core:dokkaHtmlPartial/main"></a>
+        <div class="table-row" data-filterable-current=":silk-core:dokkaHtmlPartial/main" data-filterable-set=":silk-core:dokkaHtmlPartial/main">
+          <div class="main-subrow keyValue ">
+            <div class=""><span class="inline-flex">
+                <div><a href="-player-events/index.html"><span>Player</span><wbr><span><span>Events</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1417918106%2FClasslikes%2F1209998627"></span>
+                  <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                </span></span></div>
+            <div>
+              <div class="title">
+                <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-depenent-content" data-active="" data-togglable=":silk-core:dokkaHtmlPartial/main"><div class="symbol monospace"><span class="token keyword">object </span><a href="-player-events/index.html">PlayerEvents</a><span class="top-right-position"><span class="copy-icon"></span><div class="copy-popup-wrapper popup-to-left"><span class="copy-popup-icon"></span><span>Content copied to clipboard</span></div></span></div></div></div>
+              </div>
+            </div>
+          </div>
+        </div>
+<a data-name="2126910968%2FClasslikes%2F1209998627" anchor-label="ServerEvents" id="2126910968%2FClasslikes%2F1209998627" data-filterable-set=":silk-core:dokkaHtmlPartial/main"></a>
+        <div class="table-row" data-filterable-current=":silk-core:dokkaHtmlPartial/main" data-filterable-set=":silk-core:dokkaHtmlPartial/main">
+          <div class="main-subrow keyValue ">
+            <div class=""><span class="inline-flex">
+                <div><a href="-server-events/index.html"><span>Server</span><wbr><span><span>Events</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="2126910968%2FClasslikes%2F1209998627"></span>
+                  <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                </span></span></div>
+            <div>
+              <div class="title">
+                <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-depenent-content" data-active="" data-togglable=":silk-core:dokkaHtmlPartial/main"><div class="symbol monospace"><span class="token keyword">object </span><a href="-server-events/index.html">ServerEvents</a><span class="top-right-position"><span class="copy-icon"></span><div class="copy-popup-wrapper popup-to-left"><span class="copy-popup-icon"></span><span>Content copied to clipboard</span></div></span></div></div></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <h2 class="">Properties</h2>
+      <div class="table" data-togglable="Properties"><a data-name="677643913%2FProperties%2F1209998627" anchor-label="Entity" id="677643913%2FProperties%2F1209998627" data-filterable-set=":silk-core:dokkaHtmlPartial/main"></a>
+        <div class="table-row" data-filterable-current=":silk-core:dokkaHtmlPartial/main" data-filterable-set=":silk-core:dokkaHtmlPartial/main">
+          <div class="main-subrow keyValue ">
+            <div class=""><span class="inline-flex">
+                <div><a href="-entity.html"><span><span>Entity</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="677643913%2FProperties%2F1209998627"></span>
+                  <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                </span></span></div>
+            <div>
+              <div class="title">
+                <div class="platform-hinted " data-platform-hinted="data-platform-hinted" data-togglable="Properties"><div class="content sourceset-depenent-content" data-active="" data-togglable=":silk-core:dokkaHtmlPartial/main"><a data-name="677643913%2FProperties%2F1209998627" anchor-label="Entity" id="677643913%2FProperties%2F1209998627" data-filterable-set=":silk-core:dokkaHtmlPartial/main"></a><div class="symbol monospace"><span class="token keyword"></span><span class="token keyword">val </span><a href="-events/index.html">Events</a><span class="token punctuation">.</span><a href="-entity.html">Entity</a><span class="token operator">: </span><a href="-entity-events/index.html">EntityEvents</a><span class="top-right-position"><span class="copy-icon"></span><div class="copy-popup-wrapper popup-to-left"><span class="copy-popup-icon"></span><span>Content copied to clipboard</span></div></span></div></div></div>
+              </div>
+            </div>
+          </div>
+        </div>
+<a data-name="-2030672889%2FProperties%2F1209998627" anchor-label="Player" id="-2030672889%2FProperties%2F1209998627" data-filterable-set=":silk-core:dokkaHtmlPartial/main"></a>
+        <div class="table-row" data-filterable-current=":silk-core:dokkaHtmlPartial/main" data-filterable-set=":silk-core:dokkaHtmlPartial/main">
+          <div class="main-subrow keyValue ">
+            <div class=""><span class="inline-flex">
+                <div><a href="-player.html"><span><span>Player</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-2030672889%2FProperties%2F1209998627"></span>
+                  <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                </span></span></div>
+            <div>
+              <div class="title">
+                <div class="platform-hinted " data-platform-hinted="data-platform-hinted" data-togglable="Properties"><div class="content sourceset-depenent-content" data-active="" data-togglable=":silk-core:dokkaHtmlPartial/main"><a data-name="-2030672889%2FProperties%2F1209998627" anchor-label="Player" id="-2030672889%2FProperties%2F1209998627" data-filterable-set=":silk-core:dokkaHtmlPartial/main"></a><div class="symbol monospace"><span class="token keyword"></span><span class="token keyword">val </span><a href="-events/index.html">Events</a><span class="token punctuation">.</span><a href="-player.html">Player</a><span class="token operator">: </span><a href="-player-events/index.html">PlayerEvents</a><span class="top-right-position"><span class="copy-icon"></span><div class="copy-popup-wrapper popup-to-left"><span class="copy-popup-icon"></span><span>Content copied to clipboard</span></div></span></div></div></div>
+              </div>
+            </div>
+          </div>
+        </div>
+<a data-name="32594409%2FProperties%2F1209998627" anchor-label="Server" id="32594409%2FProperties%2F1209998627" data-filterable-set=":silk-core:dokkaHtmlPartial/main"></a>
+        <div class="table-row" data-filterable-current=":silk-core:dokkaHtmlPartial/main" data-filterable-set=":silk-core:dokkaHtmlPartial/main">
+          <div class="main-subrow keyValue ">
+            <div class=""><span class="inline-flex">
+                <div><a href="-server.html"><span><span>Server</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="32594409%2FProperties%2F1209998627"></span>
+                  <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                </span></span></div>
+            <div>
+              <div class="title">
+                <div class="platform-hinted " data-platform-hinted="data-platform-hinted" data-togglable="Properties"><div class="content sourceset-depenent-content" data-active="" data-togglable=":silk-core:dokkaHtmlPartial/main"><a data-name="32594409%2FProperties%2F1209998627" anchor-label="Server" id="32594409%2FProperties%2F1209998627" data-filterable-set=":silk-core:dokkaHtmlPartial/main"></a><div class="symbol monospace"><span class="token keyword"></span><span class="token keyword">val </span><a href="-events/index.html">Events</a><span class="token punctuation">.</span><a href="-server.html">Server</a><span class="token operator">: </span><a href="-server-events/index.html">ServerEvents</a><span class="top-right-position"><span class="copy-icon"></span><div class="copy-popup-wrapper popup-to-left"><span class="copy-popup-icon"></span><span>Content copied to clipboard</span></div></span></div><div class="brief "><a data-name="32594409%2FProperties%2F1209998627" anchor-label="Server" id="32594409%2FProperties%2F1209998627" data-filterable-set=":silk-core:dokkaHtmlPartial/main"></a><p class="paragraph">Events related to the <span data-unresolved-link="net.minecraft.server/MinecraftServer///PointingToDeclaration/">MinecraftServer</span>.</p></div></div></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      <div class="footer">
+        <span class="go-to-top-icon"><a href="#content" id="go-to-top-link"></a></span><span>© 2022 Copyright</span><span class="pull-right"><span>Generated by </span><a href="https://github.com/Kotlin/dokka"><span>dokka</span><span class="padded-icon"></span></a></span>
+      </div>
+    </div>
+</div>
+
+</body></html>
+

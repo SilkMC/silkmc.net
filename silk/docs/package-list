@@ -3,11 +3,13 @@ $dokka.linkExtension:html
 
 module:silk-commands
 net.silkmc.silk.commands
+net.silkmc.silk.commands.event
 net.silkmc.silk.commands.registration
 module:silk-core
 net.silkmc.silk.core
 net.silkmc.silk.core.annotations
 net.silkmc.silk.core.entity
+net.silkmc.silk.core.event
 net.silkmc.silk.core.item
 net.silkmc.silk.core.kotlin
 net.silkmc.silk.core.logging

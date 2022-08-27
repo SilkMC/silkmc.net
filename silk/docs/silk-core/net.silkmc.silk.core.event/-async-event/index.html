@@ -1,0 +1,273 @@
+<!doctype html>
+<html>
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1" charset="UTF-8">
+    <title>AsyncEvent</title>
+<link href="../../../images/logo-icon.svg" rel="icon" type="image/svg"><script>var pathToRoot = "../../../";</script>    <script>const storage = localStorage.getItem("dokka-dark-mode")
+const savedDarkMode = storage ? JSON.parse(storage) : false
+if(savedDarkMode === true){
+    document.getElementsByTagName("html")[0].classList.add("theme-dark")
+}</script>
+<script type="text/javascript" src="../../../scripts/sourceset_dependencies.js" async></script>
+<link href="../../../styles/style.css" rel="Stylesheet">
+<link href="../../../styles/jetbrains-mono.css" rel="Stylesheet">
+<link href="../../../styles/main.css" rel="Stylesheet">
+<link href="../../../styles/prism.css" rel="Stylesheet">
+<link href="../../../styles/logo-styles.css" rel="Stylesheet">
+<script type="text/javascript" src="../../../scripts/clipboard.js" async></script>
+<script type="text/javascript" src="../../../scripts/navigation-loader.js" async></script>
+<script type="text/javascript" src="../../../scripts/platform-content-handler.js" async></script>
+<script type="text/javascript" src="../../../scripts/main.js" defer></script>
+<script type="text/javascript" src="../../../scripts/prism.js" async></script></head>
+<body>
+<div class="navigation-wrapper" id="navigation-wrapper">
+    <div id="leftToggler"><span class="icon-toggler"></span></div>
+    <div class="library-name">
+<a href="../../../index.html">
+<span>silk</span>            </a>    </div>
+    <div>
+    </div>
+    <div class="pull-right d-flex">
+        <button id="theme-toggle-button"><span id="theme-toggle"></span></button>
+        <div id="searchBar"></div>
+    </div>
+</div>
+<div id="container">
+    <div id="leftColumn">
+        <div id="sideMenu"></div>
+    </div>
+    <div id="main">
+<div class="main-content" id="content" pageids="silk-core::net.silkmc.silk.core.event/AsyncEvent///PointingToDeclaration//1209998627">
+  <div class="breadcrumbs"><a href="../../index.html">silk-core</a><span class="delimiter">/</span><a href="../index.html">net.silkmc.silk.core.event</a><span class="delimiter">/</span><a href="index.html">AsyncEvent</a></div>
+  <div class="cover ">
+    <h1 class="cover"><span>Async</span><wbr><span><span>Event</span></span></h1>
+    <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-depenent-content" data-active="" data-togglable=":silk-core:dokkaHtmlPartial/main"><div class="symbol monospace"><span class="token keyword">open </span><span class="token keyword">class </span><a href="index.html">AsyncEvent</a><span class="token operator">&lt;</span><span class="token keyword"></span><a href="index.html">T</a><span class="token punctuation">, </span><span class="token keyword"></span><a href="index.html">S</a><span class="token operator"> : </span><a href="../-event-scope/index.html">EventScope</a><span class="token operator">&gt;</span><span class="token punctuation">(</span><span class="parameters "><span class="parameter "><span class="token keyword">val </span>clientSide<span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-boolean/index.html">Boolean</a><span class="token punctuation">, </span></span><span class="parameter ">scopeSupplier<span class="token operator">: </span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token operator"> -&gt; </span><span class="token keyword"></span><a href="index.html">S</a></span></span><span class="token punctuation">)</span> : <a href="../-event/index.html">Event</a><span class="token operator">&lt;</span><span class="token keyword"></span><a href="index.html">T</a><span class="token punctuation">, </span><span class="token keyword"></span><a href="index.html">S</a><span class="token operator">&gt; </span><span class="top-right-position"><span class="copy-icon"></span><div class="copy-popup-wrapper popup-to-left"><span class="copy-popup-icon"></span><span>Content copied to clipboard</span></div></span></div><p class="paragraph">The same as <a href="../-event/index.html">Event</a> but with additional async collectors (via a flow). This allows you to listen to the event asynchronously in a totally different <span data-unresolved-link="kotlinx.coroutines/CoroutineScope///PointingToDeclaration/">CoroutineScope</span>, and unregister via cancellation of that scope. To create an event of this type, have a look at the <a href="../-event/-companion/sync-async.html">Event.syncAsync</a> and <a href="../-event/-companion/sync-async-immutable.html">Event.syncAsyncImmutable</a> functions.</p></div></div>
+  </div>
+  <div class="tabbedcontent">
+    <div class="tabs-section" tabs-section="tabs-section"><button class="section-tab" data-active="" data-togglable="Constructors">Constructors</button><button class="section-tab" data-togglable="Functions">Functions</button><button class="section-tab" data-togglable="Properties">Properties</button><button class="section-tab" data-togglable="Sources">Sources</button></div>
+    <div class="tabs-section-body">
+      <h2 class="tabbedcontent">Constructors</h2>
+      <div class="table" data-togglable="Constructors"><a data-name="802772320%2FConstructors%2F1209998627" anchor-label="AsyncEvent" id="802772320%2FConstructors%2F1209998627" data-filterable-set=":silk-core:dokkaHtmlPartial/main"></a>
+        <div class="table-row" data-filterable-current=":silk-core:dokkaHtmlPartial/main" data-filterable-set=":silk-core:dokkaHtmlPartial/main">
+          <div class="main-subrow keyValue TabbedContent">
+            <div class=""><span class="inline-flex">
+                <div><a href="-async-event.html"><span>Async</span><wbr><span><span>Event</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="802772320%2FConstructors%2F1209998627"></span>
+                  <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                </span></span></div>
+            <div>
+              <div class="title">
+                <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-depenent-content" data-active="" data-togglable=":silk-core:dokkaHtmlPartial/main"><div class="symbol monospace"><span class="token keyword"></span><span class="token keyword">fun </span><span class="token operator">&lt;</span><span class="token keyword"></span><a href="index.html">S</a><span class="token operator"> : </span><a href="../-event-scope/index.html">EventScope</a><span class="token operator">&gt; </span><a href="-async-event.html"><span class="token function">AsyncEvent</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">clientSide<span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-boolean/index.html">Boolean</a><span class="token punctuation">, </span></span><span class="parameter ">scopeSupplier<span class="token operator">: </span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token operator"> -&gt; </span><span class="token keyword"></span><a href="index.html">S</a></span></span><span class="token punctuation">)</span><span class="top-right-position"><span class="copy-icon"></span><div class="copy-popup-wrapper popup-to-left"><span class="copy-popup-icon"></span><span>Content copied to clipboard</span></div></span></div></div></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <h2 class="">Functions</h2>
+      <div class="table" data-togglable="Functions"><a data-name="1485822686%2FFunctions%2F1209998627" anchor-label="collect" id="1485822686%2FFunctions%2F1209998627" data-filterable-set=":silk-core:dokkaHtmlPartial/main"></a>
+        <div class="table-row" data-filterable-current=":silk-core:dokkaHtmlPartial/main" data-filterable-set=":silk-core:dokkaHtmlPartial/main">
+          <div class="main-subrow keyValue ">
+            <div class=""><span class="inline-flex">
+                <div><a href="collect.html"><span><span>collect</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1485822686%2FFunctions%2F1209998627"></span>
+                  <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                </span></span></div>
+            <div>
+              <div class="title">
+                <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-depenent-content" data-active="" data-togglable=":silk-core:dokkaHtmlPartial/main"><div class="symbol monospace"><span class="token keyword">suspend </span><span class="token keyword">fun </span><a href="collect.html"><span class="token function">collect</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">collector<span class="token operator">: </span><span class="token keyword">suspend </span><span class="token punctuation">(</span><span class="token keyword"></span><a href="index.html">S</a><span class="token punctuation">, </span><span class="token keyword"></span><a href="index.html">T</a><span class="token punctuation">)</span><span class="token operator"> -&gt; </span><span class="token keyword"></span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html">Unit</a></span></span><span class="token punctuation">)</span><span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-nothing/index.html">Nothing</a><span class="top-right-position"><span class="copy-icon"></span><div class="copy-popup-wrapper popup-to-left"><span class="copy-popup-icon"></span><span>Content copied to clipboard</span></div></span></div><div class="brief "><p class="paragraph">Calls <span data-unresolved-link="kotlinx.coroutines.flow/SharedFlow/collect/#kotlinx.coroutines.flow.FlowCollector[TypeParam(bounds=[kotlin.Any?])]/PointingToDeclaration/">SharedFlow.collect</span> on the underlying <a href="flow.html">flow</a>. This way the <a href="collect.html">collector</a> receives all events. Note that the thread and / or <span data-unresolved-link="kotlinx.coroutines/CoroutineScope///PointingToDeclaration/">CoroutineScope</span> you call this in decides on which thread you handle the events.</p></div></div></div>
+              </div>
+            </div>
+          </div>
+        </div>
+<a data-name="1735229825%2FFunctions%2F1209998627" anchor-label="collectInScope" id="1735229825%2FFunctions%2F1209998627" data-filterable-set=":silk-core:dokkaHtmlPartial/main"></a>
+        <div class="table-row" data-filterable-current=":silk-core:dokkaHtmlPartial/main" data-filterable-set=":silk-core:dokkaHtmlPartial/main">
+          <div class="main-subrow keyValue ">
+            <div class=""><span class="inline-flex">
+                <div><a href="collect-in-scope.html"><span>collect</span><wbr><span>In</span><wbr><span><span>Scope</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1735229825%2FFunctions%2F1209998627"></span>
+                  <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                </span></span></div>
+            <div>
+              <div class="title">
+                <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-depenent-content" data-active="" data-togglable=":silk-core:dokkaHtmlPartial/main"><div class="symbol monospace"><span class="token keyword"></span><span class="token keyword">fun </span><a href="collect-in-scope.html"><span class="token function">collectInScope</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">collector<span class="token operator">: </span><span class="token keyword">suspend </span><span class="token punctuation">(</span><span class="token keyword"></span><a href="index.html">S</a><span class="token punctuation">, </span><span class="token keyword"></span><a href="index.html">T</a><span class="token punctuation">)</span><span class="token operator"> -&gt; </span><span class="token keyword"></span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html">Unit</a></span></span><span class="token punctuation">)</span><span class="token operator">: </span><span data-unresolved-link="kotlinx.coroutines/Job///PointingToDeclaration/">Job</span><span class="top-right-position"><span class="copy-icon"></span><div class="copy-popup-wrapper popup-to-left"><span class="copy-popup-icon"></span><span>Content copied to clipboard</span></div></span></div><div class="brief "><p class="paragraph">Listens to this event, and <code class="lang-kotlin">emit</code>s to the <a href="collect-in-scope.html">collector</a> if it is called. Launches <span data-unresolved-link="kotlinx.coroutines.flow/SharedFlow/collect/#kotlinx.coroutines.flow.FlowCollector[TypeParam(bounds=[kotlin.Any?])]/PointingToDeclaration/">SharedFlow.collect</span> on the underlying <a href="flow.html">flow</a> in the current <span data-unresolved-link="kotlinx.coroutines/CoroutineScope///PointingToDeclaration/">CoroutineScope</span> (taken from context), using the dispatcher from the current scope.</p></div></div></div>
+              </div>
+            </div>
+          </div>
+        </div>
+<a data-name="-1499939588%2FFunctions%2F1209998627" anchor-label="collectInScopeSync" id="-1499939588%2FFunctions%2F1209998627" data-filterable-set=":silk-core:dokkaHtmlPartial/main"></a>
+        <div class="table-row" data-filterable-current=":silk-core:dokkaHtmlPartial/main" data-filterable-set=":silk-core:dokkaHtmlPartial/main">
+          <div class="main-subrow keyValue ">
+            <div class=""><span class="inline-flex">
+                <div><a href="collect-in-scope-sync.html"><span>collect</span><wbr><span>In</span><wbr><span>Scope</span><wbr><span><span>Sync</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1499939588%2FFunctions%2F1209998627"></span>
+                  <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                </span></span></div>
+            <div>
+              <div class="title">
+                <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-depenent-content" data-active="" data-togglable=":silk-core:dokkaHtmlPartial/main"><div class="symbol monospace"><span class="token keyword"></span><span class="token keyword">fun </span><a href="collect-in-scope-sync.html"><span class="token function">collectInScopeSync</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">collector<span class="token operator">: </span><span class="token keyword">suspend </span><span class="token punctuation">(</span><span class="token keyword"></span><a href="index.html">S</a><span class="token punctuation">, </span><span class="token keyword"></span><a href="index.html">T</a><span class="token punctuation">)</span><span class="token operator"> -&gt; </span><span class="token keyword"></span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html">Unit</a></span></span><span class="token punctuation">)</span><span class="token operator">: </span><span data-unresolved-link="kotlinx.coroutines/Job///PointingToDeclaration/">Job</span><span class="top-right-position"><span class="copy-icon"></span><div class="copy-popup-wrapper popup-to-left"><span class="copy-popup-icon"></span><span>Content copied to clipboard</span></div></span></div><div class="brief "><p class="paragraph">Listens to this event, and <code class="lang-kotlin">emit</code>s to the <a href="collect-in-scope-sync.html">collector</a> if it is called. Launches <span data-unresolved-link="kotlinx.coroutines.flow/SharedFlow/collect/#kotlinx.coroutines.flow.FlowCollector[TypeParam(bounds=[kotlin.Any?])]/PointingToDeclaration/">SharedFlow.collect</span> on the underlying <a href="flow.html">flow</a> in the current <span data-unresolved-link="kotlinx.coroutines/CoroutineScope///PointingToDeclaration/">CoroutineScope</span> (taken from context), using the fitting synchronous Minecraft main thread dispatcher (<a href="../../../silk-core/net.silkmc.silk.core.event/-async-event/sync-dispatcher.html">syncDispatcher</a>).</p></div></div></div>
+              </div>
+            </div>
+          </div>
+        </div>
+<a data-name="-2143476639%2FFunctions%2F1209998627" anchor-label="invoke" id="-2143476639%2FFunctions%2F1209998627" data-filterable-set=":silk-core:dokkaHtmlPartial/main"></a>
+        <div class="table-row" data-filterable-current=":silk-core:dokkaHtmlPartial/main" data-filterable-set=":silk-core:dokkaHtmlPartial/main">
+          <div class="main-subrow keyValue ">
+            <div class=""><span class="inline-flex">
+                <div><a href="../-event/invoke.html"><span><span>invoke</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-2143476639%2FFunctions%2F1209998627"></span>
+                  <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                </span></span></div>
+            <div>
+              <div class="title">
+                <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-depenent-content" data-active="" data-togglable=":silk-core:dokkaHtmlPartial/main"><div class="symbol monospace"><span class="token keyword"></span><span class="token keyword">fun </span><a href="../-event/invoke.html"><span class="token function">invoke</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">instance<span class="token operator">: </span><a href="index.html">T</a></span></span><span class="token punctuation">)</span><span class="token operator">: </span><a href="index.html">S</a><span class="top-right-position"><span class="copy-icon"></span><div class="copy-popup-wrapper popup-to-left"><span class="copy-popup-icon"></span><span>Content copied to clipboard</span></div></span></div><div class="brief "><p class="paragraph">Same as <a href="../-event/invoke.html">invoke</a>, but it uses the default scope provided by <a href="../-event/scope-supplier.html">scopeSupplier</a>. Returns the resulting scope.</p></div><div class="symbol monospace"><span class="token keyword">open </span><span class="token keyword">override </span><span class="token keyword">fun </span><a href="invoke.html"><span class="token function">invoke</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">instance<span class="token operator">: </span><a href="index.html">T</a><span class="token punctuation">, </span></span><span class="parameter ">scope<span class="token operator">: </span><a href="index.html">S</a></span></span><span class="token punctuation">)</span><span class="top-right-position"><span class="copy-icon"></span><div class="copy-popup-wrapper popup-to-left"><span class="copy-popup-icon"></span><span>Content copied to clipboard</span></div></span></div><div class="brief "><p class="paragraph">Invokes this event. Calling this function will trigger all listeners and collectors.</p></div></div></div>
+              </div>
+            </div>
+          </div>
+        </div>
+<a data-name="-112521216%2FFunctions%2F1209998627" anchor-label="listen" id="-112521216%2FFunctions%2F1209998627" data-filterable-set=":silk-core:dokkaHtmlPartial/main"></a>
+        <div class="table-row" data-filterable-current=":silk-core:dokkaHtmlPartial/main" data-filterable-set=":silk-core:dokkaHtmlPartial/main">
+          <div class="main-subrow keyValue ">
+            <div class=""><span class="inline-flex">
+                <div><a href="../-event/listen.html"><span><span>listen</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-112521216%2FFunctions%2F1209998627"></span>
+                  <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                </span></span></div>
+            <div>
+              <div class="title">
+                <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-depenent-content" data-active="" data-togglable=":silk-core:dokkaHtmlPartial/main"><div class="symbol monospace"><span class="token keyword"></span><span class="token keyword">fun </span><a href="../-event/listen.html"><span class="token function">listen</span></a><span class="token punctuation">(</span><span class="parameters wrapped"><span class="parameter indented">&nbsp;&nbsp;&nbsp;&nbsp;priority<span class="token operator">: </span><a href="../-event-priority/index.html">EventPriority</a><span class="token operator"> = </span>EventPriority.NORMAL<span class="token punctuation">, </span></span><span class="parameter indented">&nbsp;&nbsp;&nbsp;&nbsp;register<span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-boolean/index.html">Boolean</a><span class="token operator"> = </span><span class="token boolean">true</span><span class="token punctuation">, </span></span><span class="parameter indented">&nbsp;&nbsp;&nbsp;&nbsp;callback<span class="token operator">: </span><span class="token punctuation">(</span><span class="token keyword"></span><a href="index.html">S</a><span class="token punctuation">, </span><span class="token keyword"></span><a href="../-mutable-event-scope/index.html">MutableEventScope</a><span class="token punctuation">, </span><span class="token keyword"></span><a href="index.html">T</a><span class="token punctuation">)</span><span class="token operator"> -&gt; </span><span class="token keyword"></span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html">Unit</a></span></span><span class="token punctuation">)</span><span class="token operator">: </span><a href="../-listener-instance/index.html">ListenerInstance</a><span class="token operator">&lt;</span><span class="token operator">*</span><span class="token operator">&gt;</span><span class="top-right-position"><span class="copy-icon"></span><div class="copy-popup-wrapper popup-to-left"><span class="copy-popup-icon"></span><span>Content copied to clipboard</span></div></span></div><div class="brief "><p class="paragraph">Listens to this event. The <a href="../-event/listen.html">callback</a> will always be called synchronously. This function is synchronized, so it may be called from any thread.</p></div></div></div>
+              </div>
+            </div>
+          </div>
+        </div>
+<a data-name="-1566601239%2FFunctions%2F1209998627" anchor-label="monitor" id="-1566601239%2FFunctions%2F1209998627" data-filterable-set=":silk-core:dokkaHtmlPartial/main"></a>
+        <div class="table-row" data-filterable-current=":silk-core:dokkaHtmlPartial/main" data-filterable-set=":silk-core:dokkaHtmlPartial/main">
+          <div class="main-subrow keyValue ">
+            <div class=""><span class="inline-flex">
+                <div><a href="../-event/monitor.html"><span><span>monitor</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1566601239%2FFunctions%2F1209998627"></span>
+                  <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                </span></span></div>
+            <div>
+              <div class="title">
+                <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-depenent-content" data-active="" data-togglable=":silk-core:dokkaHtmlPartial/main"><div class="symbol monospace"><span class="token keyword"></span><span class="token keyword">fun </span><a href="../-event/monitor.html"><span class="token function">monitor</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">register<span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-boolean/index.html">Boolean</a><span class="token operator"> = </span><span class="token boolean">true</span><span class="token punctuation">, </span></span><span class="parameter ">callback<span class="token operator">: </span><span class="token punctuation">(</span><span class="token keyword"></span><a href="index.html">S</a><span class="token punctuation">, </span><span class="token keyword"></span><a href="index.html">T</a><span class="token punctuation">)</span><span class="token operator"> -&gt; </span><span class="token keyword"></span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html">Unit</a></span></span><span class="token punctuation">)</span><span class="token operator">: </span><a href="../-listener-instance/index.html">ListenerInstance</a><span class="token operator">&lt;</span><span class="token operator">*</span><span class="token operator">&gt;</span><span class="top-right-position"><span class="copy-icon"></span><div class="copy-popup-wrapper popup-to-left"><span class="copy-popup-icon"></span><span>Content copied to clipboard</span></div></span></div><div class="brief "><p class="paragraph">Monitors this event. This is the same as <a href="../-event/listen.html">listen</a>, but you do not have access to the mutable functions of the event scope. This <a href="../-event/monitor.html">callback</a> will be executed <strong>after</strong><a href="../-event-priority/-l-a-s-t/index.html">EventPriority.LAST</a>, therefore monitor sees the final state.</p></div></div></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <h2 class="">Properties</h2>
+      <div class="table" data-togglable="Properties"><a data-name="31202055%2FProperties%2F1209998627" anchor-label="clientSide" id="31202055%2FProperties%2F1209998627" data-filterable-set=":silk-core:dokkaHtmlPartial/main"></a>
+        <div class="table-row" data-filterable-current=":silk-core:dokkaHtmlPartial/main" data-filterable-set=":silk-core:dokkaHtmlPartial/main">
+          <div class="main-subrow keyValue ">
+            <div class=""><span class="inline-flex">
+                <div><a href="client-side.html"><span>client</span><wbr><span><span>Side</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="31202055%2FProperties%2F1209998627"></span>
+                  <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                </span></span></div>
+            <div>
+              <div class="title">
+                <div class="platform-hinted " data-platform-hinted="data-platform-hinted" data-togglable="Properties"><div class="content sourceset-depenent-content" data-active="" data-togglable=":silk-core:dokkaHtmlPartial/main"><a data-name="31202055%2FProperties%2F1209998627" anchor-label="clientSide" id="31202055%2FProperties%2F1209998627" data-filterable-set=":silk-core:dokkaHtmlPartial/main"></a><div class="symbol monospace"><span class="token keyword"></span><span class="token keyword">val </span><a href="client-side.html">clientSide</a><span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-boolean/index.html">Boolean</a><span class="top-right-position"><span class="copy-icon"></span><div class="copy-popup-wrapper popup-to-left"><span class="copy-popup-icon"></span><span>Content copied to clipboard</span></div></span></div></div></div>
+              </div>
+            </div>
+          </div>
+        </div>
+<a data-name="223493147%2FProperties%2F1209998627" anchor-label="flow" id="223493147%2FProperties%2F1209998627" data-filterable-set=":silk-core:dokkaHtmlPartial/main"></a>
+        <div class="table-row" data-filterable-current=":silk-core:dokkaHtmlPartial/main" data-filterable-set=":silk-core:dokkaHtmlPartial/main">
+          <div class="main-subrow keyValue ">
+            <div class=""><span class="inline-flex">
+                <div><a href="flow.html"><span><span>flow</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="223493147%2FProperties%2F1209998627"></span>
+                  <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                </span></span></div>
+            <div>
+              <div class="title">
+                <div class="platform-hinted " data-platform-hinted="data-platform-hinted" data-togglable="Properties"><div class="content sourceset-depenent-content" data-active="" data-togglable=":silk-core:dokkaHtmlPartial/main"><a data-name="223493147%2FProperties%2F1209998627" anchor-label="flow" id="223493147%2FProperties%2F1209998627" data-filterable-set=":silk-core:dokkaHtmlPartial/main"></a><div class="symbol monospace"><span class="token keyword">open </span><span class="token keyword"></span><span class="token keyword">val </span><a href="flow.html">flow</a><span class="token operator">: </span><span data-unresolved-link="kotlinx.coroutines.flow/MutableSharedFlow///PointingToDeclaration/">MutableSharedFlow</span><span class="token operator">&lt;</span><span class="token keyword"></span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-pair/index.html">Pair</a><span class="token operator">&lt;</span><span class="token keyword"></span><a href="index.html">T</a><span class="token punctuation">, </span><span class="token keyword"></span><a href="index.html">S</a><span class="token operator">&gt;</span><span class="token operator">&gt;</span><span class="top-right-position"><span class="copy-icon"></span><div class="copy-popup-wrapper popup-to-left"><span class="copy-popup-icon"></span><span>Content copied to clipboard</span></div></span></div><div class="brief "><a data-name="223493147%2FProperties%2F1209998627" anchor-label="flow" id="223493147%2FProperties%2F1209998627" data-filterable-set=":silk-core:dokkaHtmlPartial/main"></a><p class="paragraph">The internal <a href="flow.html">flow</a> to which events are <span data-unresolved-link="kotlinx.coroutines.flow/MutableSharedFlow/emit/#TypeParam(bounds=[kotlin.Any?])/PointingToDeclaration/">emitted</span>. It has no buffer, so new calls to <span data-unresolved-link="kotlinx.coroutines.flow/MutableSharedFlow/emit/#TypeParam(bounds=[kotlin.Any?])/PointingToDeclaration/">MutableSharedFlow.emit</span> will suspend if the listeners have not finished handling the previous event.</p></div></div></div>
+              </div>
+            </div>
+          </div>
+        </div>
+<a data-name="247083829%2FProperties%2F1209998627" anchor-label="invokeScope" id="247083829%2FProperties%2F1209998627" data-filterable-set=":silk-core:dokkaHtmlPartial/main"></a>
+        <div class="table-row" data-filterable-current=":silk-core:dokkaHtmlPartial/main" data-filterable-set=":silk-core:dokkaHtmlPartial/main">
+          <div class="main-subrow keyValue ">
+            <div class=""><span class="inline-flex">
+                <div><a href="invoke-scope.html"><span>invoke</span><wbr><span><span>Scope</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="247083829%2FProperties%2F1209998627"></span>
+                  <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                </span></span></div>
+            <div>
+              <div class="title">
+                <div class="platform-hinted " data-platform-hinted="data-platform-hinted" data-togglable="Properties"><div class="content sourceset-depenent-content" data-active="" data-togglable=":silk-core:dokkaHtmlPartial/main"><a data-name="247083829%2FProperties%2F1209998627" anchor-label="invokeScope" id="247083829%2FProperties%2F1209998627" data-filterable-set=":silk-core:dokkaHtmlPartial/main"></a><div class="symbol monospace"><span class="token keyword"></span><span class="token keyword">val </span><a href="invoke-scope.html">invokeScope</a><span class="token operator">: </span><span data-unresolved-link="kotlinx.coroutines/CoroutineScope///PointingToDeclaration/">CoroutineScope</span><span class="top-right-position"><span class="copy-icon"></span><div class="copy-popup-wrapper popup-to-left"><span class="copy-popup-icon"></span><span>Content copied to clipboard</span></div></span></div><div class="brief "><a data-name="247083829%2FProperties%2F1209998627" anchor-label="invokeScope" id="247083829%2FProperties%2F1209998627" data-filterable-set=":silk-core:dokkaHtmlPartial/main"></a><p class="paragraph">The scope used for emitting events without blocking the current execution.</p></div></div></div>
+              </div>
+            </div>
+          </div>
+        </div>
+<a data-name="70867445%2FProperties%2F1209998627" anchor-label="listenersByPriority" id="70867445%2FProperties%2F1209998627" data-filterable-set=":silk-core:dokkaHtmlPartial/main"></a>
+        <div class="table-row" data-filterable-current=":silk-core:dokkaHtmlPartial/main" data-filterable-set=":silk-core:dokkaHtmlPartial/main">
+          <div class="main-subrow keyValue ">
+            <div class=""><span class="inline-flex">
+                <div><a href="../-event/listeners-by-priority.html"><span>listeners</span><wbr><span>By</span><wbr><span><span>Priority</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="70867445%2FProperties%2F1209998627"></span>
+                  <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                </span></span></div>
+            <div>
+              <div class="title">
+                <div class="platform-hinted " data-platform-hinted="data-platform-hinted" data-togglable="Properties"><div class="content sourceset-depenent-content" data-active="" data-togglable=":silk-core:dokkaHtmlPartial/main"><a data-name="70867445%2FProperties%2F1209998627" anchor-label="listenersByPriority" id="70867445%2FProperties%2F1209998627" data-filterable-set=":silk-core:dokkaHtmlPartial/main"></a><div class="symbol monospace"><span class="token keyword"></span><span class="token keyword">val </span><a href="../-event/listeners-by-priority.html">listenersByPriority</a><span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin.collections/-list/index.html">List</a><span class="token operator">&lt;</span><span class="token keyword"></span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin.collections/-mutable-list/index.html">MutableList</a><span class="token operator">&lt;</span><span class="token keyword"></span><span class="token punctuation">(</span><span class="token keyword"></span><a href="index.html">S</a><span class="token punctuation">, </span><span class="token keyword"></span><a href="../-mutable-event-scope/index.html">MutableEventScope</a><span class="token punctuation">, </span><span class="token keyword"></span><a href="index.html">T</a><span class="token punctuation">)</span><span class="token operator"> -&gt; </span><span class="token keyword"></span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html">Unit</a><span class="token operator">&gt;</span><span class="token operator">&gt;</span><span class="top-right-position"><span class="copy-icon"></span><div class="copy-popup-wrapper popup-to-left"><span class="copy-popup-icon"></span><span>Content copied to clipboard</span></div></span></div><div class="brief "><a data-name="70867445%2FProperties%2F1209998627" anchor-label="listenersByPriority" id="70867445%2FProperties%2F1209998627" data-filterable-set=":silk-core:dokkaHtmlPartial/main"></a><p class="paragraph">The listeners added by <a href="../-event/listen.html">listen</a>, sorted by <a href="../-event-priority/index.html">EventPriority</a> via the index in the outer list.</p></div></div></div>
+              </div>
+            </div>
+          </div>
+        </div>
+<a data-name="-217712922%2FProperties%2F1209998627" anchor-label="monitorListeners" id="-217712922%2FProperties%2F1209998627" data-filterable-set=":silk-core:dokkaHtmlPartial/main"></a>
+        <div class="table-row" data-filterable-current=":silk-core:dokkaHtmlPartial/main" data-filterable-set=":silk-core:dokkaHtmlPartial/main">
+          <div class="main-subrow keyValue ">
+            <div class=""><span class="inline-flex">
+                <div><a href="../-event/monitor-listeners.html"><span>monitor</span><wbr><span><span>Listeners</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-217712922%2FProperties%2F1209998627"></span>
+                  <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                </span></span></div>
+            <div>
+              <div class="title">
+                <div class="platform-hinted " data-platform-hinted="data-platform-hinted" data-togglable="Properties"><div class="content sourceset-depenent-content" data-active="" data-togglable=":silk-core:dokkaHtmlPartial/main"><a data-name="-217712922%2FProperties%2F1209998627" anchor-label="monitorListeners" id="-217712922%2FProperties%2F1209998627" data-filterable-set=":silk-core:dokkaHtmlPartial/main"></a><div class="symbol monospace"><span class="token keyword"></span><span class="token keyword">val </span><a href="../-event/monitor-listeners.html">monitorListeners</a><span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin.collections/-mutable-list/index.html">MutableList</a><span class="token operator">&lt;</span><span class="token keyword"></span><span class="token punctuation">(</span><span class="token keyword"></span><a href="index.html">S</a><span class="token punctuation">, </span><span class="token keyword"></span><a href="index.html">T</a><span class="token punctuation">)</span><span class="token operator"> -&gt; </span><span class="token keyword"></span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html">Unit</a><span class="token operator">&gt;</span><span class="top-right-position"><span class="copy-icon"></span><div class="copy-popup-wrapper popup-to-left"><span class="copy-popup-icon"></span><span>Content copied to clipboard</span></div></span></div><div class="brief "><a data-name="-217712922%2FProperties%2F1209998627" anchor-label="monitorListeners" id="-217712922%2FProperties%2F1209998627" data-filterable-set=":silk-core:dokkaHtmlPartial/main"></a><p class="paragraph">The listeners added by <a href="../-event/monitor.html">monitor</a>.</p></div></div></div>
+              </div>
+            </div>
+          </div>
+        </div>
+<a data-name="1715663023%2FProperties%2F1209998627" anchor-label="scopeSupplier" id="1715663023%2FProperties%2F1209998627" data-filterable-set=":silk-core:dokkaHtmlPartial/main"></a>
+        <div class="table-row" data-filterable-current=":silk-core:dokkaHtmlPartial/main" data-filterable-set=":silk-core:dokkaHtmlPartial/main">
+          <div class="main-subrow keyValue ">
+            <div class=""><span class="inline-flex">
+                <div><a href="../-event/scope-supplier.html"><span>scope</span><wbr><span><span>Supplier</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1715663023%2FProperties%2F1209998627"></span>
+                  <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                </span></span></div>
+            <div>
+              <div class="title">
+                <div class="platform-hinted " data-platform-hinted="data-platform-hinted" data-togglable="Properties"><div class="content sourceset-depenent-content" data-active="" data-togglable=":silk-core:dokkaHtmlPartial/main"><a data-name="1715663023%2FProperties%2F1209998627" anchor-label="scopeSupplier" id="1715663023%2FProperties%2F1209998627" data-filterable-set=":silk-core:dokkaHtmlPartial/main"></a><div class="symbol monospace"><span class="token keyword"></span><span class="token keyword">val </span><a href="../-event/scope-supplier.html">scopeSupplier</a><span class="token operator">: </span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token operator"> -&gt; </span><span class="token keyword"></span><a href="index.html">S</a><span class="top-right-position"><span class="copy-icon"></span><div class="copy-popup-wrapper popup-to-left"><span class="copy-popup-icon"></span><span>Content copied to clipboard</span></div></span></div></div></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <h2 class="">Sources</h2>
+      <div class="table" data-togglable="Sources"><a data-name="-420628042%2FSource%2F1209998627" anchor-label="https://github.com/SilkMC/silk/tree/main/silk-core/src/main/kotlin/net/silkmc/silk/core/event/Event.kt#L152" id="-420628042%2FSource%2F1209998627" data-filterable-set=":silk-core:dokkaHtmlPartial/main"></a>
+        <div class="table-row" data-filterable-current=":silk-core:dokkaHtmlPartial/main" data-filterable-set=":silk-core:dokkaHtmlPartial/main">
+          <div class="main-subrow keyValue ">
+            <div class=""><span class="inline-flex">
+                <div><a href="https://github.com/SilkMC/silk/tree/main/silk-core/src/main/kotlin/net/silkmc/silk/core/event/Event.kt#L152">jvm source</a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-420628042%2FSource%2F1209998627"></span>
+                  <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                </span></span></div>
+            <div></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      <div class="footer">
+        <span class="go-to-top-icon"><a href="#content" id="go-to-top-link"></a></span><span>© 2022 Copyright</span><span class="pull-right"><span>Generated by </span><a href="https://github.com/Kotlin/dokka"><span>dokka</span><span class="padded-icon"></span></a></span>
+      </div>
+    </div>
+</div>
+
+</body></html>
+
