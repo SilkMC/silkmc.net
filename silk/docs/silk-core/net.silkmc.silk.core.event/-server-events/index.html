@@ -4,10 +4,18 @@
     <meta name="viewport" content="width=device-width, initial-scale=1" charset="UTF-8">
     <title>ServerEvents</title>
 <link href="../../../images/logo-icon.svg" rel="icon" type="image/svg"><script>var pathToRoot = "../../../";</script>    <script>const storage = localStorage.getItem("dokka-dark-mode")
-const savedDarkMode = storage ? JSON.parse(storage) : false
-if(savedDarkMode === true){
-    document.getElementsByTagName("html")[0].classList.add("theme-dark")
-}</script>
+    if (storage == null) {
+        const osDarkSchemePreferred = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches
+        if (osDarkSchemePreferred === true) {
+            document.getElementsByTagName("html")[0].classList.add("theme-dark")
+        }
+    } else {
+        const savedDarkMode = JSON.parse(storage)
+        if(savedDarkMode === true) {
+            document.getElementsByTagName("html")[0].classList.add("theme-dark")
+        }
+    }
+    </script>
 <script type="text/javascript" src="../../../scripts/sourceset_dependencies.js" async></script>
 <link href="../../../styles/style.css" rel="Stylesheet">
 <link href="../../../styles/jetbrains-mono.css" rel="Stylesheet">
@@ -18,7 +26,8 @@ if(savedDarkMode === true){
 <script type="text/javascript" src="../../../scripts/navigation-loader.js" async></script>
 <script type="text/javascript" src="../../../scripts/platform-content-handler.js" async></script>
 <script type="text/javascript" src="../../../scripts/main.js" defer></script>
-<script type="text/javascript" src="../../../scripts/prism.js" async></script></head>
+<script type="text/javascript" src="../../../scripts/prism.js" async></script>
+<script type="text/javascript" src="../../../scripts/symbol-parameters-wrapper_deferred.js" defer></script></head>
 <body>
 <div class="navigation-wrapper" id="navigation-wrapper">
     <div id="leftToggler"><span class="icon-toggler"></span></div>
@@ -38,13 +47,13 @@ if(savedDarkMode === true){
     </div>
     <div id="main">
 <div class="main-content" id="content" pageids="silk-core::net.silkmc.silk.core.event/ServerEvents///PointingToDeclaration//1209998627">
-  <div class="breadcrumbs"><a href="../../index.html">silk-core</a><span class="delimiter">/</span><a href="../index.html">net.silkmc.silk.core.event</a><span class="delimiter">/</span><a href="index.html">ServerEvents</a></div>
+  <div class="breadcrumbs"><a href="../../index.html">silk-core</a><span class="delimiter">/</span><a href="../index.html">net.silkmc.silk.core.event</a><span class="delimiter">/</span><span class="current">ServerEvents</span></div>
   <div class="cover ">
     <h1 class="cover"><span>Server</span><wbr><span><span>Events</span></span></h1>
-    <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-depenent-content" data-active="" data-togglable=":silk-core:dokkaHtmlPartial/main"><div class="symbol monospace"><span class="token keyword">object </span><a href="index.html">ServerEvents</a><span class="top-right-position"><span class="copy-icon"></span><div class="copy-popup-wrapper popup-to-left"><span class="copy-popup-icon"></span><span>Content copied to clipboard</span></div></span></div></div></div>
+    <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":silk-core:dokkaHtmlPartial/main"><div class="symbol monospace"><span class="token keyword">object </span><a href="index.html">ServerEvents</a><span class="clearfix"><span class="floating-right">(<a href="https://github.com/SilkMC/silk/tree/main/silk-core/src/main/kotlin/net/silkmc/silk/core/event/ServerEvents.kt#L12">source</a>)</span></span></div></div></div>
   </div>
   <div class="tabbedcontent">
-    <div class="tabs-section" tabs-section="tabs-section"><button class="section-tab" data-active="" data-togglable="Types">Types</button><button class="section-tab" data-togglable="Properties">Properties</button><button class="section-tab" data-togglable="Sources">Sources</button></div>
+    <div class="tabs-section" tabs-section="tabs-section"><button class="section-tab" data-active="" data-togglable="Types">Types</button><button class="section-tab" data-togglable="Properties">Properties</button></div>
     <div class="tabs-section-body">
       <h2 class="">Types</h2>
       <div class="table" data-togglable="Types"><a data-name="-74364017%2FClasslikes%2F1209998627" anchor-label="ServerEvent" id="-74364017%2FClasslikes%2F1209998627" data-filterable-set=":silk-core:dokkaHtmlPartial/main"></a>
@@ -57,7 +66,7 @@ if(savedDarkMode === true){
                 </span></span></div>
             <div>
               <div class="title">
-                <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-depenent-content" data-active="" data-togglable=":silk-core:dokkaHtmlPartial/main"><div class="symbol monospace"><span class="token keyword">class </span><a href="-server-event/index.html">ServerEvent</a><span class="token punctuation">(</span><span class="parameters "><span class="parameter "><span class="token keyword">val </span>server<span class="token operator">: </span><span data-unresolved-link="net.minecraft.server/MinecraftServer///PointingToDeclaration/">MinecraftServer</span></span></span><span class="token punctuation">)</span><span class="top-right-position"><span class="copy-icon"></span><div class="copy-popup-wrapper popup-to-left"><span class="copy-popup-icon"></span><span>Content copied to clipboard</span></div></span></div></div></div>
+                <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":silk-core:dokkaHtmlPartial/main"><div class="symbol monospace"><span class="token keyword">class </span><a href="-server-event/index.html">ServerEvent</a><span class="token punctuation">(</span><span class="parameters "><span class="parameter "><span class="token keyword">val </span>server<span class="token operator">: </span><span data-unresolved-link="net.minecraft.server/MinecraftServer///PointingToDeclaration/">MinecraftServer</span></span></span><span class="token punctuation">)</span></div></div></div>
               </div>
             </div>
           </div>
@@ -74,7 +83,7 @@ if(savedDarkMode === true){
                 </span></span></div>
             <div>
               <div class="title">
-                <div class="platform-hinted " data-platform-hinted="data-platform-hinted" data-togglable="Properties"><div class="content sourceset-depenent-content" data-active="" data-togglable=":silk-core:dokkaHtmlPartial/main"><a data-name="1534109137%2FProperties%2F1209998627" anchor-label="postStart" id="1534109137%2FProperties%2F1209998627" data-filterable-set=":silk-core:dokkaHtmlPartial/main"></a><div class="symbol monospace"><span class="token keyword"></span><span class="token keyword">val </span><a href="post-start.html">postStart</a><span class="token operator">: </span><a href="../-async-event/index.html">AsyncEvent</a><span class="token operator">&lt;</span><span class="token keyword"></span><a href="-server-event/index.html">ServerEvents.ServerEvent</a><span class="token punctuation">, </span><span class="token keyword"></span><a href="../-event-scope/-empty/index.html">EventScope.Empty</a><span class="token operator">&gt;</span><span class="top-right-position"><span class="copy-icon"></span><div class="copy-popup-wrapper popup-to-left"><span class="copy-popup-icon"></span><span>Content copied to clipboard</span></div></span></div><div class="brief "><a data-name="1534109137%2FProperties%2F1209998627" anchor-label="postStart" id="1534109137%2FProperties%2F1209998627" data-filterable-set=":silk-core:dokkaHtmlPartial/main"></a><p class="paragraph">Called after the server has successfully started.</p></div></div></div>
+                <div class="platform-hinted " data-platform-hinted="data-platform-hinted" data-togglable="Properties"><div class="content sourceset-dependent-content" data-active="" data-togglable=":silk-core:dokkaHtmlPartial/main"><a data-name="1534109137%2FProperties%2F1209998627" anchor-label="postStart" id="1534109137%2FProperties%2F1209998627" data-filterable-set=":silk-core:dokkaHtmlPartial/main"></a><div class="symbol monospace"><span class="token keyword"></span><span class="token keyword">val </span><a href="post-start.html">postStart</a><span class="token operator">: </span><a href="../-async-event/index.html">AsyncEvent</a><span class="token operator">&lt;</span><span class="token keyword"></span><a href="-server-event/index.html">ServerEvents.ServerEvent</a><span class="token punctuation">, </span><span class="token keyword"></span><a href="../-event-scope/-empty/index.html">EventScope.Empty</a><span class="token operator">&gt;</span></div><div class="brief "><a data-name="1534109137%2FProperties%2F1209998627" anchor-label="postStart" id="1534109137%2FProperties%2F1209998627" data-filterable-set=":silk-core:dokkaHtmlPartial/main"></a><p class="paragraph">Called after the server has successfully started.</p></div></div></div>
               </div>
             </div>
           </div>
@@ -89,7 +98,7 @@ if(savedDarkMode === true){
                 </span></span></div>
             <div>
               <div class="title">
-                <div class="platform-hinted " data-platform-hinted="data-platform-hinted" data-togglable="Properties"><div class="content sourceset-depenent-content" data-active="" data-togglable=":silk-core:dokkaHtmlPartial/main"><a data-name="1067806469%2FProperties%2F1209998627" anchor-label="postStop" id="1067806469%2FProperties%2F1209998627" data-filterable-set=":silk-core:dokkaHtmlPartial/main"></a><div class="symbol monospace"><span class="token keyword"></span><span class="token keyword">val </span><a href="post-stop.html">postStop</a><span class="token operator">: </span><a href="../-async-event/index.html">AsyncEvent</a><span class="token operator">&lt;</span><span class="token keyword"></span><a href="-server-event/index.html">ServerEvents.ServerEvent</a><span class="token punctuation">, </span><span class="token keyword"></span><a href="../-event-scope/-empty/index.html">EventScope.Empty</a><span class="token operator">&gt;</span><span class="top-right-position"><span class="copy-icon"></span><div class="copy-popup-wrapper popup-to-left"><span class="copy-popup-icon"></span><span>Content copied to clipboard</span></div></span></div><div class="brief "><a data-name="1067806469%2FProperties%2F1209998627" anchor-label="postStop" id="1067806469%2FProperties%2F1209998627" data-filterable-set=":silk-core:dokkaHtmlPartial/main"></a><p class="paragraph">Called after the server has successfully stopped.</p></div></div></div>
+                <div class="platform-hinted " data-platform-hinted="data-platform-hinted" data-togglable="Properties"><div class="content sourceset-dependent-content" data-active="" data-togglable=":silk-core:dokkaHtmlPartial/main"><a data-name="1067806469%2FProperties%2F1209998627" anchor-label="postStop" id="1067806469%2FProperties%2F1209998627" data-filterable-set=":silk-core:dokkaHtmlPartial/main"></a><div class="symbol monospace"><span class="token keyword"></span><span class="token keyword">val </span><a href="post-stop.html">postStop</a><span class="token operator">: </span><a href="../-async-event/index.html">AsyncEvent</a><span class="token operator">&lt;</span><span class="token keyword"></span><a href="-server-event/index.html">ServerEvents.ServerEvent</a><span class="token punctuation">, </span><span class="token keyword"></span><a href="../-event-scope/-empty/index.html">EventScope.Empty</a><span class="token operator">&gt;</span></div><div class="brief "><a data-name="1067806469%2FProperties%2F1209998627" anchor-label="postStop" id="1067806469%2FProperties%2F1209998627" data-filterable-set=":silk-core:dokkaHtmlPartial/main"></a><p class="paragraph">Called after the server has successfully stopped.</p></div></div></div>
               </div>
             </div>
           </div>
@@ -104,7 +113,7 @@ if(savedDarkMode === true){
                 </span></span></div>
             <div>
               <div class="title">
-                <div class="platform-hinted " data-platform-hinted="data-platform-hinted" data-togglable="Properties"><div class="content sourceset-depenent-content" data-active="" data-togglable=":silk-core:dokkaHtmlPartial/main"><a data-name="428855215%2FProperties%2F1209998627" anchor-label="preHalt" id="428855215%2FProperties%2F1209998627" data-filterable-set=":silk-core:dokkaHtmlPartial/main"></a><div class="symbol monospace"><span class="token keyword"></span><span class="token keyword">val </span><a href="pre-halt.html">preHalt</a><span class="token operator">: </span><a href="../-async-event/index.html">AsyncEvent</a><span class="token operator">&lt;</span><span class="token keyword"></span><a href="-server-event/index.html">ServerEvents.ServerEvent</a><span class="token punctuation">, </span><span class="token keyword"></span><a href="../-event-scope/-cancellable/index.html">EventScope.Cancellable</a><span class="token operator">&gt;</span><span class="top-right-position"><span class="copy-icon"></span><div class="copy-popup-wrapper popup-to-left"><span class="copy-popup-icon"></span><span>Content copied to clipboard</span></div></span></div><div class="brief "><a data-name="428855215%2FProperties%2F1209998627" anchor-label="preHalt" id="428855215%2FProperties%2F1209998627" data-filterable-set=":silk-core:dokkaHtmlPartial/main"></a><p class="paragraph">Called before the game loop is stopped (running set to false).</p></div></div></div>
+                <div class="platform-hinted " data-platform-hinted="data-platform-hinted" data-togglable="Properties"><div class="content sourceset-dependent-content" data-active="" data-togglable=":silk-core:dokkaHtmlPartial/main"><a data-name="428855215%2FProperties%2F1209998627" anchor-label="preHalt" id="428855215%2FProperties%2F1209998627" data-filterable-set=":silk-core:dokkaHtmlPartial/main"></a><div class="symbol monospace"><span class="token keyword"></span><span class="token keyword">val </span><a href="pre-halt.html">preHalt</a><span class="token operator">: </span><a href="../-async-event/index.html">AsyncEvent</a><span class="token operator">&lt;</span><span class="token keyword"></span><a href="-server-event/index.html">ServerEvents.ServerEvent</a><span class="token punctuation">, </span><span class="token keyword"></span><a href="../-event-scope/-cancellable/index.html">EventScope.Cancellable</a><span class="token operator">&gt;</span></div><div class="brief "><a data-name="428855215%2FProperties%2F1209998627" anchor-label="preHalt" id="428855215%2FProperties%2F1209998627" data-filterable-set=":silk-core:dokkaHtmlPartial/main"></a><p class="paragraph">Called before the game loop is stopped (running set to false).</p></div></div></div>
               </div>
             </div>
           </div>
@@ -119,7 +128,7 @@ if(savedDarkMode === true){
                 </span></span></div>
             <div>
               <div class="title">
-                <div class="platform-hinted " data-platform-hinted="data-platform-hinted" data-togglable="Properties"><div class="content sourceset-depenent-content" data-active="" data-togglable=":silk-core:dokkaHtmlPartial/main"><a data-name="-1000701208%2FProperties%2F1209998627" anchor-label="preStart" id="-1000701208%2FProperties%2F1209998627" data-filterable-set=":silk-core:dokkaHtmlPartial/main"></a><div class="symbol monospace"><span class="token keyword"></span><span class="token keyword">val </span><a href="pre-start.html">preStart</a><span class="token operator">: </span><a href="../-async-event/index.html">AsyncEvent</a><span class="token operator">&lt;</span><span class="token keyword"></span><a href="-server-event/index.html">ServerEvents.ServerEvent</a><span class="token punctuation">, </span><span class="token keyword"></span><a href="../-event-scope/-empty/index.html">EventScope.Empty</a><span class="token operator">&gt;</span><span class="top-right-position"><span class="copy-icon"></span><div class="copy-popup-wrapper popup-to-left"><span class="copy-popup-icon"></span><span>Content copied to clipboard</span></div></span></div><div class="brief "><a data-name="-1000701208%2FProperties%2F1209998627" anchor-label="preStart" id="-1000701208%2FProperties%2F1209998627" data-filterable-set=":silk-core:dokkaHtmlPartial/main"></a><p class="paragraph">Called before the server is initialized.</p></div></div></div>
+                <div class="platform-hinted " data-platform-hinted="data-platform-hinted" data-togglable="Properties"><div class="content sourceset-dependent-content" data-active="" data-togglable=":silk-core:dokkaHtmlPartial/main"><a data-name="-1000701208%2FProperties%2F1209998627" anchor-label="preStart" id="-1000701208%2FProperties%2F1209998627" data-filterable-set=":silk-core:dokkaHtmlPartial/main"></a><div class="symbol monospace"><span class="token keyword"></span><span class="token keyword">val </span><a href="pre-start.html">preStart</a><span class="token operator">: </span><a href="../-async-event/index.html">AsyncEvent</a><span class="token operator">&lt;</span><span class="token keyword"></span><a href="-server-event/index.html">ServerEvents.ServerEvent</a><span class="token punctuation">, </span><span class="token keyword"></span><a href="../-event-scope/-empty/index.html">EventScope.Empty</a><span class="token operator">&gt;</span></div><div class="brief "><a data-name="-1000701208%2FProperties%2F1209998627" anchor-label="preStart" id="-1000701208%2FProperties%2F1209998627" data-filterable-set=":silk-core:dokkaHtmlPartial/main"></a><p class="paragraph">Called before the server is initialized.</p></div></div></div>
               </div>
             </div>
           </div>
@@ -134,22 +143,9 @@ if(savedDarkMode === true){
                 </span></span></div>
             <div>
               <div class="title">
-                <div class="platform-hinted " data-platform-hinted="data-platform-hinted" data-togglable="Properties"><div class="content sourceset-depenent-content" data-active="" data-togglable=":silk-core:dokkaHtmlPartial/main"><a data-name="1678775054%2FProperties%2F1209998627" anchor-label="preStop" id="1678775054%2FProperties%2F1209998627" data-filterable-set=":silk-core:dokkaHtmlPartial/main"></a><div class="symbol monospace"><span class="token keyword"></span><span class="token keyword">val </span><a href="pre-stop.html">preStop</a><span class="token operator">: </span><a href="../-async-event/index.html">AsyncEvent</a><span class="token operator">&lt;</span><span class="token keyword"></span><a href="-server-event/index.html">ServerEvents.ServerEvent</a><span class="token punctuation">, </span><span class="token keyword"></span><a href="../-event-scope/-empty/index.html">EventScope.Empty</a><span class="token operator">&gt;</span><span class="top-right-position"><span class="copy-icon"></span><div class="copy-popup-wrapper popup-to-left"><span class="copy-popup-icon"></span><span>Content copied to clipboard</span></div></span></div><div class="brief "><a data-name="1678775054%2FProperties%2F1209998627" anchor-label="preStop" id="1678775054%2FProperties%2F1209998627" data-filterable-set=":silk-core:dokkaHtmlPartial/main"></a><p class="paragraph">Called before the server begins to shut down.</p></div></div></div>
+                <div class="platform-hinted " data-platform-hinted="data-platform-hinted" data-togglable="Properties"><div class="content sourceset-dependent-content" data-active="" data-togglable=":silk-core:dokkaHtmlPartial/main"><a data-name="1678775054%2FProperties%2F1209998627" anchor-label="preStop" id="1678775054%2FProperties%2F1209998627" data-filterable-set=":silk-core:dokkaHtmlPartial/main"></a><div class="symbol monospace"><span class="token keyword"></span><span class="token keyword">val </span><a href="pre-stop.html">preStop</a><span class="token operator">: </span><a href="../-async-event/index.html">AsyncEvent</a><span class="token operator">&lt;</span><span class="token keyword"></span><a href="-server-event/index.html">ServerEvents.ServerEvent</a><span class="token punctuation">, </span><span class="token keyword"></span><a href="../-event-scope/-empty/index.html">EventScope.Empty</a><span class="token operator">&gt;</span></div><div class="brief "><a data-name="1678775054%2FProperties%2F1209998627" anchor-label="preStop" id="1678775054%2FProperties%2F1209998627" data-filterable-set=":silk-core:dokkaHtmlPartial/main"></a><p class="paragraph">Called before the server begins to shut down.</p></div></div></div>
               </div>
             </div>
-          </div>
-        </div>
-      </div>
-      <h2 class="">Sources</h2>
-      <div class="table" data-togglable="Sources"><a data-name="2126910968%2FSource%2F1209998627" anchor-label="https://github.com/SilkMC/silk/tree/main/silk-core/src/main/kotlin/net/silkmc/silk/core/event/ServerEvents.kt#L12" id="2126910968%2FSource%2F1209998627" data-filterable-set=":silk-core:dokkaHtmlPartial/main"></a>
-        <div class="table-row" data-filterable-current=":silk-core:dokkaHtmlPartial/main" data-filterable-set=":silk-core:dokkaHtmlPartial/main">
-          <div class="main-subrow keyValue ">
-            <div class=""><span class="inline-flex">
-                <div><a href="https://github.com/SilkMC/silk/tree/main/silk-core/src/main/kotlin/net/silkmc/silk/core/event/ServerEvents.kt#L12">jvm source</a></div>
-<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="2126910968%2FSource%2F1209998627"></span>
-                  <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
-                </span></span></div>
-            <div></div>
           </div>
         </div>
       </div>

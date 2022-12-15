@@ -4,10 +4,18 @@
     <meta name="viewport" content="width=device-width, initial-scale=1" charset="UTF-8">
     <title>VariableIcon</title>
 <link href="../../../../images/logo-icon.svg" rel="icon" type="image/svg"><script>var pathToRoot = "../../../../";</script>    <script>const storage = localStorage.getItem("dokka-dark-mode")
-const savedDarkMode = storage ? JSON.parse(storage) : false
-if(savedDarkMode === true){
-    document.getElementsByTagName("html")[0].classList.add("theme-dark")
-}</script>
+    if (storage == null) {
+        const osDarkSchemePreferred = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches
+        if (osDarkSchemePreferred === true) {
+            document.getElementsByTagName("html")[0].classList.add("theme-dark")
+        }
+    } else {
+        const savedDarkMode = JSON.parse(storage)
+        if(savedDarkMode === true) {
+            document.getElementsByTagName("html")[0].classList.add("theme-dark")
+        }
+    }
+    </script>
 <script type="text/javascript" src="../../../../scripts/sourceset_dependencies.js" async></script>
 <link href="../../../../styles/style.css" rel="Stylesheet">
 <link href="../../../../styles/jetbrains-mono.css" rel="Stylesheet">
@@ -18,7 +26,8 @@ if(savedDarkMode === true){
 <script type="text/javascript" src="../../../../scripts/navigation-loader.js" async></script>
 <script type="text/javascript" src="../../../../scripts/platform-content-handler.js" async></script>
 <script type="text/javascript" src="../../../../scripts/main.js" defer></script>
-<script type="text/javascript" src="../../../../scripts/prism.js" async></script></head>
+<script type="text/javascript" src="../../../../scripts/prism.js" async></script>
+<script type="text/javascript" src="../../../../scripts/symbol-parameters-wrapper_deferred.js" defer></script></head>
 <body>
 <div class="navigation-wrapper" id="navigation-wrapper">
     <div id="leftToggler"><span class="icon-toggler"></span></div>
@@ -38,13 +47,13 @@ if(savedDarkMode === true){
     </div>
     <div id="main">
 <div class="main-content" id="content" pageids="silk-igui::net.silkmc.silk.igui/GuiIcon.VariableIcon///PointingToDeclaration//-1174248208">
-  <div class="breadcrumbs"><a href="../../../index.html">silk-igui</a><span class="delimiter">/</span><a href="../../index.html">net.silkmc.silk.igui</a><span class="delimiter">/</span><a href="../index.html">GuiIcon</a><span class="delimiter">/</span><a href="index.html">VariableIcon</a></div>
+  <div class="breadcrumbs"><a href="../../../index.html">silk-igui</a><span class="delimiter">/</span><a href="../../index.html">net.silkmc.silk.igui</a><span class="delimiter">/</span><a href="../index.html">GuiIcon</a><span class="delimiter">/</span><span class="current">VariableIcon</span></div>
   <div class="cover ">
     <h1 class="cover"><span>Variable</span><wbr><span><span>Icon</span></span></h1>
-    <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-depenent-content" data-active="" data-togglable=":silk-igui:dokkaHtmlPartial/main"><div class="symbol monospace"><span class="token keyword">class </span><a href="index.html">VariableIcon</a><span class="token operator">&lt;</span><span class="token keyword"></span><a href="index.html">E</a><span class="token operator">&gt;</span><span class="token punctuation">(</span><span class="parameters "><span class="parameter "><span class="token keyword">val </span>property<span class="token operator">: </span><a href="../../../net.silkmc.silk.igui.observable/-gui-property/index.html">GuiProperty</a><span class="token operator">&lt;</span><span class="token keyword"></span><a href="index.html">E</a><span class="token operator">&gt;</span><span class="token punctuation">, </span></span><span class="parameter "><span class="token keyword">val </span>iconGenerator<span class="token operator">: </span><span class="token punctuation">(</span><span class="token keyword"></span><a href="index.html">E</a><span class="token punctuation">)</span><span class="token operator"> -&gt; </span><span class="token keyword"></span><span data-unresolved-link="net.minecraft.world.item/ItemStack///PointingToDeclaration/">ItemStack</span></span></span><span class="token punctuation">)</span> : <a href="../index.html">GuiIcon</a><span class="top-right-position"><span class="copy-icon"></span><div class="copy-popup-wrapper popup-to-left"><span class="copy-popup-icon"></span><span>Content copied to clipboard</span></div></span></div></div></div>
+    <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":silk-igui:dokkaHtmlPartial/main"><div class="symbol monospace"><span class="token keyword">class </span><a href="index.html">VariableIcon</a><span class="token operator">&lt;</span><span class="token keyword"></span><a href="index.html">E</a><span class="token operator">&gt;</span><span class="token punctuation">(</span><span class="parameters "><span class="parameter "><span class="token keyword">val </span>property<span class="token operator">: </span><a href="../../../net.silkmc.silk.igui.observable/-gui-property/index.html">GuiProperty</a><span class="token operator">&lt;</span><span class="token keyword"></span><a href="index.html">E</a><span class="token operator">&gt;</span><span class="token punctuation">, </span></span><span class="parameter "><span class="token keyword">val </span>iconGenerator<span class="token operator">: </span><span class="token punctuation">(</span><span class="token keyword"></span><a href="index.html">E</a><span class="token punctuation">)</span><span class="token operator"> -&gt; </span><span class="token keyword"></span><span data-unresolved-link="net.minecraft.world.item/ItemStack///PointingToDeclaration/">ItemStack</span></span></span><span class="token punctuation">)</span> : <a href="../index.html">GuiIcon</a><span class="clearfix"><span class="floating-right">(<a href="https://github.com/SilkMC/silk/tree/main/silk-igui/src/main/kotlin/net/silkmc/silk/igui/GuiIcon.kt#L17">source</a>)</span></span></div></div></div>
   </div>
   <div class="tabbedcontent">
-    <div class="tabs-section" tabs-section="tabs-section"><button class="section-tab" data-active="" data-togglable="Constructors">Constructors</button><button class="section-tab" data-togglable="Properties">Properties</button><button class="section-tab" data-togglable="Sources">Sources</button></div>
+    <div class="tabs-section" tabs-section="tabs-section"><button class="section-tab" data-active="" data-togglable="Constructors">Constructors</button><button class="section-tab" data-togglable="Properties">Properties</button></div>
     <div class="tabs-section-body">
       <h2 class="tabbedcontent">Constructors</h2>
       <div class="table" data-togglable="Constructors"><a data-name="-386604675%2FConstructors%2F-1174248208" anchor-label="VariableIcon" id="-386604675%2FConstructors%2F-1174248208" data-filterable-set=":silk-igui:dokkaHtmlPartial/main"></a>
@@ -57,7 +66,7 @@ if(savedDarkMode === true){
                 </span></span></div>
             <div>
               <div class="title">
-                <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-depenent-content" data-active="" data-togglable=":silk-igui:dokkaHtmlPartial/main"><div class="symbol monospace"><span class="token keyword"></span><span class="token keyword">fun </span><span class="token operator">&lt;</span><span class="token keyword"></span><a href="index.html">E</a><span class="token operator">&gt; </span><a href="-variable-icon.html"><span class="token function">VariableIcon</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">property<span class="token operator">: </span><a href="../../../net.silkmc.silk.igui.observable/-gui-property/index.html">GuiProperty</a><span class="token operator">&lt;</span><span class="token keyword"></span><a href="index.html">E</a><span class="token operator">&gt;</span><span class="token punctuation">, </span></span><span class="parameter ">iconGenerator<span class="token operator">: </span><span class="token punctuation">(</span><span class="token keyword"></span><a href="index.html">E</a><span class="token punctuation">)</span><span class="token operator"> -&gt; </span><span class="token keyword"></span><span data-unresolved-link="net.minecraft.world.item/ItemStack///PointingToDeclaration/">ItemStack</span></span></span><span class="token punctuation">)</span><span class="top-right-position"><span class="copy-icon"></span><div class="copy-popup-wrapper popup-to-left"><span class="copy-popup-icon"></span><span>Content copied to clipboard</span></div></span></div></div></div>
+                <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":silk-igui:dokkaHtmlPartial/main"><div class="symbol monospace"><span class="token keyword"></span><span class="token keyword">fun </span><span class="token operator">&lt;</span><span class="token keyword"></span><a href="index.html">E</a><span class="token operator">&gt; </span><a href="-variable-icon.html"><span class="token function">VariableIcon</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">property<span class="token operator">: </span><a href="../../../net.silkmc.silk.igui.observable/-gui-property/index.html">GuiProperty</a><span class="token operator">&lt;</span><span class="token keyword"></span><a href="index.html">E</a><span class="token operator">&gt;</span><span class="token punctuation">, </span></span><span class="parameter ">iconGenerator<span class="token operator">: </span><span class="token punctuation">(</span><span class="token keyword"></span><a href="index.html">E</a><span class="token punctuation">)</span><span class="token operator"> -&gt; </span><span class="token keyword"></span><span data-unresolved-link="net.minecraft.world.item/ItemStack///PointingToDeclaration/">ItemStack</span></span></span><span class="token punctuation">)</span></div></div></div>
               </div>
             </div>
           </div>
@@ -74,7 +83,7 @@ if(savedDarkMode === true){
                 </span></span></div>
             <div>
               <div class="title">
-                <div class="platform-hinted " data-platform-hinted="data-platform-hinted" data-togglable="Properties"><div class="content sourceset-depenent-content" data-active="" data-togglable=":silk-igui:dokkaHtmlPartial/main"><a data-name="-712096819%2FProperties%2F-1174248208" anchor-label="iconGenerator" id="-712096819%2FProperties%2F-1174248208" data-filterable-set=":silk-igui:dokkaHtmlPartial/main"></a><div class="symbol monospace"><span class="token keyword"></span><span class="token keyword">val </span><a href="icon-generator.html">iconGenerator</a><span class="token operator">: </span><span class="token punctuation">(</span><span class="token keyword"></span><a href="index.html">E</a><span class="token punctuation">)</span><span class="token operator"> -&gt; </span><span class="token keyword"></span><span data-unresolved-link="net.minecraft.world.item/ItemStack///PointingToDeclaration/">ItemStack</span><span class="top-right-position"><span class="copy-icon"></span><div class="copy-popup-wrapper popup-to-left"><span class="copy-popup-icon"></span><span>Content copied to clipboard</span></div></span></div></div></div>
+                <div class="platform-hinted " data-platform-hinted="data-platform-hinted" data-togglable="Properties"><div class="content sourceset-dependent-content" data-active="" data-togglable=":silk-igui:dokkaHtmlPartial/main"><a data-name="-712096819%2FProperties%2F-1174248208" anchor-label="iconGenerator" id="-712096819%2FProperties%2F-1174248208" data-filterable-set=":silk-igui:dokkaHtmlPartial/main"></a><div class="symbol monospace"><span class="token keyword"></span><span class="token keyword">val </span><a href="icon-generator.html">iconGenerator</a><span class="token operator">: </span><span class="token punctuation">(</span><span class="token keyword"></span><a href="index.html">E</a><span class="token punctuation">)</span><span class="token operator"> -&gt; </span><span class="token keyword"></span><span data-unresolved-link="net.minecraft.world.item/ItemStack///PointingToDeclaration/">ItemStack</span></div></div></div>
               </div>
             </div>
           </div>
@@ -89,7 +98,7 @@ if(savedDarkMode === true){
                 </span></span></div>
             <div>
               <div class="title">
-                <div class="platform-hinted " data-platform-hinted="data-platform-hinted" data-togglable="Properties"><div class="content sourceset-depenent-content" data-active="" data-togglable=":silk-igui:dokkaHtmlPartial/main"><a data-name="-449933426%2FProperties%2F-1174248208" anchor-label="inUse" id="-449933426%2FProperties%2F-1174248208" data-filterable-set=":silk-igui:dokkaHtmlPartial/main"></a><div class="symbol monospace"><span class="token keyword"></span><span class="token keyword">var </span><a href="../../-gui-useable/in-use.html">inUse</a><span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-boolean/index.html">Boolean</a><span class="token operator"> = </span><span class="token boolean">false</span><span class="top-right-position"><span class="copy-icon"></span><div class="copy-popup-wrapper popup-to-left"><span class="copy-popup-icon"></span><span>Content copied to clipboard</span></div></span></div></div></div>
+                <div class="platform-hinted " data-platform-hinted="data-platform-hinted" data-togglable="Properties"><div class="content sourceset-dependent-content" data-active="" data-togglable=":silk-igui:dokkaHtmlPartial/main"><a data-name="-449933426%2FProperties%2F-1174248208" anchor-label="inUse" id="-449933426%2FProperties%2F-1174248208" data-filterable-set=":silk-igui:dokkaHtmlPartial/main"></a><div class="symbol monospace"><span class="token keyword"></span><span class="token keyword">var </span><a href="../../-gui-useable/in-use.html">inUse</a><span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-boolean/index.html">Boolean</a><span class="token operator"> = </span><span class="token boolean">false</span></div></div></div>
               </div>
             </div>
           </div>
@@ -104,7 +113,7 @@ if(savedDarkMode === true){
                 </span></span></div>
             <div>
               <div class="title">
-                <div class="platform-hinted " data-platform-hinted="data-platform-hinted" data-togglable="Properties"><div class="content sourceset-depenent-content" data-active="" data-togglable=":silk-igui:dokkaHtmlPartial/main"><a data-name="-242339758%2FProperties%2F-1174248208" anchor-label="itemStack" id="-242339758%2FProperties%2F-1174248208" data-filterable-set=":silk-igui:dokkaHtmlPartial/main"></a><div class="symbol monospace"><span class="token keyword">open </span><span class="token keyword">override </span><span class="token keyword">val </span><a href="item-stack.html">itemStack</a><span class="token operator">: </span><span data-unresolved-link="net.minecraft.world.item/ItemStack///PointingToDeclaration/">ItemStack</span><span class="top-right-position"><span class="copy-icon"></span><div class="copy-popup-wrapper popup-to-left"><span class="copy-popup-icon"></span><span>Content copied to clipboard</span></div></span></div></div></div>
+                <div class="platform-hinted " data-platform-hinted="data-platform-hinted" data-togglable="Properties"><div class="content sourceset-dependent-content" data-active="" data-togglable=":silk-igui:dokkaHtmlPartial/main"><a data-name="-242339758%2FProperties%2F-1174248208" anchor-label="itemStack" id="-242339758%2FProperties%2F-1174248208" data-filterable-set=":silk-igui:dokkaHtmlPartial/main"></a><div class="symbol monospace"><span class="token keyword">open </span><span class="token keyword">override </span><span class="token keyword">val </span><a href="item-stack.html">itemStack</a><span class="token operator">: </span><span data-unresolved-link="net.minecraft.world.item/ItemStack///PointingToDeclaration/">ItemStack</span></div></div></div>
               </div>
             </div>
           </div>
@@ -119,22 +128,9 @@ if(savedDarkMode === true){
                 </span></span></div>
             <div>
               <div class="title">
-                <div class="platform-hinted " data-platform-hinted="data-platform-hinted" data-togglable="Properties"><div class="content sourceset-depenent-content" data-active="" data-togglable=":silk-igui:dokkaHtmlPartial/main"><a data-name="-358391778%2FProperties%2F-1174248208" anchor-label="property" id="-358391778%2FProperties%2F-1174248208" data-filterable-set=":silk-igui:dokkaHtmlPartial/main"></a><div class="symbol monospace"><span class="token keyword"></span><span class="token keyword">val </span><a href="property.html">property</a><span class="token operator">: </span><a href="../../../net.silkmc.silk.igui.observable/-gui-property/index.html">GuiProperty</a><span class="token operator">&lt;</span><span class="token keyword"></span><a href="index.html">E</a><span class="token operator">&gt;</span><span class="top-right-position"><span class="copy-icon"></span><div class="copy-popup-wrapper popup-to-left"><span class="copy-popup-icon"></span><span>Content copied to clipboard</span></div></span></div></div></div>
+                <div class="platform-hinted " data-platform-hinted="data-platform-hinted" data-togglable="Properties"><div class="content sourceset-dependent-content" data-active="" data-togglable=":silk-igui:dokkaHtmlPartial/main"><a data-name="-358391778%2FProperties%2F-1174248208" anchor-label="property" id="-358391778%2FProperties%2F-1174248208" data-filterable-set=":silk-igui:dokkaHtmlPartial/main"></a><div class="symbol monospace"><span class="token keyword"></span><span class="token keyword">val </span><a href="property.html">property</a><span class="token operator">: </span><a href="../../../net.silkmc.silk.igui.observable/-gui-property/index.html">GuiProperty</a><span class="token operator">&lt;</span><span class="token keyword"></span><a href="index.html">E</a><span class="token operator">&gt;</span></div></div></div>
               </div>
             </div>
-          </div>
-        </div>
-      </div>
-      <h2 class="">Sources</h2>
-      <div class="table" data-togglable="Sources"><a data-name="-1248050772%2FSource%2F-1174248208" anchor-label="https://github.com/SilkMC/silk/tree/main/silk-igui/src/main/kotlin/net/silkmc/silk/igui/GuiIcon.kt#L17" id="-1248050772%2FSource%2F-1174248208" data-filterable-set=":silk-igui:dokkaHtmlPartial/main"></a>
-        <div class="table-row" data-filterable-current=":silk-igui:dokkaHtmlPartial/main" data-filterable-set=":silk-igui:dokkaHtmlPartial/main">
-          <div class="main-subrow keyValue ">
-            <div class=""><span class="inline-flex">
-                <div><a href="https://github.com/SilkMC/silk/tree/main/silk-igui/src/main/kotlin/net/silkmc/silk/igui/GuiIcon.kt#L17">jvm source</a></div>
-<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1248050772%2FSource%2F-1174248208"></span>
-                  <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
-                </span></span></div>
-            <div></div>
           </div>
         </div>
       </div>

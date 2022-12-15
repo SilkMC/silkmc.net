@@ -6,10 +6,18 @@
     <link href="images/logo-icon.svg" rel="icon" type="image/svg">
     <script>var pathToRoot = "";</script>
     <script>const storage = localStorage.getItem("dokka-dark-mode")
-const savedDarkMode = storage ? JSON.parse(storage) : false
-if(savedDarkMode === true){
-    document.getElementsByTagName("html")[0].classList.add("theme-dark")
-}</script>
+    if (storage == null) {
+        const osDarkSchemePreferred = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches
+        if (osDarkSchemePreferred === true) {
+            document.getElementsByTagName("html")[0].classList.add("theme-dark")
+        }
+    } else {
+        const savedDarkMode = JSON.parse(storage)
+        if(savedDarkMode === true) {
+            document.getElementsByTagName("html")[0].classList.add("theme-dark")
+        }
+    }
+    </script>
 <script type="text/javascript" src="scripts/sourceset_dependencies.js" async="async"></script>
 <link href="styles/style.css" rel="Stylesheet">
 <link href="styles/jetbrains-mono.css" rel="Stylesheet">
@@ -21,6 +29,7 @@ if(savedDarkMode === true){
 <script type="text/javascript" src="scripts/platform-content-handler.js" async="async"></script>
 <script type="text/javascript" src="scripts/main.js" defer="defer"></script>
 <script type="text/javascript" src="scripts/prism.js" async="async"></script>
+<script type="text/javascript" src="scripts/symbol-parameters-wrapper_deferred.js" defer="defer"></script>
 </head>
 <body>
 <div class="navigation-wrapper" id="navigation-wrapper">
@@ -52,7 +61,7 @@ if(savedDarkMode === true){
       <p class="paragraph">The library offers you stable and simple APIs for common tasks in mod development.</p>
       <h3 class=""> Setup with Gradle</h3>
       <p class="paragraph">Click on each module below to get started with it and to see how to use it in your build environment.</p>
-      <h4 class=""><strong>IMPORTANT</strong> Temporary setup requirement</h4>
+      <h4 class=""> <strong>IMPORTANT</strong> Temporary setup requirement</h4>
       <p class="paragraph"><strong>See </strong><a href="https://gist.github.com/jakobkmar/5068aa14e37b859c3246de91cac74347"><strong>this gist</strong></a><strong> to learn how to use Silk 1.9.1 and above.</strong> This is only temporary, due to Silk already making use of context receivers.</p>
       <h3 class=""> Provide it at runtime</h3>
       <p class="paragraph">If you use Silk, it must be available at runtime.</p>

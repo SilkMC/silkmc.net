@@ -4,10 +4,18 @@
     <meta name="viewport" content="width=device-width, initial-scale=1" charset="UTF-8">
     <title>PermissionLevel</title>
 <link href="../../../images/logo-icon.svg" rel="icon" type="image/svg"><script>var pathToRoot = "../../../";</script>    <script>const storage = localStorage.getItem("dokka-dark-mode")
-const savedDarkMode = storage ? JSON.parse(storage) : false
-if(savedDarkMode === true){
-    document.getElementsByTagName("html")[0].classList.add("theme-dark")
-}</script>
+    if (storage == null) {
+        const osDarkSchemePreferred = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches
+        if (osDarkSchemePreferred === true) {
+            document.getElementsByTagName("html")[0].classList.add("theme-dark")
+        }
+    } else {
+        const savedDarkMode = JSON.parse(storage)
+        if(savedDarkMode === true) {
+            document.getElementsByTagName("html")[0].classList.add("theme-dark")
+        }
+    }
+    </script>
 <script type="text/javascript" src="../../../scripts/sourceset_dependencies.js" async></script>
 <link href="../../../styles/style.css" rel="Stylesheet">
 <link href="../../../styles/jetbrains-mono.css" rel="Stylesheet">
@@ -18,7 +26,8 @@ if(savedDarkMode === true){
 <script type="text/javascript" src="../../../scripts/navigation-loader.js" async></script>
 <script type="text/javascript" src="../../../scripts/platform-content-handler.js" async></script>
 <script type="text/javascript" src="../../../scripts/main.js" defer></script>
-<script type="text/javascript" src="../../../scripts/prism.js" async></script></head>
+<script type="text/javascript" src="../../../scripts/prism.js" async></script>
+<script type="text/javascript" src="../../../scripts/symbol-parameters-wrapper_deferred.js" defer></script></head>
 <body>
 <div class="navigation-wrapper" id="navigation-wrapper">
     <div id="leftToggler"><span class="icon-toggler"></span></div>
@@ -38,13 +47,13 @@ if(savedDarkMode === true){
     </div>
     <div id="main">
 <div class="main-content" id="content" pageids="silk-commands::net.silkmc.silk.commands/PermissionLevel///PointingToDeclaration//-179987238">
-  <div class="breadcrumbs"><a href="../../index.html">silk-commands</a><span class="delimiter">/</span><a href="../index.html">net.silkmc.silk.commands</a><span class="delimiter">/</span><a href="index.html">PermissionLevel</a></div>
+  <div class="breadcrumbs"><a href="../../index.html">silk-commands</a><span class="delimiter">/</span><a href="../index.html">net.silkmc.silk.commands</a><span class="delimiter">/</span><span class="current">PermissionLevel</span></div>
   <div class="cover ">
     <h1 class="cover"><span>Permission</span><wbr><span><span>Level</span></span></h1>
-    <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-depenent-content" data-active="" data-togglable=":silk-commands:dokkaHtmlPartial/main"><div class="symbol monospace"><span class="token keyword">enum </span><a href="index.html">PermissionLevel</a> : <a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-enum/index.html">Enum</a><span class="token operator">&lt;</span><span class="token keyword"></span><a href="index.html">PermissionLevel</a><span class="token operator">&gt; </span><span class="top-right-position"><span class="copy-icon"></span><div class="copy-popup-wrapper popup-to-left"><span class="copy-popup-icon"></span><span>Content copied to clipboard</span></div></span></div><p class="paragraph">An enum containing known permission levels. Information taken from <a href="https://minecraft.fandom.com/wiki/Permission_level#Java_Edition">the Minecraft wiki</a></p></div></div>
+    <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":silk-commands:dokkaHtmlPartial/main"><div class="symbol monospace"><span class="token keyword">enum </span><a href="index.html">PermissionLevel</a> : <a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-enum/index.html">Enum</a><span class="token operator">&lt;</span><span class="token keyword"></span><a href="index.html">PermissionLevel</a><span class="token operator">&gt; </span><span class="clearfix"><span class="floating-right">(<a href="https://github.com/SilkMC/silk/tree/main/silk-commands/src/main/kotlin/net/silkmc/silk/commands/PermissionLevel.kt#L3">source</a>)</span></span></div><p class="paragraph">An enum containing known permission levels. Information taken from <a href="https://minecraft.fandom.com/wiki/Permission_level#Java_Edition">the Minecraft wiki</a></p></div></div>
   </div>
   <div class="tabbedcontent">
-    <div class="tabs-section" tabs-section="tabs-section"><button class="section-tab" data-active="" data-togglable="Entries">Entries</button><button class="section-tab" data-togglable="Properties">Properties</button><button class="section-tab" data-togglable="Sources">Sources</button></div>
+    <div class="tabs-section" tabs-section="tabs-section"><button class="section-tab" data-active="" data-togglable="Entries">Entries</button><button class="section-tab" data-togglable="Functions">Functions</button><button class="section-tab" data-togglable="Properties">Properties</button></div>
     <div class="tabs-section-body">
       <h2 class="tabbedcontent">Entries</h2>
       <div class="table" data-togglable="Entries"><a data-name="-19830555%2FClasslikes%2F-179987238" anchor-label="NONE" id="-19830555%2FClasslikes%2F-179987238" data-filterable-set=":silk-commands:dokkaHtmlPartial/main"></a>
@@ -57,7 +66,7 @@ if(savedDarkMode === true){
                 </span></span></div>
             <div>
               <div class="title">
-                <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-depenent-content" data-active="" data-togglable=":silk-commands:dokkaHtmlPartial/main"><div class="symbol monospace"><div class="block"><a href="-n-o-n-e/index.html">NONE</a></div><span class="top-right-position"><span class="copy-icon"></span><div class="copy-popup-wrapper popup-to-left"><span class="copy-popup-icon"></span><span>Content copied to clipboard</span></div></span></div><div class="brief "><p class="paragraph">The default permission level.</p></div></div></div>
+                <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":silk-commands:dokkaHtmlPartial/main"><div class="symbol monospace"><div class="block"><a href="-n-o-n-e/index.html">NONE</a></div></div><div class="brief "><p class="paragraph">The default permission level.</p></div></div></div>
               </div>
             </div>
           </div>
@@ -72,7 +81,7 @@ if(savedDarkMode === true){
                 </span></span></div>
             <div>
               <div class="title">
-                <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-depenent-content" data-active="" data-togglable=":silk-commands:dokkaHtmlPartial/main"><div class="symbol monospace"><div class="block"><a href="-b-y-p-a-s-s_-s-p-a-w-n_-p-r-o-t-e-c-t-i-o-n/index.html">BYPASS_SPAWN_PROTECTION</a></div><span class="top-right-position"><span class="copy-icon"></span><div class="copy-popup-wrapper popup-to-left"><span class="copy-popup-icon"></span><span>Content copied to clipboard</span></div></span></div><div class="brief "><p class="paragraph">Players with this level can bypass spawn protection.</p></div></div></div>
+                <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":silk-commands:dokkaHtmlPartial/main"><div class="symbol monospace"><div class="block"><a href="-b-y-p-a-s-s_-s-p-a-w-n_-p-r-o-t-e-c-t-i-o-n/index.html">BYPASS_SPAWN_PROTECTION</a></div></div><div class="brief "><p class="paragraph">Players with this level can bypass spawn protection.</p></div></div></div>
               </div>
             </div>
           </div>
@@ -87,7 +96,7 @@ if(savedDarkMode === true){
                 </span></span></div>
             <div>
               <div class="title">
-                <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-depenent-content" data-active="" data-togglable=":silk-commands:dokkaHtmlPartial/main"><div class="symbol monospace"><div class="block"><a href="-c-o-m-m-a-n-d_-r-i-g-h-t-s/index.html">COMMAND_RIGHTS</a></div><span class="top-right-position"><span class="copy-icon"></span><div class="copy-popup-wrapper popup-to-left"><span class="copy-popup-icon"></span><span>Content copied to clipboard</span></div></span></div><div class="brief "><p class="paragraph">This level allows player to use all commands, except the ones managing other players, such as <code class="lang-kotlin">/ban</code> and <code class="lang-kotlin">/kick</code>.</p></div></div></div>
+                <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":silk-commands:dokkaHtmlPartial/main"><div class="symbol monospace"><div class="block"><a href="-c-o-m-m-a-n-d_-r-i-g-h-t-s/index.html">COMMAND_RIGHTS</a></div></div><div class="brief "><p class="paragraph">This level allows player to use all commands, except the ones managing other players, such as <code class="lang-kotlin">/ban</code> and <code class="lang-kotlin">/kick</code>.</p></div></div></div>
               </div>
             </div>
           </div>
@@ -102,7 +111,7 @@ if(savedDarkMode === true){
                 </span></span></div>
             <div>
               <div class="title">
-                <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-depenent-content" data-active="" data-togglable=":silk-commands:dokkaHtmlPartial/main"><div class="symbol monospace"><div class="block"><a href="-b-a-n_-r-i-g-h-t-s/index.html">BAN_RIGHTS</a></div><span class="top-right-position"><span class="copy-icon"></span><div class="copy-popup-wrapper popup-to-left"><span class="copy-popup-icon"></span><span>Content copied to clipboard</span></div></span></div><div class="brief "><p class="paragraph">All previous rights plus the right to ban and kick players.</p></div></div></div>
+                <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":silk-commands:dokkaHtmlPartial/main"><div class="symbol monospace"><div class="block"><a href="-b-a-n_-r-i-g-h-t-s/index.html">BAN_RIGHTS</a></div></div><div class="brief "><p class="paragraph">All previous rights plus the right to ban and kick players.</p></div></div></div>
               </div>
             </div>
           </div>
@@ -117,7 +126,39 @@ if(savedDarkMode === true){
                 </span></span></div>
             <div>
               <div class="title">
-                <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-depenent-content" data-active="" data-togglable=":silk-commands:dokkaHtmlPartial/main"><div class="symbol monospace"><div class="block"><a href="-o-w-n-e-r/index.html">OWNER</a></div><span class="top-right-position"><span class="copy-icon"></span><div class="copy-popup-wrapper popup-to-left"><span class="copy-popup-icon"></span><span>Content copied to clipboard</span></div></span></div><div class="brief "><p class="paragraph">All previous rights plus the ability to stop the server.</p></div></div></div>
+                <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":silk-commands:dokkaHtmlPartial/main"><div class="symbol monospace"><div class="block"><a href="-o-w-n-e-r/index.html">OWNER</a></div></div><div class="brief "><p class="paragraph">All previous rights plus the ability to stop the server.</p></div></div></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <h2 class="">Functions</h2>
+      <div class="table" data-togglable="Functions"><a data-name="531022197%2FFunctions%2F-179987238" anchor-label="valueOf" id="531022197%2FFunctions%2F-179987238" data-filterable-set=":silk-commands:dokkaHtmlPartial/main"></a>
+        <div class="table-row" data-filterable-current=":silk-commands:dokkaHtmlPartial/main" data-filterable-set=":silk-commands:dokkaHtmlPartial/main">
+          <div class="main-subrow keyValue ">
+            <div class=""><span class="inline-flex">
+                <div><a href="value-of.html"><span>value</span><wbr><span><span>Of</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="531022197%2FFunctions%2F-179987238"></span>
+                  <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                </span></span></div>
+            <div>
+              <div class="title">
+                <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":silk-commands:dokkaHtmlPartial/main"><div class="symbol monospace"><span class="token keyword"></span><span class="token keyword">fun </span><a href="value-of.html"><span class="token function">valueOf</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">value<span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html">String</a></span></span><span class="token punctuation">)</span><span class="token operator">: </span><a href="index.html">PermissionLevel</a></div><div class="brief "><p class="paragraph">Returns the enum constant of this type with the specified name. The string must match exactly an identifier used to declare an enum constant in this type. (Extraneous whitespace characters are not permitted.)</p></div></div></div>
+              </div>
+            </div>
+          </div>
+        </div>
+<a data-name="1430458177%2FFunctions%2F-179987238" anchor-label="values" id="1430458177%2FFunctions%2F-179987238" data-filterable-set=":silk-commands:dokkaHtmlPartial/main"></a>
+        <div class="table-row" data-filterable-current=":silk-commands:dokkaHtmlPartial/main" data-filterable-set=":silk-commands:dokkaHtmlPartial/main">
+          <div class="main-subrow keyValue ">
+            <div class=""><span class="inline-flex">
+                <div><a href="values.html"><span><span>values</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1430458177%2FFunctions%2F-179987238"></span>
+                  <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                </span></span></div>
+            <div>
+              <div class="title">
+                <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":silk-commands:dokkaHtmlPartial/main"><div class="symbol monospace"><span class="token keyword"></span><span class="token keyword">fun </span><a href="values.html"><span class="token function">values</span></a><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-array/index.html">Array</a><span class="token operator">&lt;</span><span class="token keyword"></span><a href="index.html">PermissionLevel</a><span class="token operator">&gt;</span></div><div class="brief "><p class="paragraph">Returns an array containing the constants of this enum type, in the order they're declared.</p></div></div></div>
               </div>
             </div>
           </div>
@@ -134,7 +175,7 @@ if(savedDarkMode === true){
                 </span></span></div>
             <div>
               <div class="title">
-                <div class="platform-hinted " data-platform-hinted="data-platform-hinted" data-togglable="Properties"><div class="content sourceset-depenent-content" data-active="" data-togglable=":silk-commands:dokkaHtmlPartial/main"><a data-name="-98074221%2FProperties%2F-179987238" anchor-label="level" id="-98074221%2FProperties%2F-179987238" data-filterable-set=":silk-commands:dokkaHtmlPartial/main"></a><div class="symbol monospace"><span class="token keyword"></span><span class="token keyword">val </span><a href="level.html">level</a><span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-int/index.html">Int</a><span class="top-right-position"><span class="copy-icon"></span><div class="copy-popup-wrapper popup-to-left"><span class="copy-popup-icon"></span><span>Content copied to clipboard</span></div></span></div></div></div>
+                <div class="platform-hinted " data-platform-hinted="data-platform-hinted" data-togglable="Properties"><div class="content sourceset-dependent-content" data-active="" data-togglable=":silk-commands:dokkaHtmlPartial/main"><a data-name="-98074221%2FProperties%2F-179987238" anchor-label="level" id="-98074221%2FProperties%2F-179987238" data-filterable-set=":silk-commands:dokkaHtmlPartial/main"></a><div class="symbol monospace"><span class="token keyword"></span><span class="token keyword">val </span><a href="level.html">level</a><span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-int/index.html">Int</a></div></div></div>
               </div>
             </div>
           </div>
@@ -149,7 +190,7 @@ if(savedDarkMode === true){
                 </span></span></div>
             <div>
               <div class="title">
-                <div class="platform-hinted " data-platform-hinted="data-platform-hinted" data-togglable="Properties"><div class="content sourceset-depenent-content" data-active="" data-togglable=":silk-commands:dokkaHtmlPartial/main"><a data-name="-372974862%2FProperties%2F-179987238" anchor-label="name" id="-372974862%2FProperties%2F-179987238" data-filterable-set=":silk-commands:dokkaHtmlPartial/main"></a><div class="symbol monospace"><span class="token keyword"></span><span class="token keyword">val </span><a href="-o-w-n-e-r/index.html#-372974862%2FProperties%2F-179987238">name</a><span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html">String</a><span class="top-right-position"><span class="copy-icon"></span><div class="copy-popup-wrapper popup-to-left"><span class="copy-popup-icon"></span><span>Content copied to clipboard</span></div></span></div></div></div>
+                <div class="platform-hinted " data-platform-hinted="data-platform-hinted" data-togglable="Properties"><div class="content sourceset-dependent-content" data-active="" data-togglable=":silk-commands:dokkaHtmlPartial/main"><a data-name="-372974862%2FProperties%2F-179987238" anchor-label="name" id="-372974862%2FProperties%2F-179987238" data-filterable-set=":silk-commands:dokkaHtmlPartial/main"></a><div class="symbol monospace"><span class="token keyword"></span><span class="token keyword">val </span><a href="-o-w-n-e-r/index.html#-372974862%2FProperties%2F-179987238">name</a><span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html">String</a></div></div></div>
               </div>
             </div>
           </div>
@@ -164,22 +205,9 @@ if(savedDarkMode === true){
                 </span></span></div>
             <div>
               <div class="title">
-                <div class="platform-hinted " data-platform-hinted="data-platform-hinted" data-togglable="Properties"><div class="content sourceset-depenent-content" data-active="" data-togglable=":silk-commands:dokkaHtmlPartial/main"><a data-name="-739389684%2FProperties%2F-179987238" anchor-label="ordinal" id="-739389684%2FProperties%2F-179987238" data-filterable-set=":silk-commands:dokkaHtmlPartial/main"></a><div class="symbol monospace"><span class="token keyword"></span><span class="token keyword">val </span><a href="-o-w-n-e-r/index.html#-739389684%2FProperties%2F-179987238">ordinal</a><span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-int/index.html">Int</a><span class="top-right-position"><span class="copy-icon"></span><div class="copy-popup-wrapper popup-to-left"><span class="copy-popup-icon"></span><span>Content copied to clipboard</span></div></span></div></div></div>
+                <div class="platform-hinted " data-platform-hinted="data-platform-hinted" data-togglable="Properties"><div class="content sourceset-dependent-content" data-active="" data-togglable=":silk-commands:dokkaHtmlPartial/main"><a data-name="-739389684%2FProperties%2F-179987238" anchor-label="ordinal" id="-739389684%2FProperties%2F-179987238" data-filterable-set=":silk-commands:dokkaHtmlPartial/main"></a><div class="symbol monospace"><span class="token keyword"></span><span class="token keyword">val </span><a href="-o-w-n-e-r/index.html#-739389684%2FProperties%2F-179987238">ordinal</a><span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-int/index.html">Int</a></div></div></div>
               </div>
             </div>
-          </div>
-        </div>
-      </div>
-      <h2 class="">Sources</h2>
-      <div class="table" data-togglable="Sources"><a data-name="909613916%2FSource%2F-179987238" anchor-label="https://github.com/SilkMC/silk/tree/main/silk-commands/src/main/kotlin/net/silkmc/silk/commands/PermissionLevel.kt#L3" id="909613916%2FSource%2F-179987238" data-filterable-set=":silk-commands:dokkaHtmlPartial/main"></a>
-        <div class="table-row" data-filterable-current=":silk-commands:dokkaHtmlPartial/main" data-filterable-set=":silk-commands:dokkaHtmlPartial/main">
-          <div class="main-subrow keyValue ">
-            <div class=""><span class="inline-flex">
-                <div><a href="https://github.com/SilkMC/silk/tree/main/silk-commands/src/main/kotlin/net/silkmc/silk/commands/PermissionLevel.kt#L3">jvm source</a></div>
-<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="909613916%2FSource%2F-179987238"></span>
-                  <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
-                </span></span></div>
-            <div></div>
           </div>
         </div>
       </div>
