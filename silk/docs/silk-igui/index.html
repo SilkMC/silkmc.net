@@ -34,9 +34,12 @@
     <div class="library-name">
 <a href="../index.html">
 <span>silk</span>            </a>    </div>
-    <div>
+    <div>1.9.6
     </div>
     <div class="pull-right d-flex">
+        <div class="filter-section" id="filter-section">
+                <button class="platform-tag platform-selector jvm-like" data-active="" data-filter=":silk-igui:dokkaHtmlPartial/main">jvm</button>
+        </div>
         <button id="theme-toggle-button"><span id="theme-toggle"></span></button>
         <div id="searchBar"></div>
     </div>
@@ -50,7 +53,7 @@
   <div class="breadcrumbs"></div>
   <div class="cover ">
     <h1 class="cover"><span><span>silk-igui</span></span></h1>
-    <div class="platform-hinted UnderCoverText" data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":silk-igui:dokkaHtmlPartial/main"><p class="paragraph">The Inventory GUI (<code class="lang-kotlin">igui</code> in short) provides a high level <i>server-side</i> GUI API. You build the GUI using a custom and easy-to-use builder DSL.</p><p class="paragraph">The GUI rerenders automatically if the state changes, it provides animations and "compounds" which are an easy-to-use abstraction for listing a lot of elements of the same type.</p><h3 class=""> Dependency</h3><div class="sample-container"><pre><code class="block lang-kt" theme="idea">modImplementation("net.silkmc:silk-igui:1.9.5")</code></pre><span class="top-right-position"><span class="copy-icon"></span><div class="copy-popup-wrapper popup-to-left"><span class="copy-popup-icon"></span><span>Content copied to clipboard</span></div></span></div><h2 class=""> Using the igui builder</h2><h3 class=""> Create a new gui</h3><p class="paragraph">The <a href="net.silkmc.silk.igui/igui.html">igui</a> function opens up a new gui builder. Use the <a href="net.silkmc.silk.igui/-gui-builder/page.html">page</a> function to add a new page to this gui, you can that function as often as you want.</p><div class="sample-container"><pre><code class="block lang-kotlin" theme="idea">igui(GuiType.NINE_BY_SIX, "My cool gui".literal, defaultPageKey = 1) {<br>    page(1) {<br>        // access to the page builder inside here<br>    }<br>}</code></pre><span class="top-right-position"><span class="copy-icon"></span><div class="copy-popup-wrapper popup-to-left"><span class="copy-popup-icon"></span><span>Content copied to clipboard</span></div></span></div><h3 class=""> The page builder</h3><p class="paragraph">The <a href="net.silkmc.silk.igui/-gui-builder/-page-builder/index.html">page builder</a> is the most important part of the gui dsl. Inside this builder, you have access <a href="net.silkmc.silk.igui/-gui-builder/-page-builder/index.html">all functions adding elements to the gui</a>.</p></div></div>
+    <div class="platform-hinted UnderCoverText" data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":silk-igui:dokkaHtmlPartial/main"><p class="paragraph">The Inventory GUI (<code class="lang-kotlin">igui</code> in short) provides a high level <i>server-side</i> GUI API. You build the GUI using a custom and easy-to-use builder DSL.</p><p class="paragraph">The GUI rerenders automatically if the state changes, it provides animations and "compounds" which are an easy-to-use abstraction for listing a lot of elements of the same type.</p><h3 class=""> Dependency</h3><div class="sample-container"><pre><code class="block lang-kt" theme="idea">modImplementation("net.silkmc:silk-igui:1.9.6")</code></pre><span class="top-right-position"><span class="copy-icon"></span><div class="copy-popup-wrapper popup-to-left"><span class="copy-popup-icon"></span><span>Content copied to clipboard</span></div></span></div><h2 class=""> Using the igui builder</h2><h3 class=""> Create a new gui</h3><p class="paragraph">The <a href="net.silkmc.silk.igui/igui.html">igui</a> function opens up a new gui builder. Use the <a href="net.silkmc.silk.igui/-gui-builder/page.html">page</a> function to add a new page to this gui, you can that function as often as you want.</p><div class="sample-container"><pre><code class="block lang-kotlin" theme="idea">igui(GuiType.NINE_BY_SIX, "My cool gui".literal, defaultPageKey = 1) {<br>    page(1) {<br>        // access to the page builder inside here<br>    }<br>}</code></pre><span class="top-right-position"><span class="copy-icon"></span><div class="copy-popup-wrapper popup-to-left"><span class="copy-popup-icon"></span><span>Content copied to clipboard</span></div></span></div><h3 class=""> The page builder</h3><p class="paragraph">The <a href="net.silkmc.silk.igui/-gui-builder/-page-builder/index.html">page builder</a> is the most important part of the gui dsl. Inside this builder, you have access <a href="net.silkmc.silk.igui/-gui-builder/-page-builder/index.html">all functions adding elements to the gui</a>.</p></div></div>
   </div>
   <h2 class="">Packages</h2>
   <div class="table"><a data-name="-196735877%2FPackages%2F-1174248208" anchor-label="net.silkmc.silk.igui" id="-196735877%2FPackages%2F-1174248208" data-filterable-set=":silk-igui:dokkaHtmlPartial/main"></a>
@@ -62,7 +65,11 @@
 <span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-196735877%2FPackages%2F-1174248208"></span>
                 <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
               </span></span></div>
-          <div class="pull-right"></div>
+          <div class="pull-right">
+            <div class="platform-tags no-gutters">
+              <div class="platform-tag jvm-like">jvm</div>
+            </div>
+          </div>
         </div>
         <div><span class="brief-comment"><a data-name="-196735877%2FPackages%2F-1174248208" anchor-label="net.silkmc.silk.igui" id="-196735877%2FPackages%2F-1174248208" data-filterable-set=":silk-igui:dokkaHtmlPartial/main"></a>
             <p class="paragraph">Contains the GUI builder and all GUI implementation classes</p>
@@ -78,7 +85,11 @@
 <span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1659600974%2FPackages%2F-1174248208"></span>
                 <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
               </span></span></div>
-          <div class="pull-right"></div>
+          <div class="pull-right">
+            <div class="platform-tags no-gutters">
+              <div class="platform-tag jvm-like">jvm</div>
+            </div>
+          </div>
         </div>
         <div><span class="brief-comment"><a data-name="1659600974%2FPackages%2F-1174248208" anchor-label="net.silkmc.silk.igui.elements" id="1659600974%2FPackages%2F-1174248208" data-filterable-set=":silk-igui:dokkaHtmlPartial/main"></a>
             <p class="paragraph">GUI elements can be rendered by a GUI implementation</p>
@@ -94,7 +105,11 @@
 <span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1512481584%2FPackages%2F-1174248208"></span>
                 <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
               </span></span></div>
-          <div class="pull-right"></div>
+          <div class="pull-right">
+            <div class="platform-tags no-gutters">
+              <div class="platform-tag jvm-like">jvm</div>
+            </div>
+          </div>
         </div>
         <div><span class="brief-comment"><a data-name="1512481584%2FPackages%2F-1174248208" anchor-label="net.silkmc.silk.igui.events" id="1512481584%2FPackages%2F-1174248208" data-filterable-set=":silk-igui:dokkaHtmlPartial/main"></a>
             <p class="paragraph">GUI events are passed to the user of this API for usage in callbacks</p>
@@ -110,7 +125,11 @@
 <span class="anchor-wrapper"><span class="anchor-icon" pointing-to="848573530%2FPackages%2F-1174248208"></span>
                 <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
               </span></span></div>
-          <div class="pull-right"></div>
+          <div class="pull-right">
+            <div class="platform-tags no-gutters">
+              <div class="platform-tag jvm-like">jvm</div>
+            </div>
+          </div>
         </div>
         <div><span class="brief-comment"><a data-name="848573530%2FPackages%2F-1174248208" anchor-label="net.silkmc.silk.igui.observable" id="848573530%2FPackages%2F-1174248208" data-filterable-set=":silk-igui:dokkaHtmlPartial/main"></a>
             <p class="paragraph">Observable lists and properties which are used by GUI elements to handle non-static content</p>
@@ -120,10 +139,10 @@
   </div>
 </div>
       <div class="footer">
-        <span class="go-to-top-icon"><a href="#content" id="go-to-top-link"></a></span><span>© 2022 Copyright</span><span class="pull-right"><span>Generated by </span><a href="https://github.com/Kotlin/dokka"><span>dokka</span><span class="padded-icon"></span></a></span>
+        <span class="go-to-top-icon"><a href="#content" id="go-to-top-link"></a></span><span>© 2023 Copyright</span><span class="pull-right"><span>Generated by </span><a href="https://github.com/Kotlin/dokka"><span>dokka</span><span class="padded-icon"></span></a></span>
       </div>
     </div>
 </div>
-
-</body></html>
+</body>
+</html>
 
