@@ -1,9 +1,11 @@
 <!doctype html>
-<html>
+<html class="no-js">
 <head>
     <meta name="viewport" content="width=device-width, initial-scale=1" charset="UTF-8">
     <title>net.silkmc.silk.game.cooldown</title>
-<link href="../../images/logo-icon.svg" rel="icon" type="image/svg"><script>var pathToRoot = "../../";</script>    <script>const storage = localStorage.getItem("dokka-dark-mode")
+<link href="../../images/logo-icon.svg" rel="icon" type="image/svg">    <script>var pathToRoot = "../../";</script>
+    <script>document.documentElement.classList.replace("no-js","js");</script>
+    <script>const storage = localStorage.getItem("dokka-dark-mode")
     if (storage == null) {
         const osDarkSchemePreferred = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches
         if (osDarkSchemePreferred === true) {
@@ -16,12 +18,13 @@
         }
     }
     </script>
+<script type="text/javascript" src="https://unpkg.com/kotlin-playground@1/dist/playground.min.js" async></script>
 <script type="text/javascript" src="../../scripts/sourceset_dependencies.js" async></script>
 <link href="../../styles/style.css" rel="Stylesheet">
-<link href="../../styles/jetbrains-mono.css" rel="Stylesheet">
 <link href="../../styles/main.css" rel="Stylesheet">
 <link href="../../styles/prism.css" rel="Stylesheet">
 <link href="../../styles/logo-styles.css" rel="Stylesheet">
+<link href="../../styles/font-jb-sans-auto.css" rel="Stylesheet">
 <script type="text/javascript" src="../../scripts/clipboard.js" async></script>
 <script type="text/javascript" src="../../scripts/navigation-loader.js" async></script>
 <script type="text/javascript" src="../../scripts/platform-content-handler.js" async></script>
@@ -29,31 +32,37 @@
 <script type="text/javascript" src="../../scripts/prism.js" async></script>
 <script type="text/javascript" src="../../scripts/symbol-parameters-wrapper_deferred.js" defer></script></head>
 <body>
-<div class="navigation-wrapper" id="navigation-wrapper">
-    <div id="leftToggler"><span class="icon-toggler"></span></div>
-    <div class="library-name">
-<a href="../../index.html">
-<span>silk</span>            </a>    </div>
-    <div>1.10.0
-    </div>
-    <div class="pull-right d-flex">
+    <div class="root">
+<nav class="navigation" id="navigation-wrapper">
+    <div class="navigation--inner">
+        <div class="navigation-title">
+            <button class="menu-toggle" id="menu-toggle" type="button">toggle menu</button>
+            <div class="library-name">
+<a class="library-name--link" href="../../index.html">
+                            silk
+                    </a>            </div>
+            <div class="library-version">1.10.4
+            </div>
+        </div>
         <div class="filter-section" id="filter-section">
                 <button class="platform-tag platform-selector jvm-like" data-active="" data-filter=":silk-game:dokkaHtmlPartial/main">jvm</button>
         </div>
-        <button id="theme-toggle-button"><span id="theme-toggle"></span></button>
-        <div id="searchBar"></div>
     </div>
-</div>
-<div id="container">
-    <div id="leftColumn">
-        <div id="sideMenu"></div>
+    <div class="navigation-controls">
+        <button class="navigation-controls--btn navigation-controls--theme" id="theme-toggle-button" type="button">switch theme</button>
+        <div class="navigation-controls--btn navigation-controls--search" id="searchBar" role="button">search in API</div>
     </div>
-    <div id="main">
+</nav>
+        <div id="container">
+            <div class="sidebar" id="leftColumn">
+                <div class="sidebar--inner" id="sideMenu"></div>
+            </div>
+            <div id="main">
 <div class="main-content" data-page-type="package" id="content" pageids="silk-game::net.silkmc.silk.game.cooldown////PointingToDeclaration//-1451631312">
   <div class="breadcrumbs"><a href="../index.html">silk-game</a><span class="delimiter">/</span><span class="current">net.silkmc.silk.game.cooldown</span></div>
   <div class="cover ">
     <h1 class="cover"><span><span>Package-level</span></span> <span><span>declarations</span></span></h1>
-    <div class="platform-hinted UnderCoverText" data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":silk-game:dokkaHtmlPartial/main"><p class="paragraph">Functions for handling cooldown for actions performed on or by entities, including players</p><h2 class=""> Cooldown management</h2><h3 class=""> Create a cooldown "key"</h3><p class="paragraph">Each <i>type</i> of cooldown can be represented by a new instance of net.silkmc.silk.game.Cooldown.</p><div class="sample-container"><pre><code class="block lang-kotlin" theme="idea">val myCooldown = Cooldown()</code></pre><span class="top-right-position"><span class="copy-icon"></span><div class="copy-popup-wrapper popup-to-left"><span class="copy-popup-icon"></span><span>Content copied to clipboard</span></div></span></div><p class="paragraph">You can also pass an net.minecraft.util.Identifier to the <code class="lang-kotlin">Cooldown</code> constructor.</p><h4 class=""> Specify a default cooldown length</h4><p class="paragraph">Optionally, you can specify a default cooldown length, because the <code class="lang-kotlin">defaultLength</code> has a default value of <code class="lang-kotlin">50L</code> which you probably don't want. This step is irrelevant for you, if you are specifying the length of the cooldown explicitly each time.</p><div class="sample-container"><pre><code class="block lang-kotlin" theme="idea">val myCooldown = Cooldown(defaultLength = 1000L)</code></pre><span class="top-right-position"><span class="copy-icon"></span><div class="copy-popup-wrapper popup-to-left"><span class="copy-popup-icon"></span><span>Content copied to clipboard</span></div></span></div><p class="paragraph">The time unit is <code class="lang-kotlin">ms</code>.</p><h3 class=""> Cooldown actions</h3><h4 class=""> hasCooldown</h4><p class="paragraph">You can check whether a player has a cooldown or not using the <a href="-cooldown/has-cooldown.html">hasCooldown</a> function.</p><div class="sample-container"><pre><code class="block lang-kotlin" theme="idea">if (myCooldown.hasCooldown(entity).not()) {<br>    // no cooldown<br>}</code></pre><span class="top-right-position"><span class="copy-icon"></span><div class="copy-popup-wrapper popup-to-left"><span class="copy-popup-icon"></span><span>Content copied to clipboard</span></div></span></div><h4 class=""> applyCooldown</h4><p class="paragraph">You can apply a cooldown instance using the <a href="-cooldown/apply-cooldown.html">applyCooldown</a> function.</p><div class="sample-container"><pre><code class="block lang-kotlin" theme="idea">myCooldown.applyCooldown(entity, delay = 2000L)<br><br>// the following will be true now<br>myCooldown.hasCooldown(entity)</code></pre><span class="top-right-position"><span class="copy-icon"></span><div class="copy-popup-wrapper popup-to-left"><span class="copy-popup-icon"></span><span>Content copied to clipboard</span></div></span></div><p class="paragraph">Note: This function also takes a <code class="lang-kotlin">delay</code> parameter, but that one is not required.</p><h4 class=""> withCooldown</h4><p class="paragraph">Often you want to execute some code if the player or entity does not have an active cooldown, and then apply the cooldown. This can be done in a short form using the <a href="-cooldown/with-cooldown.html">withCooldown</a> function.</p><div class="sample-container"><pre><code class="block lang-kotlin" theme="idea">myCooldown.withCooldown(entity, delay = 2000L) {<br>    // this will be executed at a maximum of 1 time per 2 seconds<br>    logInfo("hey")<br>}</code></pre><span class="top-right-position"><span class="copy-icon"></span><div class="copy-popup-wrapper popup-to-left"><span class="copy-popup-icon"></span><span>Content copied to clipboard</span></div></span></div></div></div>
+    <div class="platform-hinted UnderCoverText" data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":silk-game:dokkaHtmlPartial/main"><p class="paragraph">Functions for handling cooldown for actions performed on or by entities, including players</p><h2 class="">Cooldown management</h2><h3 class="">Create a cooldown "key"</h3><p class="paragraph">Each <i>type</i> of cooldown can be represented by a new instance of net.silkmc.silk.game.Cooldown.</p><div class="sample-container"><pre><code class="block lang-kotlin" theme="idea">val myCooldown = Cooldown()</code></pre><span class="top-right-position"><span class="copy-icon"></span><div class="copy-popup-wrapper popup-to-left"><span class="copy-popup-icon"></span><span>Content copied to clipboard</span></div></span></div><p class="paragraph">You can also pass an net.minecraft.util.Identifier to the <code class="lang-kotlin">Cooldown</code> constructor.</p><h4 class="">Specify a default cooldown length</h4><p class="paragraph">Optionally, you can specify a default cooldown length, because the <code class="lang-kotlin">defaultLength</code> has a default value of <code class="lang-kotlin">50L</code> which you probably don't want. This step is irrelevant for you, if you are specifying the length of the cooldown explicitly each time.</p><div class="sample-container"><pre><code class="block lang-kotlin" theme="idea">val myCooldown = Cooldown(defaultLength = 1000L)</code></pre><span class="top-right-position"><span class="copy-icon"></span><div class="copy-popup-wrapper popup-to-left"><span class="copy-popup-icon"></span><span>Content copied to clipboard</span></div></span></div><p class="paragraph">The time unit is <code class="lang-kotlin">ms</code>.</p><h3 class="">Cooldown actions</h3><h4 class="">hasCooldown</h4><p class="paragraph">You can check whether a player has a cooldown or not using the <a href="-cooldown/has-cooldown.html">hasCooldown</a> function.</p><div class="sample-container"><pre><code class="block lang-kotlin" theme="idea">if (myCooldown.hasCooldown(entity).not()) {<br>    // no cooldown<br>}</code></pre><span class="top-right-position"><span class="copy-icon"></span><div class="copy-popup-wrapper popup-to-left"><span class="copy-popup-icon"></span><span>Content copied to clipboard</span></div></span></div><h4 class="">applyCooldown</h4><p class="paragraph">You can apply a cooldown instance using the <a href="-cooldown/apply-cooldown.html">applyCooldown</a> function.</p><div class="sample-container"><pre><code class="block lang-kotlin" theme="idea">myCooldown.applyCooldown(entity, delay = 2000L)<br><br>// the following will be true now<br>myCooldown.hasCooldown(entity)</code></pre><span class="top-right-position"><span class="copy-icon"></span><div class="copy-popup-wrapper popup-to-left"><span class="copy-popup-icon"></span><span>Content copied to clipboard</span></div></span></div><p class="paragraph">Note: This function also takes a <code class="lang-kotlin">delay</code> parameter, but that one is not required.</p><h4 class="">withCooldown</h4><p class="paragraph">Often you want to execute some code if the player or entity does not have an active cooldown, and then apply the cooldown. This can be done in a short form using the <a href="-cooldown/with-cooldown.html">withCooldown</a> function.</p><div class="sample-container"><pre><code class="block lang-kotlin" theme="idea">myCooldown.withCooldown(entity, delay = 2000L) {<br>    // this will be executed at a maximum of 1 time per 2 seconds<br>    logInfo("hey")<br>}</code></pre><span class="top-right-position"><span class="copy-icon"></span><div class="copy-popup-wrapper popup-to-left"><span class="copy-popup-icon"></span><span>Content copied to clipboard</span></div></span></div></div></div>
   </div>
   <div class="tabbedcontent">
     <div class="tabs-section" tabs-section="tabs-section"><button class="section-tab" data-active="" data-togglable="TYPE">Types</button></div>
@@ -81,10 +90,11 @@
   </div>
 </div>
       <div class="footer">
-        <span class="go-to-top-icon"><a href="#content" id="go-to-top-link"></a></span><span>© 2023 Copyright</span><span class="pull-right"><span>Generated by </span><a href="https://github.com/Kotlin/dokka"><span>dokka</span><span class="padded-icon"></span></a></span>
+        <span class="go-to-top-icon"><a href="#content" id="go-to-top-link"></a></span><span>© 2024 Copyright</span><span class="pull-right"><span>Generated by </span><a href="https://github.com/Kotlin/dokka"><span>dokka</span><span class="padded-icon"></span></a></span>
       </div>
+            </div>
+        </div>
     </div>
-</div>
 </body>
 </html>
 

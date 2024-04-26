@@ -1,9 +1,11 @@
 <!doctype html>
-<html>
+<html class="no-js">
 <head>
     <meta name="viewport" content="width=device-width, initial-scale=1" charset="UTF-8">
     <title>net.silkmc.silk.igui.observable</title>
-<link href="../../images/logo-icon.svg" rel="icon" type="image/svg"><script>var pathToRoot = "../../";</script>    <script>const storage = localStorage.getItem("dokka-dark-mode")
+<link href="../../images/logo-icon.svg" rel="icon" type="image/svg">    <script>var pathToRoot = "../../";</script>
+    <script>document.documentElement.classList.replace("no-js","js");</script>
+    <script>const storage = localStorage.getItem("dokka-dark-mode")
     if (storage == null) {
         const osDarkSchemePreferred = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches
         if (osDarkSchemePreferred === true) {
@@ -16,12 +18,13 @@
         }
     }
     </script>
+<script type="text/javascript" src="https://unpkg.com/kotlin-playground@1/dist/playground.min.js" async></script>
 <script type="text/javascript" src="../../scripts/sourceset_dependencies.js" async></script>
 <link href="../../styles/style.css" rel="Stylesheet">
-<link href="../../styles/jetbrains-mono.css" rel="Stylesheet">
 <link href="../../styles/main.css" rel="Stylesheet">
 <link href="../../styles/prism.css" rel="Stylesheet">
 <link href="../../styles/logo-styles.css" rel="Stylesheet">
+<link href="../../styles/font-jb-sans-auto.css" rel="Stylesheet">
 <script type="text/javascript" src="../../scripts/clipboard.js" async></script>
 <script type="text/javascript" src="../../scripts/navigation-loader.js" async></script>
 <script type="text/javascript" src="../../scripts/platform-content-handler.js" async></script>
@@ -29,26 +32,32 @@
 <script type="text/javascript" src="../../scripts/prism.js" async></script>
 <script type="text/javascript" src="../../scripts/symbol-parameters-wrapper_deferred.js" defer></script></head>
 <body>
-<div class="navigation-wrapper" id="navigation-wrapper">
-    <div id="leftToggler"><span class="icon-toggler"></span></div>
-    <div class="library-name">
-<a href="../../index.html">
-<span>silk</span>            </a>    </div>
-    <div>1.10.0
-    </div>
-    <div class="pull-right d-flex">
+    <div class="root">
+<nav class="navigation" id="navigation-wrapper">
+    <div class="navigation--inner">
+        <div class="navigation-title">
+            <button class="menu-toggle" id="menu-toggle" type="button">toggle menu</button>
+            <div class="library-name">
+<a class="library-name--link" href="../../index.html">
+                            silk
+                    </a>            </div>
+            <div class="library-version">1.10.4
+            </div>
+        </div>
         <div class="filter-section" id="filter-section">
                 <button class="platform-tag platform-selector jvm-like" data-active="" data-filter=":silk-igui:dokkaHtmlPartial/main">jvm</button>
         </div>
-        <button id="theme-toggle-button"><span id="theme-toggle"></span></button>
-        <div id="searchBar"></div>
     </div>
-</div>
-<div id="container">
-    <div id="leftColumn">
-        <div id="sideMenu"></div>
+    <div class="navigation-controls">
+        <button class="navigation-controls--btn navigation-controls--theme" id="theme-toggle-button" type="button">switch theme</button>
+        <div class="navigation-controls--btn navigation-controls--search" id="searchBar" role="button">search in API</div>
     </div>
-    <div id="main">
+</nav>
+        <div id="container">
+            <div class="sidebar" id="leftColumn">
+                <div class="sidebar--inner" id="sideMenu"></div>
+            </div>
+            <div id="main">
 <div class="main-content" data-page-type="package" id="content" pageids="silk-igui::net.silkmc.silk.igui.observable////PointingToDeclaration//-1174248208">
   <div class="breadcrumbs"><a href="../index.html">silk-igui</a><span class="delimiter">/</span><span class="current">net.silkmc.silk.igui.observable</span></div>
   <div class="cover ">
@@ -70,7 +79,7 @@
                   </span></span></div>
               <div>
                 <div class="title">
-                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":silk-igui:dokkaHtmlPartial/main"><div class="symbol monospace"><span class="token keyword">abstract </span><span class="token keyword">class </span><a href="-abstract-gui-list/index.html">AbstractGuiList</a><span class="token operator">&lt;</span><span class="token keyword"></span><a href="-abstract-gui-list/index.html">T</a><span class="token punctuation">, </span><span class="token keyword">out </span><a href="-abstract-gui-list/index.html">L</a><span class="token operator"> : </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin.collections/-list/index.html">List</a><span class="token operator">&lt;</span><span class="token keyword"></span><a href="-abstract-gui-list/index.html">T</a><span class="token operator">&gt;</span><span class="token operator">&gt;</span><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">collection<span class="token operator">: </span><a href="-abstract-gui-list/index.html">L</a></span></span><span class="token punctuation">)</span></div><div class="brief "><p class="paragraph">Parent class of the immutable <a href="-gui-list/index.html">GuiList</a> and mutable <a href="-gui-mutable-list/index.html">GuiMutableList</a>.</p></div></div></div>
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":silk-igui:dokkaHtmlPartial/main"><div class="symbol monospace"><span class="token keyword">abstract </span><span class="token keyword">class </span><a href="-abstract-gui-list/index.html">AbstractGuiList</a><span class="token operator">&lt;</span><a href="-abstract-gui-list/index.html">T</a><span class="token punctuation">, </span><span class="token keyword">out </span><a href="-abstract-gui-list/index.html">L</a><span class="token operator"> : </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin.collections/-list/index.html">List</a><span class="token operator">&lt;</span><a href="-abstract-gui-list/index.html">T</a><span class="token operator">&gt;</span><span class="token operator">&gt;</span><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">collection<span class="token operator">: </span><a href="-abstract-gui-list/index.html">L</a></span></span><span class="token punctuation">)</span></div><div class="brief "><p class="paragraph">Parent class of the immutable <a href="-gui-list/index.html">GuiList</a> and mutable <a href="-gui-mutable-list/index.html">GuiMutableList</a>.</p></div></div></div>
                 </div>
               </div>
             </div>
@@ -85,7 +94,7 @@
                   </span></span></div>
               <div>
                 <div class="title">
-                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":silk-igui:dokkaHtmlPartial/main"><div class="symbol monospace"><span class="token keyword">class </span><a href="-gui-list/index.html">GuiList</a><span class="token operator">&lt;</span><span class="token keyword"></span><a href="-gui-list/index.html">T</a><span class="token operator">&gt;</span><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">collection<span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin.collections/-list/index.html">List</a><span class="token operator">&lt;</span><span class="token keyword"></span><a href="-gui-list/index.html">T</a><span class="token operator">&gt;</span></span></span><span class="token punctuation">)</span> : <a href="-abstract-gui-list/index.html">AbstractGuiList</a><span class="token operator">&lt;</span><span class="token keyword"></span><a href="-gui-list/index.html">T</a><span class="token punctuation">, </span><span class="token keyword"></span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin.collections/-list/index.html">List</a><span class="token operator">&lt;</span><span class="token keyword"></span><a href="-gui-list/index.html">T</a><span class="token operator">&gt;</span><span class="token operator">&gt; </span></div><div class="brief "><p class="paragraph">Wraps a normal list into a format which can be used by specific gui components - the most prominent one being <a href="../net.silkmc.silk.igui/-gui-compound/index.html">net.silkmc.silk.igui.GuiCompound</a>. This gui list is immutable.</p></div></div></div>
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":silk-igui:dokkaHtmlPartial/main"><div class="symbol monospace"><span class="token keyword">class </span><a href="-gui-list/index.html">GuiList</a><span class="token operator">&lt;</span><a href="-gui-list/index.html">T</a><span class="token operator">&gt;</span><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">collection<span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin.collections/-list/index.html">List</a><span class="token operator">&lt;</span><a href="-gui-list/index.html">T</a><span class="token operator">&gt;</span></span></span><span class="token punctuation">)</span> : <a href="-abstract-gui-list/index.html">AbstractGuiList</a><span class="token operator">&lt;</span><a href="-gui-list/index.html">T</a><span class="token punctuation">, </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin.collections/-list/index.html">List</a><span class="token operator">&lt;</span><a href="-gui-list/index.html">T</a><span class="token operator">&gt;</span><span class="token operator">&gt; </span></div><div class="brief "><p class="paragraph">Wraps a normal list into a format which can be used by specific gui components - the most prominent one being <a href="../net.silkmc.silk.igui/-gui-compound/index.html">net.silkmc.silk.igui.GuiCompound</a>. This gui list is immutable.</p></div></div></div>
                 </div>
               </div>
             </div>
@@ -100,7 +109,7 @@
                   </span></span></div>
               <div>
                 <div class="title">
-                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":silk-igui:dokkaHtmlPartial/main"><div class="symbol monospace"><span class="token keyword">class </span><a href="-gui-mutable-list/index.html">GuiMutableList</a><span class="token operator">&lt;</span><span class="token keyword"></span><a href="-gui-mutable-list/index.html">T</a><span class="token operator">&gt;</span><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">collection<span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin.collections/-mutable-list/index.html">MutableList</a><span class="token operator">&lt;</span><span class="token keyword"></span><a href="-gui-mutable-list/index.html">T</a><span class="token operator">&gt;</span></span></span><span class="token punctuation">)</span> : <a href="-abstract-gui-list/index.html">AbstractGuiList</a><span class="token operator">&lt;</span><span class="token keyword"></span><a href="-gui-mutable-list/index.html">T</a><span class="token punctuation">, </span><span class="token keyword"></span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin.collections/-mutable-list/index.html">MutableList</a><span class="token operator">&lt;</span><span class="token keyword"></span><a href="-gui-mutable-list/index.html">T</a><span class="token operator">&gt;</span><span class="token operator">&gt; </span></div><div class="brief "><p class="paragraph">Does the same as <a href="-gui-list/index.html">GuiList</a>, but is mutatable. If you change the content if this list using the <a href="-gui-mutable-list/mutate.html">mutate</a> function, the gui will update accordingly.</p></div></div></div>
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":silk-igui:dokkaHtmlPartial/main"><div class="symbol monospace"><span class="token keyword">class </span><a href="-gui-mutable-list/index.html">GuiMutableList</a><span class="token operator">&lt;</span><a href="-gui-mutable-list/index.html">T</a><span class="token operator">&gt;</span><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">collection<span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin.collections/-mutable-list/index.html">MutableList</a><span class="token operator">&lt;</span><a href="-gui-mutable-list/index.html">T</a><span class="token operator">&gt;</span></span></span><span class="token punctuation">)</span> : <a href="-abstract-gui-list/index.html">AbstractGuiList</a><span class="token operator">&lt;</span><a href="-gui-mutable-list/index.html">T</a><span class="token punctuation">, </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin.collections/-mutable-list/index.html">MutableList</a><span class="token operator">&lt;</span><a href="-gui-mutable-list/index.html">T</a><span class="token operator">&gt;</span><span class="token operator">&gt; </span></div><div class="brief "><p class="paragraph">Does the same as <a href="-gui-list/index.html">GuiList</a>, but is mutatable. If you change the content if this list using the <a href="-gui-mutable-list/mutate.html">mutate</a> function, the gui will update accordingly.</p></div></div></div>
                 </div>
               </div>
             </div>
@@ -115,7 +124,7 @@
                   </span></span></div>
               <div>
                 <div class="title">
-                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":silk-igui:dokkaHtmlPartial/main"><div class="symbol monospace"><span class="token keyword">class </span><a href="-gui-property/index.html">GuiProperty</a><span class="token operator">&lt;</span><span class="token keyword"></span><a href="-gui-property/index.html">T</a><span class="token operator">&gt;</span><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">value<span class="token operator">: </span><a href="-gui-property/index.html">T</a></span></span><span class="token punctuation">)</span></div><div class="brief "><p class="paragraph">A property which can be used to represent mutable state in a gui. You can use the <a href="../net.silkmc.silk.igui/gui-icon.html">net.silkmc.silk.igui.guiIcon</a> function to specify how the value of this property can be rendered to the gui.</p></div></div></div>
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":silk-igui:dokkaHtmlPartial/main"><div class="symbol monospace"><span class="token keyword">class </span><a href="-gui-property/index.html">GuiProperty</a><span class="token operator">&lt;</span><a href="-gui-property/index.html">T</a><span class="token operator">&gt;</span><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">value<span class="token operator">: </span><a href="-gui-property/index.html">T</a></span></span><span class="token punctuation">)</span></div><div class="brief "><p class="paragraph">A property which can be used to represent mutable state in a gui. You can use the <a href="../net.silkmc.silk.igui/gui-icon.html">net.silkmc.silk.igui.guiIcon</a> function to specify how the value of this property can be rendered to the gui.</p></div></div></div>
                 </div>
               </div>
             </div>
@@ -125,7 +134,7 @@
       <div data-togglable="EXTENSION_FUNCTION">
         <h2 class="">Functions</h2>
         <div class="table"><a data-name="872422462%2FFunctions%2F-1174248208" anchor-label="asGuiList" id="872422462%2FFunctions%2F-1174248208" data-filterable-set=":silk-igui:dokkaHtmlPartial/main"></a>
-          <div class="table-row" data-togglable="EXTENSION_FUNCTION" data-filterable-current=":silk-igui:dokkaHtmlPartial/main" data-filterable-set=":silk-igui:dokkaHtmlPartial/main">
+          <div class="table-row" data-filterable-current=":silk-igui:dokkaHtmlPartial/main" data-filterable-set=":silk-igui:dokkaHtmlPartial/main">
             <div class="main-subrow keyValue ">
               <div class=""><span class="inline-flex">
                   <div><a href="as-gui-list.html"><span>as</span><wbr><span>Gui</span><wbr><span><span>List</span></span></a></div>
@@ -134,13 +143,13 @@
                   </span></span></div>
               <div>
                 <div class="title">
-                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":silk-igui:dokkaHtmlPartial/main"><div class="symbol monospace"><span class="token keyword"></span><span class="token keyword">fun </span><span class="token operator">&lt;</span><span class="token keyword"></span><a href="as-gui-list.html">T</a><span class="token operator">&gt; </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin.collections/-list/index.html">List</a><span class="token operator">&lt;</span><span class="token keyword"></span><a href="as-gui-list.html">T</a><span class="token operator">&gt;</span><span class="token punctuation">.</span><a href="as-gui-list.html"><span class="token function">asGuiList</span></a><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token operator">: </span><a href="-gui-list/index.html">GuiList</a><span class="token operator">&lt;</span><span class="token keyword"></span><a href="as-gui-list.html">T</a><span class="token operator">&gt;</span></div><div class="brief "><p class="paragraph">Wraps this list in a <a href="-gui-list/index.html">GuiList</a>. This list is immutable and therefore static in the gui.</p></div></div></div>
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":silk-igui:dokkaHtmlPartial/main"><div class="symbol monospace"><span class="token keyword">fun </span><span class="token operator">&lt;</span><a href="as-gui-list.html">T</a><span class="token operator">&gt; </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin.collections/-list/index.html">List</a><span class="token operator">&lt;</span><a href="as-gui-list.html">T</a><span class="token operator">&gt;</span><span class="token punctuation">.</span><a href="as-gui-list.html"><span class="token function">asGuiList</span></a><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token operator">: </span><a href="-gui-list/index.html">GuiList</a><span class="token operator">&lt;</span><a href="as-gui-list.html">T</a><span class="token operator">&gt;</span></div><div class="brief "><p class="paragraph">Wraps this list in a <a href="-gui-list/index.html">GuiList</a>. This list is immutable and therefore static in the gui.</p></div></div></div>
                 </div>
               </div>
             </div>
           </div>
 <a data-name="-1542949806%2FFunctions%2F-1174248208" anchor-label="asMutableGuiList" id="-1542949806%2FFunctions%2F-1174248208" data-filterable-set=":silk-igui:dokkaHtmlPartial/main"></a>
-          <div class="table-row" data-togglable="EXTENSION_FUNCTION" data-filterable-current=":silk-igui:dokkaHtmlPartial/main" data-filterable-set=":silk-igui:dokkaHtmlPartial/main">
+          <div class="table-row" data-filterable-current=":silk-igui:dokkaHtmlPartial/main" data-filterable-set=":silk-igui:dokkaHtmlPartial/main">
             <div class="main-subrow keyValue ">
               <div class=""><span class="inline-flex">
                   <div><a href="as-mutable-gui-list.html"><span>as</span><wbr><span>Mutable</span><wbr><span>Gui</span><wbr><span><span>List</span></span></a></div>
@@ -149,13 +158,13 @@
                   </span></span></div>
               <div>
                 <div class="title">
-                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":silk-igui:dokkaHtmlPartial/main"><div class="symbol monospace"><span class="token keyword"></span><span class="token keyword">fun </span><span class="token operator">&lt;</span><span class="token keyword"></span><a href="as-mutable-gui-list.html">T</a><span class="token operator">&gt; </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin.collections/-mutable-list/index.html">MutableList</a><span class="token operator">&lt;</span><span class="token keyword"></span><a href="as-mutable-gui-list.html">T</a><span class="token operator">&gt;</span><span class="token punctuation">.</span><a href="as-mutable-gui-list.html"><span class="token function">asMutableGuiList</span></a><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token operator">: </span><a href="-gui-mutable-list/index.html">GuiMutableList</a><span class="token operator">&lt;</span><span class="token keyword"></span><a href="as-mutable-gui-list.html">T</a><span class="token operator">&gt;</span></div><div class="brief "><p class="paragraph">Wraps this list in a <a href="-gui-mutable-list/index.html">GuiMutableList</a>, which informs gui components about any content updates.</p></div></div></div>
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":silk-igui:dokkaHtmlPartial/main"><div class="symbol monospace"><span class="token keyword">fun </span><span class="token operator">&lt;</span><a href="as-mutable-gui-list.html">T</a><span class="token operator">&gt; </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin.collections/-mutable-list/index.html">MutableList</a><span class="token operator">&lt;</span><a href="as-mutable-gui-list.html">T</a><span class="token operator">&gt;</span><span class="token punctuation">.</span><a href="as-mutable-gui-list.html"><span class="token function">asMutableGuiList</span></a><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token operator">: </span><a href="-gui-mutable-list/index.html">GuiMutableList</a><span class="token operator">&lt;</span><a href="as-mutable-gui-list.html">T</a><span class="token operator">&gt;</span></div><div class="brief "><p class="paragraph">Wraps this list in a <a href="-gui-mutable-list/index.html">GuiMutableList</a>, which informs gui components about any content updates.</p></div></div></div>
                 </div>
               </div>
             </div>
           </div>
 <a data-name="-1049897805%2FFunctions%2F-1174248208" anchor-label="toGuiList" id="-1049897805%2FFunctions%2F-1174248208" data-filterable-set=":silk-igui:dokkaHtmlPartial/main"></a>
-          <div class="table-row" data-togglable="EXTENSION_FUNCTION" data-filterable-current=":silk-igui:dokkaHtmlPartial/main" data-filterable-set=":silk-igui:dokkaHtmlPartial/main">
+          <div class="table-row" data-filterable-current=":silk-igui:dokkaHtmlPartial/main" data-filterable-set=":silk-igui:dokkaHtmlPartial/main">
             <div class="main-subrow keyValue ">
               <div class=""><span class="inline-flex">
                   <div><a href="to-gui-list.html"><span>to</span><wbr><span>Gui</span><wbr><span><span>List</span></span></a></div>
@@ -164,13 +173,13 @@
                   </span></span></div>
               <div>
                 <div class="title">
-                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":silk-igui:dokkaHtmlPartial/main"><div class="symbol monospace"><span class="token keyword"></span><span class="token keyword">fun </span><span class="token operator">&lt;</span><span class="token keyword"></span><a href="to-gui-list.html">T</a><span class="token operator">&gt; </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin.collections/-iterable/index.html">Iterable</a><span class="token operator">&lt;</span><span class="token keyword"></span><a href="to-gui-list.html">T</a><span class="token operator">&gt;</span><span class="token punctuation">.</span><a href="to-gui-list.html"><span class="token function">toGuiList</span></a><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token operator">: </span><a href="-gui-list/index.html">GuiList</a><span class="token operator">&lt;</span><span class="token keyword"></span><a href="to-gui-list.html">T</a><span class="token operator">&gt;</span></div><div class="brief "><p class="paragraph">Creates a new <a href="-gui-list/index.html">GuiList</a> out of the content of this iterable. This list is immutable and therefore static in the gui.</p></div></div></div>
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":silk-igui:dokkaHtmlPartial/main"><div class="symbol monospace"><span class="token keyword">fun </span><span class="token operator">&lt;</span><a href="to-gui-list.html">T</a><span class="token operator">&gt; </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin.collections/-iterable/index.html">Iterable</a><span class="token operator">&lt;</span><a href="to-gui-list.html">T</a><span class="token operator">&gt;</span><span class="token punctuation">.</span><a href="to-gui-list.html"><span class="token function">toGuiList</span></a><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token operator">: </span><a href="-gui-list/index.html">GuiList</a><span class="token operator">&lt;</span><a href="to-gui-list.html">T</a><span class="token operator">&gt;</span></div><div class="brief "><p class="paragraph">Creates a new <a href="-gui-list/index.html">GuiList</a> out of the content of this iterable. This list is immutable and therefore static in the gui.</p></div></div></div>
                 </div>
               </div>
             </div>
           </div>
 <a data-name="-644842317%2FFunctions%2F-1174248208" anchor-label="toMutableGuiList" id="-644842317%2FFunctions%2F-1174248208" data-filterable-set=":silk-igui:dokkaHtmlPartial/main"></a>
-          <div class="table-row" data-togglable="EXTENSION_FUNCTION" data-filterable-current=":silk-igui:dokkaHtmlPartial/main" data-filterable-set=":silk-igui:dokkaHtmlPartial/main">
+          <div class="table-row" data-filterable-current=":silk-igui:dokkaHtmlPartial/main" data-filterable-set=":silk-igui:dokkaHtmlPartial/main">
             <div class="main-subrow keyValue ">
               <div class=""><span class="inline-flex">
                   <div><a href="to-mutable-gui-list.html"><span>to</span><wbr><span>Mutable</span><wbr><span>Gui</span><wbr><span><span>List</span></span></a></div>
@@ -179,7 +188,7 @@
                   </span></span></div>
               <div>
                 <div class="title">
-                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":silk-igui:dokkaHtmlPartial/main"><div class="symbol monospace"><span class="token keyword"></span><span class="token keyword">fun </span><span class="token operator">&lt;</span><span class="token keyword"></span><a href="to-mutable-gui-list.html">T</a><span class="token operator">&gt; </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin.collections/-iterable/index.html">Iterable</a><span class="token operator">&lt;</span><span class="token keyword"></span><a href="to-mutable-gui-list.html">T</a><span class="token operator">&gt;</span><span class="token punctuation">.</span><a href="to-mutable-gui-list.html"><span class="token function">toMutableGuiList</span></a><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token operator">: </span><a href="-gui-mutable-list/index.html">GuiMutableList</a><span class="token operator">&lt;</span><span class="token keyword"></span><a href="to-mutable-gui-list.html">T</a><span class="token operator">&gt;</span></div><div class="brief "><p class="paragraph">Creates a new <a href="-gui-mutable-list/index.html">GuiMutableList</a>, which informs gui components about any content updates, out of the content of this iterable.</p></div></div></div>
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":silk-igui:dokkaHtmlPartial/main"><div class="symbol monospace"><span class="token keyword">fun </span><span class="token operator">&lt;</span><a href="to-mutable-gui-list.html">T</a><span class="token operator">&gt; </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin.collections/-iterable/index.html">Iterable</a><span class="token operator">&lt;</span><a href="to-mutable-gui-list.html">T</a><span class="token operator">&gt;</span><span class="token punctuation">.</span><a href="to-mutable-gui-list.html"><span class="token function">toMutableGuiList</span></a><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token operator">: </span><a href="-gui-mutable-list/index.html">GuiMutableList</a><span class="token operator">&lt;</span><a href="to-mutable-gui-list.html">T</a><span class="token operator">&gt;</span></div><div class="brief "><p class="paragraph">Creates a new <a href="-gui-mutable-list/index.html">GuiMutableList</a>, which informs gui components about any content updates, out of the content of this iterable.</p></div></div></div>
                 </div>
               </div>
             </div>
@@ -190,10 +199,11 @@
   </div>
 </div>
       <div class="footer">
-        <span class="go-to-top-icon"><a href="#content" id="go-to-top-link"></a></span><span>© 2023 Copyright</span><span class="pull-right"><span>Generated by </span><a href="https://github.com/Kotlin/dokka"><span>dokka</span><span class="padded-icon"></span></a></span>
+        <span class="go-to-top-icon"><a href="#content" id="go-to-top-link"></a></span><span>© 2024 Copyright</span><span class="pull-right"><span>Generated by </span><a href="https://github.com/Kotlin/dokka"><span>dokka</span><span class="padded-icon"></span></a></span>
       </div>
+            </div>
+        </div>
     </div>
-</div>
 </body>
 </html>
 

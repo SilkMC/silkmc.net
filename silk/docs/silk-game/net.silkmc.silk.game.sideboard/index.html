@@ -1,9 +1,11 @@
 <!doctype html>
-<html>
+<html class="no-js">
 <head>
     <meta name="viewport" content="width=device-width, initial-scale=1" charset="UTF-8">
     <title>net.silkmc.silk.game.sideboard</title>
-<link href="../../images/logo-icon.svg" rel="icon" type="image/svg"><script>var pathToRoot = "../../";</script>    <script>const storage = localStorage.getItem("dokka-dark-mode")
+<link href="../../images/logo-icon.svg" rel="icon" type="image/svg">    <script>var pathToRoot = "../../";</script>
+    <script>document.documentElement.classList.replace("no-js","js");</script>
+    <script>const storage = localStorage.getItem("dokka-dark-mode")
     if (storage == null) {
         const osDarkSchemePreferred = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches
         if (osDarkSchemePreferred === true) {
@@ -16,12 +18,13 @@
         }
     }
     </script>
+<script type="text/javascript" src="https://unpkg.com/kotlin-playground@1/dist/playground.min.js" async></script>
 <script type="text/javascript" src="../../scripts/sourceset_dependencies.js" async></script>
 <link href="../../styles/style.css" rel="Stylesheet">
-<link href="../../styles/jetbrains-mono.css" rel="Stylesheet">
 <link href="../../styles/main.css" rel="Stylesheet">
 <link href="../../styles/prism.css" rel="Stylesheet">
 <link href="../../styles/logo-styles.css" rel="Stylesheet">
+<link href="../../styles/font-jb-sans-auto.css" rel="Stylesheet">
 <script type="text/javascript" src="../../scripts/clipboard.js" async></script>
 <script type="text/javascript" src="../../scripts/navigation-loader.js" async></script>
 <script type="text/javascript" src="../../scripts/platform-content-handler.js" async></script>
@@ -29,31 +32,37 @@
 <script type="text/javascript" src="../../scripts/prism.js" async></script>
 <script type="text/javascript" src="../../scripts/symbol-parameters-wrapper_deferred.js" defer></script></head>
 <body>
-<div class="navigation-wrapper" id="navigation-wrapper">
-    <div id="leftToggler"><span class="icon-toggler"></span></div>
-    <div class="library-name">
-<a href="../../index.html">
-<span>silk</span>            </a>    </div>
-    <div>1.10.0
-    </div>
-    <div class="pull-right d-flex">
+    <div class="root">
+<nav class="navigation" id="navigation-wrapper">
+    <div class="navigation--inner">
+        <div class="navigation-title">
+            <button class="menu-toggle" id="menu-toggle" type="button">toggle menu</button>
+            <div class="library-name">
+<a class="library-name--link" href="../../index.html">
+                            silk
+                    </a>            </div>
+            <div class="library-version">1.10.4
+            </div>
+        </div>
         <div class="filter-section" id="filter-section">
                 <button class="platform-tag platform-selector jvm-like" data-active="" data-filter=":silk-game:dokkaHtmlPartial/main">jvm</button>
         </div>
-        <button id="theme-toggle-button"><span id="theme-toggle"></span></button>
-        <div id="searchBar"></div>
     </div>
-</div>
-<div id="container">
-    <div id="leftColumn">
-        <div id="sideMenu"></div>
+    <div class="navigation-controls">
+        <button class="navigation-controls--btn navigation-controls--theme" id="theme-toggle-button" type="button">switch theme</button>
+        <div class="navigation-controls--btn navigation-controls--search" id="searchBar" role="button">search in API</div>
     </div>
-    <div id="main">
+</nav>
+        <div id="container">
+            <div class="sidebar" id="leftColumn">
+                <div class="sidebar--inner" id="sideMenu"></div>
+            </div>
+            <div id="main">
 <div class="main-content" data-page-type="package" id="content" pageids="silk-game::net.silkmc.silk.game.sideboard////PointingToDeclaration//-1451631312">
   <div class="breadcrumbs"><a href="../index.html">silk-game</a><span class="delimiter">/</span><span class="current">net.silkmc.silk.game.sideboard</span></div>
   <div class="cover ">
     <h1 class="cover"><span><span>Package-level</span></span> <span><span>declarations</span></span></h1>
-    <div class="platform-hinted UnderCoverText" data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":silk-game:dokkaHtmlPartial/main"><p class="paragraph">A sideboard builder (displayed using scoreboards), supporting boards with changing content. The sideboard can be displayed to a selection of players.</p><h2 class=""> Sideboard management</h2><h3 class=""> Creating a sideboard</h3><p class="paragraph">Use the top-level <a href="sideboard.html">sideboard</a> function.</p><div class="sample-container"><pre><code class="block lang-kotlin" theme="idea">val mySideboard = sideboard("My Sideboard".literal) {<br>    // build your sideboard here<br>}</code></pre><span class="top-right-position"><span class="copy-icon"></span><div class="copy-popup-wrapper popup-to-left"><span class="copy-popup-icon"></span><span>Content copied to clipboard</span></div></span></div><h3 class=""> Display sideboard to a player</h3><p class="paragraph">To show the sideboard to a player, you can simply use the <a href="-sideboard/display-to-player.html">displayToPlayer</a> function.</p><div class="sample-container"><pre><code class="block lang-kotlin" theme="idea">mySideboard.displayToPlayer(player)</code></pre><span class="top-right-position"><span class="copy-icon"></span><div class="copy-popup-wrapper popup-to-left"><span class="copy-popup-icon"></span><span>Content copied to clipboard</span></div></span></div><p class="paragraph">To remove a sideboard for a player, just call <a href="-sideboard/hide-from-player.html">hideFromPlayer</a>.</p><h2 class=""> Sideboard builder</h2><h3 class=""> Basic text line</h3><div class="sample-container"><pre><code class="block lang-kotlin" theme="idea">val mySideboard = sideboard("My Sideboard".literal) {<br>    line("Hey, this is".literal)<br>    line("my cool board!".literal)<br>    emptyLine()<br>    line(literalText("colors work as well!") {<br>        color = 0xFF9658<br>    })<br>}</code></pre><span class="top-right-position"><span class="copy-icon"></span><div class="copy-popup-wrapper popup-to-left"><span class="copy-popup-icon"></span><span>Content copied to clipboard</span></div></span></div><p class="paragraph">See <a href="-sideboard-builder/line.html">line</a> and <a href="-sideboard-builder/empty-line.html">emptyLine</a>.</p><h3 class=""> Updatable line</h3><p class="paragraph">You can create an <a href="-sideboard-line/-updatable/index.html">updatable line</a> as a normal value everywhere</p><div class="sample-container"><pre><code class="block lang-kotlin" theme="idea">val updatableLine = SideboardLine.Updatable()<br>// or optionally pass an initial value<br>val updatableLine = SideboardLine.Updatable(initial = "Nothing here".literal)</code></pre><span class="top-right-position"><span class="copy-icon"></span><div class="copy-popup-wrapper popup-to-left"><span class="copy-popup-icon"></span><span>Content copied to clipboard</span></div></span></div><p class="paragraph">and then use it in a sideboard builder</p><div class="sample-container"><pre><code class="block lang-kotlin" theme="idea">val mySideboard = sideboard("My Sideboard".literal) {<br>    line("The following line".literal)<br>    line("is updatable:".literal)<br>    line(updatableLine)<br>}</code></pre><span class="top-right-position"><span class="copy-icon"></span><div class="copy-popup-wrapper popup-to-left"><span class="copy-popup-icon"></span><span>Content copied to clipboard</span></div></span></div><p class="paragraph">To change the value of that updatable line, just call either <a href="-sideboard-line/-updatable/launch-update.html">launchUpdate</a> or if you are already in a suspending context just call <a href="-sideboard-line/-updatable/update.html">update</a>.</p><div class="sample-container"><pre><code class="block lang-kotlin" theme="idea">updatableLine.update("New line content!".literal)</code></pre><span class="top-right-position"><span class="copy-icon"></span><div class="copy-popup-wrapper popup-to-left"><span class="copy-popup-icon"></span><span>Content copied to clipboard</span></div></span></div><h3 class=""> Periodically updating line</h3><p class="paragraph">If you want to update a line periodically, you can easily do so using the <a href="-sideboard-builder/updating-line.html">updatingLine</a> function of the sideboard builder.</p><div class="sample-container"><pre><code class="block lang-kotlin" theme="idea">val mySideboard = sideboard("My Sideboard".literal) {<br>    updatingLine(1.seconds) {<br>        literalText("changing color") {<br>            color = (0x000000..0xFFFFFF).random()<br>        }<br>    }<br>}</code></pre><span class="top-right-position"><span class="copy-icon"></span><div class="copy-popup-wrapper popup-to-left"><span class="copy-popup-icon"></span><span>Content copied to clipboard</span></div></span></div></div></div>
+    <div class="platform-hinted UnderCoverText" data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":silk-game:dokkaHtmlPartial/main"><p class="paragraph">A sideboard builder (displayed using scoreboards), supporting boards with changing content. The sideboard can be displayed to a selection of players.</p><h2 class="">Sideboard management</h2><h3 class="">Creating a sideboard</h3><p class="paragraph">Use the top-level <a href="sideboard.html">sideboard</a> function.</p><div class="sample-container"><pre><code class="block lang-kotlin" theme="idea">val mySideboard = sideboard("My Sideboard".literal) {<br>    // build your sideboard here<br>}</code></pre><span class="top-right-position"><span class="copy-icon"></span><div class="copy-popup-wrapper popup-to-left"><span class="copy-popup-icon"></span><span>Content copied to clipboard</span></div></span></div><h3 class="">Display sideboard to a player</h3><p class="paragraph">To show the sideboard to a player, you can simply use the <a href="-sideboard/display-to-player.html">displayToPlayer</a> function.</p><div class="sample-container"><pre><code class="block lang-kotlin" theme="idea">mySideboard.displayToPlayer(player)</code></pre><span class="top-right-position"><span class="copy-icon"></span><div class="copy-popup-wrapper popup-to-left"><span class="copy-popup-icon"></span><span>Content copied to clipboard</span></div></span></div><p class="paragraph">To remove a sideboard for a player, just call <a href="-sideboard/hide-from-player.html">hideFromPlayer</a>.</p><h2 class="">Sideboard builder</h2><h3 class="">Basic text line</h3><div class="sample-container"><pre><code class="block lang-kotlin" theme="idea">val mySideboard = sideboard("My Sideboard".literal) {<br>    line("Hey, this is".literal)<br>    line("my cool board!".literal)<br>    emptyLine()<br>    line(literalText("colors work as well!") {<br>        color = 0xFF9658<br>    })<br>}</code></pre><span class="top-right-position"><span class="copy-icon"></span><div class="copy-popup-wrapper popup-to-left"><span class="copy-popup-icon"></span><span>Content copied to clipboard</span></div></span></div><p class="paragraph">See <a href="-sideboard-builder/line.html">line</a> and <a href="-sideboard-builder/empty-line.html">emptyLine</a>.</p><h3 class="">Updatable line</h3><p class="paragraph">You can create an <a href="-sideboard-line/-updatable/index.html">updatable line</a> as a normal value everywhere</p><div class="sample-container"><pre><code class="block lang-kotlin" theme="idea">val updatableLine = SideboardLine.Updatable()<br>// or optionally pass an initial value<br>val updatableLine = SideboardLine.Updatable(initial = "Nothing here".literal)</code></pre><span class="top-right-position"><span class="copy-icon"></span><div class="copy-popup-wrapper popup-to-left"><span class="copy-popup-icon"></span><span>Content copied to clipboard</span></div></span></div><p class="paragraph">and then use it in a sideboard builder</p><div class="sample-container"><pre><code class="block lang-kotlin" theme="idea">val mySideboard = sideboard("My Sideboard".literal) {<br>    line("The following line".literal)<br>    line("is updatable:".literal)<br>    line(updatableLine)<br>}</code></pre><span class="top-right-position"><span class="copy-icon"></span><div class="copy-popup-wrapper popup-to-left"><span class="copy-popup-icon"></span><span>Content copied to clipboard</span></div></span></div><p class="paragraph">To change the value of that updatable line, just call either <a href="-sideboard-line/-updatable/launch-update.html">launchUpdate</a> or if you are already in a suspending context just call <a href="-sideboard-line/-updatable/update.html">update</a>.</p><div class="sample-container"><pre><code class="block lang-kotlin" theme="idea">updatableLine.update("New line content!".literal)</code></pre><span class="top-right-position"><span class="copy-icon"></span><div class="copy-popup-wrapper popup-to-left"><span class="copy-popup-icon"></span><span>Content copied to clipboard</span></div></span></div><h3 class="">Periodically updating line</h3><p class="paragraph">If you want to update a line periodically, you can easily do so using the <a href="-sideboard-builder/updating-line.html">updatingLine</a> function of the sideboard builder.</p><div class="sample-container"><pre><code class="block lang-kotlin" theme="idea">val mySideboard = sideboard("My Sideboard".literal) {<br>    updatingLine(1.seconds) {<br>        literalText("changing color") {<br>            color = (0x000000..0xFFFFFF).random()<br>        }<br>    }<br>}</code></pre><span class="top-right-position"><span class="copy-icon"></span><div class="copy-popup-wrapper popup-to-left"><span class="copy-popup-icon"></span><span>Content copied to clipboard</span></div></span></div></div></div>
   </div>
   <div class="tabbedcontent">
     <div class="tabs-section" tabs-section="tabs-section"><button class="section-tab" data-active="" data-togglable="TYPE">Types</button><button class="section-tab" data-togglable="FUNCTION,EXTENSION_FUNCTION">Functions</button></div>
@@ -70,7 +79,7 @@
                   </span></span></div>
               <div>
                 <div class="title">
-                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":silk-game:dokkaHtmlPartial/main"><div class="symbol monospace"><span class="token keyword">class </span><a href="-changing-sideboard-line/index.html"><strike>ChangingSideboardLine</strike></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter "><span class="token keyword">val </span>textFlow<span class="token operator">: </span><span data-unresolved-link="kotlinx.coroutines.flow/Flow///PointingToDeclaration/">Flow</span><span class="token operator">&lt;</span><span class="token keyword"></span><span data-unresolved-link="net.minecraft.network.chat/Component///PointingToDeclaration/">Component</span><span class="token operator">&gt;</span></span></span><span class="token punctuation">)</span> : <a href="-sideboard-line/index.html">SideboardLine</a></div><div class="brief "><p class="paragraph">A sideboard line which does change. Everytime the given <a href="-changing-sideboard-line/text-flow.html">textFlow</a> emits a new Text, the sideboard line will be updated for all players currently seeing the <a href="-sideboard/index.html">Sideboard</a>.</p></div></div></div>
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":silk-game:dokkaHtmlPartial/main"><div class="symbol monospace"><span class="token keyword">class </span><a href="-changing-sideboard-line/index.html"><strike>ChangingSideboardLine</strike></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter "><span class="token keyword">val </span>textFlow<span class="token operator">: </span><span data-unresolved-link="kotlinx.coroutines.flow/Flow///PointingToDeclaration/">Flow</span><span class="token operator">&lt;</span><span data-unresolved-link="net.minecraft.network.chat/Component///PointingToDeclaration/">Component</span><span class="token operator">&gt;</span></span></span><span class="token punctuation">)</span> : <a href="-sideboard-line/index.html">SideboardLine</a></div><div class="brief "><p class="paragraph">A sideboard line which does change. Everytime the given <a href="-changing-sideboard-line/text-flow.html">textFlow</a> emits a new Text, the sideboard line will be updated for all players currently seeing the <a href="-sideboard/index.html">Sideboard</a>.</p></div></div></div>
                 </div>
               </div>
             </div>
@@ -85,7 +94,7 @@
                   </span></span></div>
               <div>
                 <div class="title">
-                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":silk-game:dokkaHtmlPartial/main"><div class="symbol monospace"><span class="token keyword">class </span><a href="-sideboard/index.html">Sideboard</a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">name<span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html">String</a><span class="token punctuation">, </span></span><span class="parameter ">displayName<span class="token operator">: </span><span data-unresolved-link="net.minecraft.network.chat/Component///PointingToDeclaration/">Component</span><span class="token punctuation">, </span></span><span class="parameter ">lines<span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin.collections/-list/index.html">List</a><span class="token operator">&lt;</span><span class="token keyword"></span><a href="-sideboard-line/index.html">SideboardLine</a><span class="token operator">&gt;</span></span></span><span class="token punctuation">)</span></div><div class="brief "><p class="paragraph">A sideboard which can be displayed to a variable collection of players using the <a href="-sideboard/display-to-player.html">displayToPlayer</a> function. A sideboard is an abstraction of Minecraft's server side scoreboards displayed on the right-hand side of the screen.</p></div></div></div>
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":silk-game:dokkaHtmlPartial/main"><div class="symbol monospace"><span class="token keyword">class </span><a href="-sideboard/index.html">Sideboard</a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">name<span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html">String</a><span class="token punctuation">, </span></span><span class="parameter ">displayName<span class="token operator">: </span><span data-unresolved-link="net.minecraft.network.chat/Component///PointingToDeclaration/">Component</span><span class="token punctuation">, </span></span><span class="parameter ">numberFormat<span class="token operator">: </span><span data-unresolved-link="net.minecraft.network.chat.numbers/NumberFormat///PointingToDeclaration/">NumberFormat</span><span class="token punctuation">, </span></span><span class="parameter ">lines<span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin.collections/-list/index.html">List</a><span class="token operator">&lt;</span><a href="-sideboard-line/index.html">SideboardLine</a><span class="token operator">&gt;</span></span></span><span class="token punctuation">)</span></div><div class="brief "><p class="paragraph">A sideboard which can be displayed to a variable collection of players using the <a href="-sideboard/display-to-player.html">displayToPlayer</a> function. A sideboard is an abstraction of Minecraft's server side scoreboards displayed on the right-hand side of the screen.</p></div></div></div>
                 </div>
               </div>
             </div>
@@ -149,22 +158,22 @@
                   </span></span></div>
               <div>
                 <div class="title">
-                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":silk-game:dokkaHtmlPartial/main"><div class="symbol monospace"><span class="token keyword"></span><span class="token keyword">fun </span><span data-unresolved-link="net.minecraft.server.level/ServerPlayer///PointingToDeclaration/">ServerPlayer</span><span class="token punctuation">.</span><a href="show-sideboard.html"><span class="token function"><strike>showSideboard</strike></span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">sideboard<span class="token operator">: </span><a href="-sideboard/index.html">Sideboard</a></span></span><span class="token punctuation">)</span></div><div class="brief "><p class="paragraph">Displays the given <a href="show-sideboard.html">sideboard</a> to the player. Future updates will be visible to the player as well.</p></div></div></div>
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":silk-game:dokkaHtmlPartial/main"><div class="symbol monospace"><span class="token keyword">fun </span><span data-unresolved-link="net.minecraft.server.level/ServerPlayer///PointingToDeclaration/">ServerPlayer</span><span class="token punctuation">.</span><a href="show-sideboard.html"><span class="token function"><strike>showSideboard</strike></span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">sideboard<span class="token operator">: </span><a href="-sideboard/index.html">Sideboard</a></span></span><span class="token punctuation">)</span></div><div class="brief "><p class="paragraph">Displays the given <a href="show-sideboard.html">sideboard</a> to the player. Future updates will be visible to the player as well.</p></div></div></div>
                 </div>
               </div>
             </div>
           </div>
-<a data-name="-61442512%2FFunctions%2F-1451631312" anchor-label="sideboard" id="-61442512%2FFunctions%2F-1451631312" data-filterable-set=":silk-game:dokkaHtmlPartial/main"></a>
+<a data-name="-1962822229%2FFunctions%2F-1451631312" anchor-label="sideboard" id="-1962822229%2FFunctions%2F-1451631312" data-filterable-set=":silk-game:dokkaHtmlPartial/main"></a>
           <div class="table-row" data-filterable-current=":silk-game:dokkaHtmlPartial/main" data-filterable-set=":silk-game:dokkaHtmlPartial/main">
             <div class="main-subrow keyValue ">
               <div class=""><span class="inline-flex">
                   <div><a href="sideboard.html"><span><span>sideboard</span></span></a></div>
-<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-61442512%2FFunctions%2F-1451631312"></span>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1962822229%2FFunctions%2F-1451631312"></span>
                     <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
                   </span></span></div>
               <div>
                 <div class="title">
-                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":silk-game:dokkaHtmlPartial/main"><div class="symbol monospace"><span class="token keyword">inline </span><span class="token keyword">fun </span><a href="sideboard.html"><span class="token function">sideboard</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">displayName<span class="token operator">: </span><span data-unresolved-link="net.minecraft.network.chat/Component///PointingToDeclaration/">Component</span><span class="token punctuation">, </span></span><span class="parameter ">name<span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html">String</a><span class="token operator"> = </span>displayName.string.filter { it.isLetter() }.take(16)<span class="token punctuation">, </span></span><span class="parameter ">builder<span class="token operator">: </span><span class="token keyword"></span><a href="-sideboard-builder/index.html">SideboardBuilder</a><span class="token punctuation">.</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token operator"> -&gt; </span><span class="token keyword"></span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html">Unit</a></span></span><span class="token punctuation">)</span><span class="token operator">: </span><a href="-sideboard/index.html">Sideboard</a></div><div class="brief "><p class="paragraph">Opens a new sideboard <a href="sideboard.html">builder</a> and returns the final sideboard.</p></div></div></div>
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":silk-game:dokkaHtmlPartial/main"><div class="symbol monospace"><span class="token keyword">inline </span><span class="token keyword">fun </span><a href="sideboard.html"><span class="token function">sideboard</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">displayName<span class="token operator">: </span><span data-unresolved-link="net.minecraft.network.chat/Component///PointingToDeclaration/">Component</span><span class="token punctuation">, </span></span><span class="parameter ">name<span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html">String</a><span class="token operator"> = </span>displayName.string.filter { it.isLetter() }.take(16)<span class="token punctuation">, </span></span><span class="parameter ">numberFormat<span class="token operator">: </span><span data-unresolved-link="net.minecraft.network.chat.numbers/NumberFormat///PointingToDeclaration/">NumberFormat</span><span class="token operator"> = </span>BlankFormat.INSTANCE<span class="token punctuation">, </span></span><span class="parameter ">builder<span class="token operator">: </span><a href="-sideboard-builder/index.html">SideboardBuilder</a><span class="token punctuation">.</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token operator"> -&gt; </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html">Unit</a></span></span><span class="token punctuation">)</span><span class="token operator">: </span><a href="-sideboard/index.html">Sideboard</a></div><div class="brief "><p class="paragraph">Opens a new sideboard <a href="sideboard.html">builder</a> and returns the final sideboard.</p></div></div></div>
                 </div>
               </div>
             </div>
@@ -175,10 +184,11 @@
   </div>
 </div>
       <div class="footer">
-        <span class="go-to-top-icon"><a href="#content" id="go-to-top-link"></a></span><span>© 2023 Copyright</span><span class="pull-right"><span>Generated by </span><a href="https://github.com/Kotlin/dokka"><span>dokka</span><span class="padded-icon"></span></a></span>
+        <span class="go-to-top-icon"><a href="#content" id="go-to-top-link"></a></span><span>© 2024 Copyright</span><span class="pull-right"><span>Generated by </span><a href="https://github.com/Kotlin/dokka"><span>dokka</span><span class="padded-icon"></span></a></span>
       </div>
+            </div>
+        </div>
     </div>
-</div>
 </body>
 </html>
 

@@ -1,9 +1,11 @@
 <!doctype html>
-<html>
+<html class="no-js">
 <head>
     <meta name="viewport" content="width=device-width, initial-scale=1" charset="UTF-8">
     <title>Gui</title>
-<link href="../../../images/logo-icon.svg" rel="icon" type="image/svg"><script>var pathToRoot = "../../../";</script>    <script>const storage = localStorage.getItem("dokka-dark-mode")
+<link href="../../../images/logo-icon.svg" rel="icon" type="image/svg">    <script>var pathToRoot = "../../../";</script>
+    <script>document.documentElement.classList.replace("no-js","js");</script>
+    <script>const storage = localStorage.getItem("dokka-dark-mode")
     if (storage == null) {
         const osDarkSchemePreferred = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches
         if (osDarkSchemePreferred === true) {
@@ -16,12 +18,13 @@
         }
     }
     </script>
+<script type="text/javascript" src="https://unpkg.com/kotlin-playground@1/dist/playground.min.js" async></script>
 <script type="text/javascript" src="../../../scripts/sourceset_dependencies.js" async></script>
 <link href="../../../styles/style.css" rel="Stylesheet">
-<link href="../../../styles/jetbrains-mono.css" rel="Stylesheet">
 <link href="../../../styles/main.css" rel="Stylesheet">
 <link href="../../../styles/prism.css" rel="Stylesheet">
 <link href="../../../styles/logo-styles.css" rel="Stylesheet">
+<link href="../../../styles/font-jb-sans-auto.css" rel="Stylesheet">
 <script type="text/javascript" src="../../../scripts/clipboard.js" async></script>
 <script type="text/javascript" src="../../../scripts/navigation-loader.js" async></script>
 <script type="text/javascript" src="../../../scripts/platform-content-handler.js" async></script>
@@ -29,31 +32,37 @@
 <script type="text/javascript" src="../../../scripts/prism.js" async></script>
 <script type="text/javascript" src="../../../scripts/symbol-parameters-wrapper_deferred.js" defer></script></head>
 <body>
-<div class="navigation-wrapper" id="navigation-wrapper">
-    <div id="leftToggler"><span class="icon-toggler"></span></div>
-    <div class="library-name">
-<a href="../../../index.html">
-<span>silk</span>            </a>    </div>
-    <div>1.10.0
-    </div>
-    <div class="pull-right d-flex">
+    <div class="root">
+<nav class="navigation" id="navigation-wrapper">
+    <div class="navigation--inner">
+        <div class="navigation-title">
+            <button class="menu-toggle" id="menu-toggle" type="button">toggle menu</button>
+            <div class="library-name">
+<a class="library-name--link" href="../../../index.html">
+                            silk
+                    </a>            </div>
+            <div class="library-version">1.10.4
+            </div>
+        </div>
         <div class="filter-section" id="filter-section">
                 <button class="platform-tag platform-selector jvm-like" data-active="" data-filter=":silk-igui:dokkaHtmlPartial/main">jvm</button>
         </div>
-        <button id="theme-toggle-button"><span id="theme-toggle"></span></button>
-        <div id="searchBar"></div>
     </div>
-</div>
-<div id="container">
-    <div id="leftColumn">
-        <div id="sideMenu"></div>
+    <div class="navigation-controls">
+        <button class="navigation-controls--btn navigation-controls--theme" id="theme-toggle-button" type="button">switch theme</button>
+        <div class="navigation-controls--btn navigation-controls--search" id="searchBar" role="button">search in API</div>
     </div>
-    <div id="main">
+</nav>
+        <div id="container">
+            <div class="sidebar" id="leftColumn">
+                <div class="sidebar--inner" id="sideMenu"></div>
+            </div>
+            <div id="main">
 <div class="main-content" data-page-type="classlike" id="content" pageids="silk-igui::net.silkmc.silk.igui/Gui///PointingToDeclaration//-1174248208">
   <div class="breadcrumbs"><a href="../../index.html">silk-igui</a><span class="delimiter">/</span><a href="../index.html">net.silkmc.silk.igui</a><span class="delimiter">/</span><span class="current">Gui</span></div>
   <div class="cover ">
     <h1 class="cover"><span><span>Gui</span></span></h1>
-    <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":silk-igui:dokkaHtmlPartial/main"><div class="symbol monospace"><span class="token keyword">class </span><a href="index.html">Gui</a><span class="token punctuation">(</span><span class="parameters "><span class="parameter "><span class="token keyword">val </span>guiType<span class="token operator">: </span><a href="../-gui-type/index.html">GuiType</a><span class="token punctuation">, </span></span><span class="parameter "><span class="token keyword">val </span>title<span class="token operator">: </span><span data-unresolved-link="net.minecraft.network.chat/Component///PointingToDeclaration/">Component</span><span class="token punctuation">, </span></span><span class="parameter "><span class="token keyword">val </span>pagesByKey<span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin.collections/-map/index.html">Map</a><span class="token operator">&lt;</span><span class="token keyword"></span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html">String</a><span class="token punctuation">, </span><span class="token keyword"></span><a href="../-gui-page/index.html">GuiPage</a><span class="token operator">&gt;</span><span class="token punctuation">, </span></span><span class="parameter "><span class="token keyword">val </span>pagesByNumber<span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin.collections/-map/index.html">Map</a><span class="token operator">&lt;</span><span class="token keyword"></span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-int/index.html">Int</a><span class="token punctuation">, </span><span class="token keyword"></span><a href="../-gui-page/index.html">GuiPage</a><span class="token operator">&gt;</span><span class="token punctuation">, </span></span><span class="parameter "><span class="token keyword">val </span>defaultPageKey<span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html">String</a><span class="token punctuation">, </span></span><span class="parameter "><span class="token keyword">val </span>eventHandler<span class="token operator">: </span><a href="../-gui-event-handler/index.html">GuiEventHandler</a></span></span><span class="token punctuation">)</span> : <span data-unresolved-link="net.minecraft.world/SimpleContainer///PointingToDeclaration/">SimpleContainer</span>, <span data-unresolved-link="net.minecraft.world/MenuProvider///PointingToDeclaration/">MenuProvider</span><span class="clearfix"><span class="floating-right">(<a href="https://github.com/SilkMC/silk/tree/main/silk-igui/src/main/kotlin/net/silkmc/silk/igui/Gui.kt#L32">source</a>)</span></span></div></div></div>
+    <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":silk-igui:dokkaHtmlPartial/main"><div class="symbol monospace"><span class="token keyword">class </span><a href="index.html">Gui</a><span class="token punctuation">(</span><span class="parameters "><span class="parameter "><span class="token keyword">val </span>guiType<span class="token operator">: </span><a href="../-gui-type/index.html">GuiType</a><span class="token punctuation">, </span></span><span class="parameter "><span class="token keyword">val </span>title<span class="token operator">: </span><span data-unresolved-link="net.minecraft.network.chat/Component///PointingToDeclaration/">Component</span><span class="token punctuation">, </span></span><span class="parameter "><span class="token keyword">val </span>pagesByKey<span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin.collections/-map/index.html">Map</a><span class="token operator">&lt;</span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html">String</a><span class="token punctuation">, </span><a href="../-gui-page/index.html">GuiPage</a><span class="token operator">&gt;</span><span class="token punctuation">, </span></span><span class="parameter "><span class="token keyword">val </span>pagesByNumber<span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin.collections/-map/index.html">Map</a><span class="token operator">&lt;</span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-int/index.html">Int</a><span class="token punctuation">, </span><a href="../-gui-page/index.html">GuiPage</a><span class="token operator">&gt;</span><span class="token punctuation">, </span></span><span class="parameter "><span class="token keyword">val </span>defaultPageKey<span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html">String</a><span class="token punctuation">, </span></span><span class="parameter "><span class="token keyword">val </span>eventHandler<span class="token operator">: </span><a href="../-gui-event-handler/index.html">GuiEventHandler</a></span></span><span class="token punctuation">)</span> : <span data-unresolved-link="net.minecraft.world/SimpleContainer///PointingToDeclaration/">SimpleContainer</span>, <span data-unresolved-link="net.minecraft.world/MenuProvider///PointingToDeclaration/">MenuProvider</span><span class="clearfix"><span class="floating-right">(<a href="https://github.com/SilkMC/silk/tree/main/silk-igui/src/main/kotlin/net/silkmc/silk/igui/Gui.kt#L32">source</a>)</span></span></div></div></div>
   </div>
   <div class="tabbedcontent">
     <div class="tabs-section" tabs-section="tabs-section"><button class="section-tab" data-active="" data-togglable="CONSTRUCTOR,TYPE,PROPERTY,FUNCTION">Members</button><button class="section-tab" data-togglable="CONSTRUCTOR,TYPE,PROPERTY,FUNCTION,EXTENSION_PROPERTY,EXTENSION_FUNCTION">Members &amp; Extensions</button></div>
@@ -70,7 +79,7 @@
                   </span></span></div>
               <div>
                 <div class="title">
-                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":silk-igui:dokkaHtmlPartial/main"><div class="symbol monospace"><span class="token keyword">constructor</span><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">guiType<span class="token operator">: </span><a href="../-gui-type/index.html">GuiType</a><span class="token punctuation">, </span></span><span class="parameter ">title<span class="token operator">: </span><span data-unresolved-link="net.minecraft.network.chat/Component///PointingToDeclaration/">Component</span><span class="token punctuation">, </span></span><span class="parameter ">pagesByKey<span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin.collections/-map/index.html">Map</a><span class="token operator">&lt;</span><span class="token keyword"></span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html">String</a><span class="token punctuation">, </span><span class="token keyword"></span><a href="../-gui-page/index.html">GuiPage</a><span class="token operator">&gt;</span><span class="token punctuation">, </span></span><span class="parameter ">pagesByNumber<span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin.collections/-map/index.html">Map</a><span class="token operator">&lt;</span><span class="token keyword"></span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-int/index.html">Int</a><span class="token punctuation">, </span><span class="token keyword"></span><a href="../-gui-page/index.html">GuiPage</a><span class="token operator">&gt;</span><span class="token punctuation">, </span></span><span class="parameter ">defaultPageKey<span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html">String</a><span class="token punctuation">, </span></span><span class="parameter ">eventHandler<span class="token operator">: </span><a href="../-gui-event-handler/index.html">GuiEventHandler</a></span></span><span class="token punctuation">)</span></div></div></div>
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":silk-igui:dokkaHtmlPartial/main"><div class="symbol monospace"><span class="token keyword">constructor</span><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">guiType<span class="token operator">: </span><a href="../-gui-type/index.html">GuiType</a><span class="token punctuation">, </span></span><span class="parameter ">title<span class="token operator">: </span><span data-unresolved-link="net.minecraft.network.chat/Component///PointingToDeclaration/">Component</span><span class="token punctuation">, </span></span><span class="parameter ">pagesByKey<span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin.collections/-map/index.html">Map</a><span class="token operator">&lt;</span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html">String</a><span class="token punctuation">, </span><a href="../-gui-page/index.html">GuiPage</a><span class="token operator">&gt;</span><span class="token punctuation">, </span></span><span class="parameter ">pagesByNumber<span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin.collections/-map/index.html">Map</a><span class="token operator">&lt;</span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-int/index.html">Int</a><span class="token punctuation">, </span><a href="../-gui-page/index.html">GuiPage</a><span class="token operator">&gt;</span><span class="token punctuation">, </span></span><span class="parameter ">defaultPageKey<span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html">String</a><span class="token punctuation">, </span></span><span class="parameter ">eventHandler<span class="token operator">: </span><a href="../-gui-event-handler/index.html">GuiEventHandler</a></span></span><span class="token punctuation">)</span></div></div></div>
                 </div>
               </div>
             </div>
@@ -89,7 +98,7 @@
                   </span></span></div>
               <div>
                 <div class="title">
-                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":silk-igui:dokkaHtmlPartial/main"><div class="symbol monospace"><span class="token keyword"></span><span class="token keyword">val </span><a href="accessor.html">accessor</a><span class="token operator">: </span><span data-unresolved-link="net.silkmc.silk.igui.mixin/SimpleContainerAccessor///PointingToDeclaration/">SimpleContainerAccessor</span></div></div></div>
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":silk-igui:dokkaHtmlPartial/main"><div class="symbol monospace"><span class="token keyword">val </span><a href="accessor.html">accessor</a><span class="token operator">: </span><span data-unresolved-link="net.silkmc.silk.igui.mixin/SimpleContainerAccessor///PointingToDeclaration/">SimpleContainerAccessor</span></div></div></div>
                 </div>
               </div>
             </div>
@@ -104,7 +113,7 @@
                   </span></span></div>
               <div>
                 <div class="title">
-                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":silk-igui:dokkaHtmlPartial/main"><div class="symbol monospace"><span class="token keyword"></span><span class="token keyword">var </span><a href="current-page.html">currentPage</a><span class="token operator">: </span><a href="../-gui-page/index.html">GuiPage</a></div></div></div>
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":silk-igui:dokkaHtmlPartial/main"><div class="symbol monospace"><span class="token keyword">var </span><a href="current-page.html">currentPage</a><span class="token operator">: </span><a href="../-gui-page/index.html">GuiPage</a></div></div></div>
                 </div>
               </div>
             </div>
@@ -119,7 +128,7 @@
                   </span></span></div>
               <div>
                 <div class="title">
-                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":silk-igui:dokkaHtmlPartial/main"><div class="symbol monospace"><span class="token keyword"></span><span class="token keyword">val </span><a href="default-page-key.html">defaultPageKey</a><span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html">String</a></div></div></div>
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":silk-igui:dokkaHtmlPartial/main"><div class="symbol monospace"><span class="token keyword">val </span><a href="default-page-key.html">defaultPageKey</a><span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html">String</a></div></div></div>
                 </div>
               </div>
             </div>
@@ -134,7 +143,7 @@
                   </span></span></div>
               <div>
                 <div class="title">
-                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":silk-igui:dokkaHtmlPartial/main"><div class="symbol monospace"><span class="token keyword"></span><span class="token keyword">val </span><a href="event-handler.html">eventHandler</a><span class="token operator">: </span><a href="../-gui-event-handler/index.html">GuiEventHandler</a></div></div></div>
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":silk-igui:dokkaHtmlPartial/main"><div class="symbol monospace"><span class="token keyword">val </span><a href="event-handler.html">eventHandler</a><span class="token operator">: </span><a href="../-gui-event-handler/index.html">GuiEventHandler</a></div></div></div>
                 </div>
               </div>
             </div>
@@ -149,7 +158,7 @@
                   </span></span></div>
               <div>
                 <div class="title">
-                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":silk-igui:dokkaHtmlPartial/main"><div class="symbol monospace"><span class="token keyword"></span><span class="token keyword">val </span><a href="gui-type.html">guiType</a><span class="token operator">: </span><a href="../-gui-type/index.html">GuiType</a></div></div></div>
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":silk-igui:dokkaHtmlPartial/main"><div class="symbol monospace"><span class="token keyword">val </span><a href="gui-type.html">guiType</a><span class="token operator">: </span><a href="../-gui-type/index.html">GuiType</a></div></div></div>
                 </div>
               </div>
             </div>
@@ -164,7 +173,7 @@
                   </span></span></div>
               <div>
                 <div class="title">
-                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":silk-igui:dokkaHtmlPartial/main"><div class="symbol monospace"><span class="token keyword"></span><span class="token keyword">var </span><a href="is-offset.html">isOffset</a><span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-boolean/index.html">Boolean</a></div></div></div>
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":silk-igui:dokkaHtmlPartial/main"><div class="symbol monospace"><span class="token keyword">var </span><a href="is-offset.html">isOffset</a><span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-boolean/index.html">Boolean</a></div></div></div>
                 </div>
               </div>
             </div>
@@ -179,7 +188,7 @@
                   </span></span></div>
               <div>
                 <div class="title">
-                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":silk-igui:dokkaHtmlPartial/main"><div class="symbol monospace"><span class="token keyword"></span><span class="token keyword">val </span><a href="index.html#48150380%2FProperties%2F-1174248208">items</a><span class="token operator">: </span><span data-unresolved-link="net.minecraft.core/NonNullList///PointingToDeclaration/">NonNullList</span><span class="token operator">&lt;</span><span class="token keyword"></span><span data-unresolved-link="net.minecraft.world.item/ItemStack///PointingToDeclaration/">ItemStack</span><span class="token operator">&gt;</span></div></div></div>
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":silk-igui:dokkaHtmlPartial/main"><div class="symbol monospace"><span class="token keyword">val </span><a href="index.html#48150380%2FProperties%2F-1174248208">items</a><span class="token operator">: </span><span data-unresolved-link="net.minecraft.core/NonNullList///PointingToDeclaration/">NonNullList</span><span class="token operator">&lt;</span><span data-unresolved-link="net.minecraft.world.item/ItemStack///PointingToDeclaration/">ItemStack</span><span class="token operator">&gt;</span></div></div></div>
                 </div>
               </div>
             </div>
@@ -194,7 +203,7 @@
                   </span></span></div>
               <div>
                 <div class="title">
-                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":silk-igui:dokkaHtmlPartial/main"><div class="symbol monospace"><span class="token keyword"></span><span class="token keyword">val </span><a href="pages-by-key.html">pagesByKey</a><span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin.collections/-map/index.html">Map</a><span class="token operator">&lt;</span><span class="token keyword"></span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html">String</a><span class="token punctuation">, </span><span class="token keyword"></span><a href="../-gui-page/index.html">GuiPage</a><span class="token operator">&gt;</span></div></div></div>
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":silk-igui:dokkaHtmlPartial/main"><div class="symbol monospace"><span class="token keyword">val </span><a href="pages-by-key.html">pagesByKey</a><span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin.collections/-map/index.html">Map</a><span class="token operator">&lt;</span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html">String</a><span class="token punctuation">, </span><a href="../-gui-page/index.html">GuiPage</a><span class="token operator">&gt;</span></div></div></div>
                 </div>
               </div>
             </div>
@@ -209,7 +218,7 @@
                   </span></span></div>
               <div>
                 <div class="title">
-                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":silk-igui:dokkaHtmlPartial/main"><div class="symbol monospace"><span class="token keyword"></span><span class="token keyword">val </span><a href="pages-by-number.html">pagesByNumber</a><span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin.collections/-map/index.html">Map</a><span class="token operator">&lt;</span><span class="token keyword"></span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-int/index.html">Int</a><span class="token punctuation">, </span><span class="token keyword"></span><a href="../-gui-page/index.html">GuiPage</a><span class="token operator">&gt;</span></div></div></div>
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":silk-igui:dokkaHtmlPartial/main"><div class="symbol monospace"><span class="token keyword">val </span><a href="pages-by-number.html">pagesByNumber</a><span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin.collections/-map/index.html">Map</a><span class="token operator">&lt;</span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-int/index.html">Int</a><span class="token punctuation">, </span><a href="../-gui-page/index.html">GuiPage</a><span class="token operator">&gt;</span></div></div></div>
                 </div>
               </div>
             </div>
@@ -224,7 +233,7 @@
                   </span></span></div>
               <div>
                 <div class="title">
-                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":silk-igui:dokkaHtmlPartial/main"><div class="symbol monospace"><span class="token keyword"></span><span class="token keyword">val </span><a href="title.html">title</a><span class="token operator">: </span><span data-unresolved-link="net.minecraft.network.chat/Component///PointingToDeclaration/">Component</span></div></div></div>
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":silk-igui:dokkaHtmlPartial/main"><div class="symbol monospace"><span class="token keyword">val </span><a href="title.html">title</a><span class="token operator">: </span><span data-unresolved-link="net.minecraft.network.chat/Component///PointingToDeclaration/">Component</span></div></div></div>
                 </div>
               </div>
             </div>
@@ -239,7 +248,7 @@
                   </span></span></div>
               <div>
                 <div class="title">
-                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":silk-igui:dokkaHtmlPartial/main"><div class="symbol monospace"><span class="token keyword"></span><span class="token keyword">val </span><a href="views.html">views</a><span class="token operator">: </span><a href="https://docs.oracle.com/javase/8/docs/api/java/util/HashMap.html">HashMap</a><span class="token operator">&lt;</span><span class="token keyword"></span><span data-unresolved-link="net.minecraft.world.entity.player/Player///PointingToDeclaration/">Player</span><span class="token punctuation">, </span><span class="token keyword"></span><a href="../-gui-screen-handler/index.html">GuiScreenHandler</a><span class="token operator">&gt;</span></div></div></div>
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":silk-igui:dokkaHtmlPartial/main"><div class="symbol monospace"><span class="token keyword">val </span><a href="views.html">views</a><span class="token operator">: </span><a href="https://docs.oracle.com/javase/8/docs/api/java/util/HashMap.html">HashMap</a><span class="token operator">&lt;</span><span data-unresolved-link="net.minecraft.world.entity.player/Player///PointingToDeclaration/">Player</span><span class="token punctuation">, </span><a href="../-gui-screen-handler/index.html">GuiScreenHandler</a><span class="token operator">&gt;</span></div></div></div>
                 </div>
               </div>
             </div>
@@ -258,7 +267,7 @@
                   </span></span></div>
               <div>
                 <div class="title">
-                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":silk-igui:dokkaHtmlPartial/main"><div class="symbol monospace"><span class="token keyword">open </span><span class="token keyword"></span><span class="token keyword">fun </span><a href="index.html#1954599920%2FFunctions%2F-1174248208"><span class="token function">addItem</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">itemStack<span class="token operator">: </span><span data-unresolved-link="net.minecraft.world.item/ItemStack///PointingToDeclaration/">ItemStack</span></span></span><span class="token punctuation">)</span><span class="token operator">: </span><span data-unresolved-link="net.minecraft.world.item/ItemStack///PointingToDeclaration/">ItemStack</span></div></div></div>
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":silk-igui:dokkaHtmlPartial/main"><div class="symbol monospace"><span class="token keyword">open </span><span class="token keyword">fun </span><a href="index.html#1954599920%2FFunctions%2F-1174248208"><span class="token function">addItem</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">itemStack<span class="token operator">: </span><span data-unresolved-link="net.minecraft.world.item/ItemStack///PointingToDeclaration/">ItemStack</span></span></span><span class="token punctuation">)</span><span class="token operator">: </span><span data-unresolved-link="net.minecraft.world.item/ItemStack///PointingToDeclaration/">ItemStack</span></div></div></div>
                 </div>
               </div>
             </div>
@@ -273,7 +282,7 @@
                   </span></span></div>
               <div>
                 <div class="title">
-                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":silk-igui:dokkaHtmlPartial/main"><div class="symbol monospace"><span class="token keyword">open </span><span class="token keyword"></span><span class="token keyword">fun </span><a href="index.html#1191083876%2FFunctions%2F-1174248208"><span class="token function">addListener</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">containerListener<span class="token operator">: </span><span data-unresolved-link="net.minecraft.world/ContainerListener///PointingToDeclaration/">ContainerListener</span></span></span><span class="token punctuation">)</span></div></div></div>
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":silk-igui:dokkaHtmlPartial/main"><div class="symbol monospace"><span class="token keyword">open </span><span class="token keyword">fun </span><a href="index.html#1191083876%2FFunctions%2F-1174248208"><span class="token function">addListener</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">containerListener<span class="token operator">: </span><span data-unresolved-link="net.minecraft.world/ContainerListener///PointingToDeclaration/">ContainerListener</span></span></span><span class="token punctuation">)</span></div></div></div>
                 </div>
               </div>
             </div>
@@ -288,7 +297,7 @@
                   </span></span></div>
               <div>
                 <div class="title">
-                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":silk-igui:dokkaHtmlPartial/main"><div class="symbol monospace"><span class="token keyword">open </span><span class="token keyword"></span><span class="token keyword">fun </span><a href="index.html#1060598178%2FFunctions%2F-1174248208"><span class="token function">canAddItem</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">itemStack<span class="token operator">: </span><span data-unresolved-link="net.minecraft.world.item/ItemStack///PointingToDeclaration/">ItemStack</span></span></span><span class="token punctuation">)</span><span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-boolean/index.html">Boolean</a></div></div></div>
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":silk-igui:dokkaHtmlPartial/main"><div class="symbol monospace"><span class="token keyword">open </span><span class="token keyword">fun </span><a href="index.html#1060598178%2FFunctions%2F-1174248208"><span class="token function">canAddItem</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">itemStack<span class="token operator">: </span><span data-unresolved-link="net.minecraft.world.item/ItemStack///PointingToDeclaration/">ItemStack</span></span></span><span class="token punctuation">)</span><span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-boolean/index.html">Boolean</a></div></div></div>
                 </div>
               </div>
             </div>
@@ -303,7 +312,7 @@
                   </span></span></div>
               <div>
                 <div class="title">
-                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":silk-igui:dokkaHtmlPartial/main"><div class="symbol monospace"><span class="token keyword">open </span><span class="token keyword"></span><span class="token keyword">fun </span><a href="index.html#123781315%2FFunctions%2F-1174248208"><span class="token function">canPlaceItem</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">i<span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-int/index.html">Int</a><span class="token punctuation">, </span></span><span class="parameter ">itemStack<span class="token operator">: </span><span data-unresolved-link="net.minecraft.world.item/ItemStack///PointingToDeclaration/">ItemStack</span></span></span><span class="token punctuation">)</span><span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-boolean/index.html">Boolean</a></div></div></div>
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":silk-igui:dokkaHtmlPartial/main"><div class="symbol monospace"><span class="token keyword">open </span><span class="token keyword">fun </span><a href="index.html#123781315%2FFunctions%2F-1174248208"><span class="token function">canPlaceItem</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">i<span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-int/index.html">Int</a><span class="token punctuation">, </span></span><span class="parameter ">itemStack<span class="token operator">: </span><span data-unresolved-link="net.minecraft.world.item/ItemStack///PointingToDeclaration/">ItemStack</span></span></span><span class="token punctuation">)</span><span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-boolean/index.html">Boolean</a></div></div></div>
                 </div>
               </div>
             </div>
@@ -318,7 +327,7 @@
                   </span></span></div>
               <div>
                 <div class="title">
-                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":silk-igui:dokkaHtmlPartial/main"><div class="symbol monospace"><span class="token keyword">open </span><span class="token keyword"></span><span class="token keyword">fun </span><a href="index.html#146511577%2FFunctions%2F-1174248208"><span class="token function">canTakeItem</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">container<span class="token operator">: </span><span data-unresolved-link="net.minecraft.world/Container///PointingToDeclaration/">Container</span><span class="token punctuation">, </span></span><span class="parameter ">i<span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-int/index.html">Int</a><span class="token punctuation">, </span></span><span class="parameter ">itemStack<span class="token operator">: </span><span data-unresolved-link="net.minecraft.world.item/ItemStack///PointingToDeclaration/">ItemStack</span></span></span><span class="token punctuation">)</span><span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-boolean/index.html">Boolean</a></div></div></div>
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":silk-igui:dokkaHtmlPartial/main"><div class="symbol monospace"><span class="token keyword">open </span><span class="token keyword">fun </span><a href="index.html#146511577%2FFunctions%2F-1174248208"><span class="token function">canTakeItem</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">container<span class="token operator">: </span><span data-unresolved-link="net.minecraft.world/Container///PointingToDeclaration/">Container</span><span class="token punctuation">, </span></span><span class="parameter ">i<span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-int/index.html">Int</a><span class="token punctuation">, </span></span><span class="parameter ">itemStack<span class="token operator">: </span><span data-unresolved-link="net.minecraft.world.item/ItemStack///PointingToDeclaration/">ItemStack</span></span></span><span class="token punctuation">)</span><span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-boolean/index.html">Boolean</a></div></div></div>
                 </div>
               </div>
             </div>
@@ -333,7 +342,7 @@
                   </span></span></div>
               <div>
                 <div class="title">
-                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":silk-igui:dokkaHtmlPartial/main"><div class="symbol monospace"><span class="token keyword"></span><span class="token keyword">fun </span><a href="index.html">Gui</a><span class="token punctuation">.</span><a href="../change-page.html"><span class="token function">changePage</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">fromPage<span class="token operator">: </span><a href="../-gui-page/index.html">GuiPage</a><span class="token punctuation">, </span></span><span class="parameter ">toPage<span class="token operator">: </span><a href="../-gui-page/index.html">GuiPage</a><span class="token punctuation">, </span></span><span class="parameter ">overrideEffect<span class="token operator">: </span><a href="../-gui-page/-change-effect/index.html">GuiPage.ChangeEffect</a><span class="token operator">?</span><span class="token operator"> = </span>null</span></span><span class="token punctuation">)</span><span class="token operator">: </span><span data-unresolved-link="kotlinx.coroutines/Job///PointingToDeclaration/">Job</span></div></div></div>
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":silk-igui:dokkaHtmlPartial/main"><div class="symbol monospace"><span class="token keyword">fun </span><a href="index.html">Gui</a><span class="token punctuation">.</span><a href="../change-page.html"><span class="token function">changePage</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">fromPage<span class="token operator">: </span><a href="../-gui-page/index.html">GuiPage</a><span class="token punctuation">, </span></span><span class="parameter ">toPage<span class="token operator">: </span><a href="../-gui-page/index.html">GuiPage</a><span class="token punctuation">, </span></span><span class="parameter ">overrideEffect<span class="token operator">: </span><a href="../-gui-page/-change-effect/index.html">GuiPage.ChangeEffect</a><span class="token operator">?</span><span class="token operator"> = </span>null</span></span><span class="token punctuation">)</span><span class="token operator">: </span><span data-unresolved-link="kotlinx.coroutines/Job///PointingToDeclaration/">Job</span></div></div></div>
                 </div>
               </div>
             </div>
@@ -363,7 +372,7 @@
                   </span></span></div>
               <div>
                 <div class="title">
-                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":silk-igui:dokkaHtmlPartial/main"><div class="symbol monospace"><span class="token keyword"></span><span class="token keyword">fun </span><a href="close-for-viewers.html"><span class="token function">closeForViewers</span></a><span class="token punctuation">(</span><span class="token punctuation">)</span></div><div class="brief "><p class="paragraph">Closes this gui for all players viewing it.</p></div></div></div>
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":silk-igui:dokkaHtmlPartial/main"><div class="symbol monospace"><span class="token keyword">fun </span><a href="close-for-viewers.html"><span class="token function">closeForViewers</span></a><span class="token punctuation">(</span><span class="token punctuation">)</span></div><div class="brief "><p class="paragraph">Closes this gui for all players viewing it.</p></div></div></div>
                 </div>
               </div>
             </div>
@@ -378,7 +387,7 @@
                   </span></span></div>
               <div>
                 <div class="title">
-                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":silk-igui:dokkaHtmlPartial/main"><div class="symbol monospace"><span class="token keyword">open </span><span class="token keyword"></span><span class="token keyword">fun </span><a href="index.html#1222068586%2FFunctions%2F-1174248208"><span class="token function">countItem</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">item<span class="token operator">: </span><span data-unresolved-link="net.minecraft.world.item/Item///PointingToDeclaration/">Item</span></span></span><span class="token punctuation">)</span><span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-int/index.html">Int</a></div></div></div>
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":silk-igui:dokkaHtmlPartial/main"><div class="symbol monospace"><span class="token keyword">open </span><span class="token keyword">fun </span><a href="index.html#1222068586%2FFunctions%2F-1174248208"><span class="token function">countItem</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">item<span class="token operator">: </span><span data-unresolved-link="net.minecraft.world.item/Item///PointingToDeclaration/">Item</span></span></span><span class="token punctuation">)</span><span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-int/index.html">Int</a></div></div></div>
                 </div>
               </div>
             </div>
@@ -398,17 +407,17 @@
               </div>
             </div>
           </div>
-<a data-name="-1621631890%2FFunctions%2F-1174248208" anchor-label="createTag" id="-1621631890%2FFunctions%2F-1174248208" data-filterable-set=":silk-igui:dokkaHtmlPartial/main"></a>
+<a data-name="-771759662%2FFunctions%2F-1174248208" anchor-label="createTag" id="-771759662%2FFunctions%2F-1174248208" data-filterable-set=":silk-igui:dokkaHtmlPartial/main"></a>
           <div class="table-row" data-filterable-current=":silk-igui:dokkaHtmlPartial/main" data-filterable-set=":silk-igui:dokkaHtmlPartial/main">
             <div class="main-subrow keyValue ">
               <div class=""><span class="inline-flex">
-                  <div><a href="index.html#-1621631890%2FFunctions%2F-1174248208"><span>create</span><wbr><span><span>Tag</span></span></a></div>
-<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1621631890%2FFunctions%2F-1174248208"></span>
+                  <div><a href="index.html#-771759662%2FFunctions%2F-1174248208"><span>create</span><wbr><span><span>Tag</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-771759662%2FFunctions%2F-1174248208"></span>
                     <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
                   </span></span></div>
               <div>
                 <div class="title">
-                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":silk-igui:dokkaHtmlPartial/main"><div class="symbol monospace"><span class="token keyword">open </span><span class="token keyword"></span><span class="token keyword">fun </span><a href="index.html#-1621631890%2FFunctions%2F-1174248208"><span class="token function">createTag</span></a><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token operator">: </span><span data-unresolved-link="net.minecraft.nbt/ListTag///PointingToDeclaration/">ListTag</span></div></div></div>
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":silk-igui:dokkaHtmlPartial/main"><div class="symbol monospace"><span class="token keyword">open </span><span class="token keyword">fun </span><a href="index.html#-771759662%2FFunctions%2F-1174248208"><span class="token function">createTag</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">provider<span class="token operator">: </span><span data-unresolved-link="net.minecraft.core/HolderLookup.Provider///PointingToDeclaration/">HolderLookup.Provider</span></span></span><span class="token punctuation">)</span><span class="token operator">: </span><span data-unresolved-link="net.minecraft.nbt/ListTag///PointingToDeclaration/">ListTag</span></div></div></div>
                 </div>
               </div>
             </div>
@@ -428,17 +437,17 @@
               </div>
             </div>
           </div>
-<a data-name="-1309897174%2FFunctions%2F-1174248208" anchor-label="fromTag" id="-1309897174%2FFunctions%2F-1174248208" data-filterable-set=":silk-igui:dokkaHtmlPartial/main"></a>
+<a data-name="690765817%2FFunctions%2F-1174248208" anchor-label="fromTag" id="690765817%2FFunctions%2F-1174248208" data-filterable-set=":silk-igui:dokkaHtmlPartial/main"></a>
           <div class="table-row" data-filterable-current=":silk-igui:dokkaHtmlPartial/main" data-filterable-set=":silk-igui:dokkaHtmlPartial/main">
             <div class="main-subrow keyValue ">
               <div class=""><span class="inline-flex">
-                  <div><a href="index.html#-1309897174%2FFunctions%2F-1174248208"><span>from</span><wbr><span><span>Tag</span></span></a></div>
-<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1309897174%2FFunctions%2F-1174248208"></span>
+                  <div><a href="index.html#690765817%2FFunctions%2F-1174248208"><span>from</span><wbr><span><span>Tag</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="690765817%2FFunctions%2F-1174248208"></span>
                     <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
                   </span></span></div>
               <div>
                 <div class="title">
-                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":silk-igui:dokkaHtmlPartial/main"><div class="symbol monospace"><span class="token keyword">open </span><span class="token keyword"></span><span class="token keyword">fun </span><a href="index.html#-1309897174%2FFunctions%2F-1174248208"><span class="token function">fromTag</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">listTag<span class="token operator">: </span><span data-unresolved-link="net.minecraft.nbt/ListTag///PointingToDeclaration/">ListTag</span></span></span><span class="token punctuation">)</span></div></div></div>
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":silk-igui:dokkaHtmlPartial/main"><div class="symbol monospace"><span class="token keyword">open </span><span class="token keyword">fun </span><a href="index.html#690765817%2FFunctions%2F-1174248208"><span class="token function">fromTag</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">listTag<span class="token operator">: </span><span data-unresolved-link="net.minecraft.nbt/ListTag///PointingToDeclaration/">ListTag</span><span class="token punctuation">, </span></span><span class="parameter ">provider<span class="token operator">: </span><span data-unresolved-link="net.minecraft.core/HolderLookup.Provider///PointingToDeclaration/">HolderLookup.Provider</span></span></span><span class="token punctuation">)</span></div></div></div>
                 </div>
               </div>
             </div>
@@ -488,17 +497,17 @@
               </div>
             </div>
           </div>
-<a data-name="-1853114721%2FFunctions%2F-1174248208" anchor-label="getMaxStackSize" id="-1853114721%2FFunctions%2F-1174248208" data-filterable-set=":silk-igui:dokkaHtmlPartial/main"></a>
+<a data-name="1610085258%2FFunctions%2F-1174248208" anchor-label="getMaxStackSize" id="1610085258%2FFunctions%2F-1174248208" data-filterable-set=":silk-igui:dokkaHtmlPartial/main"></a>
           <div class="table-row" data-filterable-current=":silk-igui:dokkaHtmlPartial/main" data-filterable-set=":silk-igui:dokkaHtmlPartial/main">
             <div class="main-subrow keyValue ">
               <div class=""><span class="inline-flex">
                   <div><a href="index.html#-1853114721%2FFunctions%2F-1174248208"><span>get</span><wbr><span>Max</span><wbr><span>Stack</span><wbr><span><span>Size</span></span></a></div>
-<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1853114721%2FFunctions%2F-1174248208"></span>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="1610085258%2FFunctions%2F-1174248208"></span>
                     <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
                   </span></span></div>
               <div>
                 <div class="title">
-                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":silk-igui:dokkaHtmlPartial/main"><div class="symbol monospace"><span class="token keyword">open </span><span class="token keyword"></span><span class="token keyword">fun </span><a href="index.html#-1853114721%2FFunctions%2F-1174248208"><span class="token function">getMaxStackSize</span></a><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-int/index.html">Int</a></div></div></div>
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":silk-igui:dokkaHtmlPartial/main"><div class="symbol monospace"><span class="token keyword">open </span><span class="token keyword">fun </span><a href="index.html#-1853114721%2FFunctions%2F-1174248208"><span class="token function">getMaxStackSize</span></a><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-int/index.html">Int</a></div><div class="symbol monospace"><span class="token keyword">open </span><span class="token keyword">fun </span><a href="index.html#701860407%2FFunctions%2F-1174248208"><span class="token function">getMaxStackSize</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">itemStack<span class="token operator">: </span><span data-unresolved-link="net.minecraft.world.item/ItemStack///PointingToDeclaration/">ItemStack</span></span></span><span class="token punctuation">)</span><span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-int/index.html">Int</a></div></div></div>
                 </div>
               </div>
             </div>
@@ -513,7 +522,7 @@
                   </span></span></div>
               <div>
                 <div class="title">
-                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":silk-igui:dokkaHtmlPartial/main"><div class="symbol monospace"><span class="token keyword">open </span><span class="token keyword"></span><span class="token keyword">fun </span><a href="index.html#364949398%2FFunctions%2F-1174248208"><span class="token function">hasAnyMatching</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">predicate<span class="token operator">: </span><a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/Predicate.html">Predicate</a><span class="token operator">&lt;</span><span class="token keyword"></span><span data-unresolved-link="net.minecraft.world.item/ItemStack///PointingToDeclaration/">ItemStack</span><span class="token operator">&gt;</span></span></span><span class="token punctuation">)</span><span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-boolean/index.html">Boolean</a></div></div></div>
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":silk-igui:dokkaHtmlPartial/main"><div class="symbol monospace"><span class="token keyword">open </span><span class="token keyword">fun </span><a href="index.html#364949398%2FFunctions%2F-1174248208"><span class="token function">hasAnyMatching</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">predicate<span class="token operator">: </span><a href="https://docs.oracle.com/javase/8/docs/api/java/util/function/Predicate.html">Predicate</a><span class="token operator">&lt;</span><span data-unresolved-link="net.minecraft.world.item/ItemStack///PointingToDeclaration/">ItemStack</span><span class="token operator">&gt;</span></span></span><span class="token punctuation">)</span><span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-boolean/index.html">Boolean</a></div></div></div>
                 </div>
               </div>
             </div>
@@ -528,7 +537,7 @@
                   </span></span></div>
               <div>
                 <div class="title">
-                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":silk-igui:dokkaHtmlPartial/main"><div class="symbol monospace"><span class="token keyword">open </span><span class="token keyword"></span><span class="token keyword">fun </span><a href="index.html#1596165121%2FFunctions%2F-1174248208"><span class="token function">hasAnyOf</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">set<span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin.collections/-mutable-set/index.html">MutableSet</a><span class="token operator">&lt;</span><span class="token keyword"></span><span data-unresolved-link="net.minecraft.world.item/Item///PointingToDeclaration/">Item</span><span class="token operator">&gt;</span></span></span><span class="token punctuation">)</span><span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-boolean/index.html">Boolean</a></div></div></div>
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":silk-igui:dokkaHtmlPartial/main"><div class="symbol monospace"><span class="token keyword">open </span><span class="token keyword">fun </span><a href="index.html#1596165121%2FFunctions%2F-1174248208"><span class="token function">hasAnyOf</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">set<span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin.collections/-mutable-set/index.html">MutableSet</a><span class="token operator">&lt;</span><span data-unresolved-link="net.minecraft.world.item/Item///PointingToDeclaration/">Item</span><span class="token operator">&gt;</span></span></span><span class="token punctuation">)</span><span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-boolean/index.html">Boolean</a></div></div></div>
                 </div>
               </div>
             </div>
@@ -588,7 +597,7 @@
                   </span></span></div>
               <div>
                 <div class="title">
-                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":silk-igui:dokkaHtmlPartial/main"><div class="symbol monospace"><span class="token keyword">open </span><span class="token keyword"></span><span class="token keyword">fun </span><a href="index.html#28212043%2FFunctions%2F-1174248208"><span class="token function">removeAllItems</span></a><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin.collections/-mutable-list/index.html">MutableList</a><span class="token operator">&lt;</span><span class="token keyword"></span><span data-unresolved-link="net.minecraft.world.item/ItemStack///PointingToDeclaration/">ItemStack</span><span class="token operator">&gt;</span></div></div></div>
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":silk-igui:dokkaHtmlPartial/main"><div class="symbol monospace"><span class="token keyword">open </span><span class="token keyword">fun </span><a href="index.html#28212043%2FFunctions%2F-1174248208"><span class="token function">removeAllItems</span></a><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin.collections/-mutable-list/index.html">MutableList</a><span class="token operator">&lt;</span><span data-unresolved-link="net.minecraft.world.item/ItemStack///PointingToDeclaration/">ItemStack</span><span class="token operator">&gt;</span></div></div></div>
                 </div>
               </div>
             </div>
@@ -633,7 +642,7 @@
                   </span></span></div>
               <div>
                 <div class="title">
-                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":silk-igui:dokkaHtmlPartial/main"><div class="symbol monospace"><span class="token keyword">open </span><span class="token keyword"></span><span class="token keyword">fun </span><a href="index.html#384456664%2FFunctions%2F-1174248208"><span class="token function">removeItemType</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">item<span class="token operator">: </span><span data-unresolved-link="net.minecraft.world.item/Item///PointingToDeclaration/">Item</span><span class="token punctuation">, </span></span><span class="parameter ">i<span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-int/index.html">Int</a></span></span><span class="token punctuation">)</span><span class="token operator">: </span><span data-unresolved-link="net.minecraft.world.item/ItemStack///PointingToDeclaration/">ItemStack</span></div></div></div>
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":silk-igui:dokkaHtmlPartial/main"><div class="symbol monospace"><span class="token keyword">open </span><span class="token keyword">fun </span><a href="index.html#384456664%2FFunctions%2F-1174248208"><span class="token function">removeItemType</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">item<span class="token operator">: </span><span data-unresolved-link="net.minecraft.world.item/Item///PointingToDeclaration/">Item</span><span class="token punctuation">, </span></span><span class="parameter ">i<span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-int/index.html">Int</a></span></span><span class="token punctuation">)</span><span class="token operator">: </span><span data-unresolved-link="net.minecraft.world.item/ItemStack///PointingToDeclaration/">ItemStack</span></div></div></div>
                 </div>
               </div>
             </div>
@@ -648,7 +657,7 @@
                   </span></span></div>
               <div>
                 <div class="title">
-                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":silk-igui:dokkaHtmlPartial/main"><div class="symbol monospace"><span class="token keyword">open </span><span class="token keyword"></span><span class="token keyword">fun </span><a href="index.html#-623788795%2FFunctions%2F-1174248208"><span class="token function">removeListener</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">containerListener<span class="token operator">: </span><span data-unresolved-link="net.minecraft.world/ContainerListener///PointingToDeclaration/">ContainerListener</span></span></span><span class="token punctuation">)</span></div></div></div>
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":silk-igui:dokkaHtmlPartial/main"><div class="symbol monospace"><span class="token keyword">open </span><span class="token keyword">fun </span><a href="index.html#-623788795%2FFunctions%2F-1174248208"><span class="token function">removeListener</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">containerListener<span class="token operator">: </span><span data-unresolved-link="net.minecraft.world/ContainerListener///PointingToDeclaration/">ContainerListener</span></span></span><span class="token punctuation">)</span></div></div></div>
                 </div>
               </div>
             </div>
@@ -683,21 +692,6 @@
               </div>
             </div>
           </div>
-<a data-name="-1443003288%2FFunctions%2F-1174248208" anchor-label="shouldCloseCurrentScreen" id="-1443003288%2FFunctions%2F-1174248208" data-filterable-set=":silk-igui:dokkaHtmlPartial/main"></a>
-          <div class="table-row" data-filterable-current=":silk-igui:dokkaHtmlPartial/main" data-filterable-set=":silk-igui:dokkaHtmlPartial/main">
-            <div class="main-subrow keyValue ">
-              <div class=""><span class="inline-flex">
-                  <div><a href="index.html#-1443003288%2FFunctions%2F-1174248208"><span>should</span><wbr><span>Close</span><wbr><span>Current</span><wbr><span><span>Screen</span></span></a></div>
-<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1443003288%2FFunctions%2F-1174248208"></span>
-                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
-                  </span></span></div>
-              <div>
-                <div class="title">
-                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":silk-igui:dokkaHtmlPartial/main"><div class="symbol monospace"><span class="token keyword">open </span><span class="token keyword"></span><span class="token keyword">fun </span><a href="index.html#-1443003288%2FFunctions%2F-1174248208"><span class="token function">shouldCloseCurrentScreen</span></a><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-boolean/index.html">Boolean</a></div></div></div>
-                </div>
-              </div>
-            </div>
-          </div>
 <a data-name="857431133%2FFunctions%2F-1174248208" anchor-label="startOpen" id="857431133%2FFunctions%2F-1174248208" data-filterable-set=":silk-igui:dokkaHtmlPartial/main"></a>
           <div class="table-row" data-filterable-current=":silk-igui:dokkaHtmlPartial/main" data-filterable-set=":silk-igui:dokkaHtmlPartial/main">
             <div class="main-subrow keyValue ">
@@ -708,7 +702,7 @@
                   </span></span></div>
               <div>
                 <div class="title">
-                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":silk-igui:dokkaHtmlPartial/main"><div class="symbol monospace"><span class="token keyword">open </span><span class="token keyword"></span><span class="token keyword">fun </span><a href="index.html#857431133%2FFunctions%2F-1174248208"><span class="token function">startOpen</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">player<span class="token operator">: </span><span data-unresolved-link="net.minecraft.world.entity.player/Player///PointingToDeclaration/">Player</span></span></span><span class="token punctuation">)</span></div></div></div>
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":silk-igui:dokkaHtmlPartial/main"><div class="symbol monospace"><span class="token keyword">open </span><span class="token keyword">fun </span><a href="index.html#857431133%2FFunctions%2F-1174248208"><span class="token function">startOpen</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">player<span class="token operator">: </span><span data-unresolved-link="net.minecraft.world.entity.player/Player///PointingToDeclaration/">Player</span></span></span><span class="token punctuation">)</span></div></div></div>
                 </div>
               </div>
             </div>
@@ -764,10 +758,11 @@
   </div>
 </div>
       <div class="footer">
-        <span class="go-to-top-icon"><a href="#content" id="go-to-top-link"></a></span><span>© 2023 Copyright</span><span class="pull-right"><span>Generated by </span><a href="https://github.com/Kotlin/dokka"><span>dokka</span><span class="padded-icon"></span></a></span>
+        <span class="go-to-top-icon"><a href="#content" id="go-to-top-link"></a></span><span>© 2024 Copyright</span><span class="pull-right"><span>Generated by </span><a href="https://github.com/Kotlin/dokka"><span>dokka</span><span class="padded-icon"></span></a></span>
       </div>
+            </div>
+        </div>
     </div>
-</div>
 </body>
 </html>
 

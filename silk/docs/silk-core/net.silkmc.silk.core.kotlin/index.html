@@ -1,9 +1,11 @@
 <!doctype html>
-<html>
+<html class="no-js">
 <head>
     <meta name="viewport" content="width=device-width, initial-scale=1" charset="UTF-8">
     <title>net.silkmc.silk.core.kotlin</title>
-<link href="../../images/logo-icon.svg" rel="icon" type="image/svg"><script>var pathToRoot = "../../";</script>    <script>const storage = localStorage.getItem("dokka-dark-mode")
+<link href="../../images/logo-icon.svg" rel="icon" type="image/svg">    <script>var pathToRoot = "../../";</script>
+    <script>document.documentElement.classList.replace("no-js","js");</script>
+    <script>const storage = localStorage.getItem("dokka-dark-mode")
     if (storage == null) {
         const osDarkSchemePreferred = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches
         if (osDarkSchemePreferred === true) {
@@ -16,12 +18,13 @@
         }
     }
     </script>
+<script type="text/javascript" src="https://unpkg.com/kotlin-playground@1/dist/playground.min.js" async></script>
 <script type="text/javascript" src="../../scripts/sourceset_dependencies.js" async></script>
 <link href="../../styles/style.css" rel="Stylesheet">
-<link href="../../styles/jetbrains-mono.css" rel="Stylesheet">
 <link href="../../styles/main.css" rel="Stylesheet">
 <link href="../../styles/prism.css" rel="Stylesheet">
 <link href="../../styles/logo-styles.css" rel="Stylesheet">
+<link href="../../styles/font-jb-sans-auto.css" rel="Stylesheet">
 <script type="text/javascript" src="../../scripts/clipboard.js" async></script>
 <script type="text/javascript" src="../../scripts/navigation-loader.js" async></script>
 <script type="text/javascript" src="../../scripts/platform-content-handler.js" async></script>
@@ -29,26 +32,32 @@
 <script type="text/javascript" src="../../scripts/prism.js" async></script>
 <script type="text/javascript" src="../../scripts/symbol-parameters-wrapper_deferred.js" defer></script></head>
 <body>
-<div class="navigation-wrapper" id="navigation-wrapper">
-    <div id="leftToggler"><span class="icon-toggler"></span></div>
-    <div class="library-name">
-<a href="../../index.html">
-<span>silk</span>            </a>    </div>
-    <div>1.10.0
-    </div>
-    <div class="pull-right d-flex">
+    <div class="root">
+<nav class="navigation" id="navigation-wrapper">
+    <div class="navigation--inner">
+        <div class="navigation-title">
+            <button class="menu-toggle" id="menu-toggle" type="button">toggle menu</button>
+            <div class="library-name">
+<a class="library-name--link" href="../../index.html">
+                            silk
+                    </a>            </div>
+            <div class="library-version">1.10.4
+            </div>
+        </div>
         <div class="filter-section" id="filter-section">
                 <button class="platform-tag platform-selector jvm-like" data-active="" data-filter=":silk-core:dokkaHtmlPartial/main">jvm</button>
         </div>
-        <button id="theme-toggle-button"><span id="theme-toggle"></span></button>
-        <div id="searchBar"></div>
     </div>
-</div>
-<div id="container">
-    <div id="leftColumn">
-        <div id="sideMenu"></div>
+    <div class="navigation-controls">
+        <button class="navigation-controls--btn navigation-controls--theme" id="theme-toggle-button" type="button">switch theme</button>
+        <div class="navigation-controls--btn navigation-controls--search" id="searchBar" role="button">search in API</div>
     </div>
-    <div id="main">
+</nav>
+        <div id="container">
+            <div class="sidebar" id="leftColumn">
+                <div class="sidebar--inner" id="sideMenu"></div>
+            </div>
+            <div id="main">
 <div class="main-content" data-page-type="package" id="content" pageids="silk-core::net.silkmc.silk.core.kotlin////PointingToDeclaration//1209998627">
   <div class="breadcrumbs"><a href="../index.html">silk-core</a><span class="delimiter">/</span><span class="current">net.silkmc.silk.core.kotlin</span></div>
   <div class="cover ">
@@ -70,7 +79,7 @@
                   </span></span></div>
               <div>
                 <div class="title">
-                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":silk-core:dokkaHtmlPartial/main"><div class="symbol monospace"><span class="token keyword">class </span><a href="-limited-access-wrapper/index.html">LimitedAccessWrapper</a><span class="token operator">&lt;</span><span class="token keyword"></span><a href="-limited-access-wrapper/index.html">T</a><span class="token operator">&gt;</span><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">value<span class="token operator">: </span><a href="-limited-access-wrapper/index.html">T</a></span></span><span class="token punctuation">)</span></div><div class="brief "><p class="paragraph">Protects access to the given <a href="../../silk-core/net.silkmc.silk.core.kotlin/-limited-access-wrapper/value.html">value</a> by wrapping it in this class and only exposing it via the <a href="-limited-access-wrapper/access.html">access</a> function, which will only be executed in a context where the internal <span data-unresolved-link="kotlinx.coroutines.sync/Mutex///PointingToDeclaration/">Mutex</span> is locked.</p></div></div></div>
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":silk-core:dokkaHtmlPartial/main"><div class="symbol monospace"><span class="token keyword">class </span><a href="-limited-access-wrapper/index.html">LimitedAccessWrapper</a><span class="token operator">&lt;</span><a href="-limited-access-wrapper/index.html">T</a><span class="token operator">&gt;</span><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">value<span class="token operator">: </span><a href="-limited-access-wrapper/index.html">T</a></span></span><span class="token punctuation">)</span></div><div class="brief "><p class="paragraph">Protects access to the given <a href="../../silk-core/net.silkmc.silk.core.kotlin/-limited-access-wrapper/value.html">value</a> by wrapping it in this class and only exposing it via the <a href="-limited-access-wrapper/access.html">access</a> function, which will only be executed in a context where the internal <span data-unresolved-link="kotlinx.coroutines.sync/Mutex///PointingToDeclaration/">Mutex</span> is locked.</p></div></div></div>
                 </div>
               </div>
             </div>
@@ -95,7 +104,7 @@
       <div data-togglable="EXTENSION_PROPERTY">
         <h2 class="">Properties</h2>
         <div class="table"><a data-name="1145733863%2FProperties%2F1209998627" anchor-label="max" id="1145733863%2FProperties%2F1209998627" data-filterable-set=":silk-core:dokkaHtmlPartial/main"></a>
-          <div class="table-row" data-togglable="EXTENSION_PROPERTY" data-filterable-current=":silk-core:dokkaHtmlPartial/main" data-filterable-set=":silk-core:dokkaHtmlPartial/main">
+          <div class="table-row" data-filterable-current=":silk-core:dokkaHtmlPartial/main" data-filterable-set=":silk-core:dokkaHtmlPartial/main">
             <div class="main-subrow keyValue ">
               <div class=""><span class="inline-flex">
                   <div><a href="max.html"><span><span>max</span></span></a></div>
@@ -104,13 +113,13 @@
                   </span></span></div>
               <div>
                 <div class="title">
-                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":silk-core:dokkaHtmlPartial/main"><div class="symbol monospace"><span class="token keyword"></span><span class="token keyword">val </span><span class="token operator">&lt;</span><span class="token keyword"></span><a href="max.html">T</a><span class="token operator"> : </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-comparable/index.html">Comparable</a><span class="token operator">&lt;</span><span class="token keyword"></span><a href="max.html">T</a><span class="token operator">&gt;</span><span class="token operator">&gt; </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-pair/index.html">Pair</a><span class="token operator">&lt;</span><span class="token keyword"></span><a href="max.html">T</a><span class="token punctuation">, </span><span class="token keyword"></span><a href="max.html">T</a><span class="token operator">&gt;</span><span class="token punctuation">.</span><a href="max.html">max</a><span class="token operator">: </span><a href="max.html">T</a></div></div></div>
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":silk-core:dokkaHtmlPartial/main"><div class="symbol monospace"><span class="token keyword">val </span><span class="token operator">&lt;</span><a href="max.html">T</a><span class="token operator"> : </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-comparable/index.html">Comparable</a><span class="token operator">&lt;</span><a href="max.html">T</a><span class="token operator">&gt;</span><span class="token operator">&gt; </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-pair/index.html">Pair</a><span class="token operator">&lt;</span><a href="max.html">T</a><span class="token punctuation">, </span><a href="max.html">T</a><span class="token operator">&gt;</span><span class="token punctuation">.</span><a href="max.html">max</a><span class="token operator">: </span><a href="max.html">T</a></div></div></div>
                 </div>
               </div>
             </div>
           </div>
 <a data-name="-28836295%2FProperties%2F1209998627" anchor-label="min" id="-28836295%2FProperties%2F1209998627" data-filterable-set=":silk-core:dokkaHtmlPartial/main"></a>
-          <div class="table-row" data-togglable="EXTENSION_PROPERTY" data-filterable-current=":silk-core:dokkaHtmlPartial/main" data-filterable-set=":silk-core:dokkaHtmlPartial/main">
+          <div class="table-row" data-filterable-current=":silk-core:dokkaHtmlPartial/main" data-filterable-set=":silk-core:dokkaHtmlPartial/main">
             <div class="main-subrow keyValue ">
               <div class=""><span class="inline-flex">
                   <div><a href="min.html"><span><span>min</span></span></a></div>
@@ -119,13 +128,13 @@
                   </span></span></div>
               <div>
                 <div class="title">
-                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":silk-core:dokkaHtmlPartial/main"><div class="symbol monospace"><span class="token keyword"></span><span class="token keyword">val </span><span class="token operator">&lt;</span><span class="token keyword"></span><a href="min.html">T</a><span class="token operator"> : </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-comparable/index.html">Comparable</a><span class="token operator">&lt;</span><span class="token keyword"></span><a href="min.html">T</a><span class="token operator">&gt;</span><span class="token operator">&gt; </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-pair/index.html">Pair</a><span class="token operator">&lt;</span><span class="token keyword"></span><a href="min.html">T</a><span class="token punctuation">, </span><span class="token keyword"></span><a href="min.html">T</a><span class="token operator">&gt;</span><span class="token punctuation">.</span><a href="min.html">min</a><span class="token operator">: </span><a href="min.html">T</a></div></div></div>
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":silk-core:dokkaHtmlPartial/main"><div class="symbol monospace"><span class="token keyword">val </span><span class="token operator">&lt;</span><a href="min.html">T</a><span class="token operator"> : </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-comparable/index.html">Comparable</a><span class="token operator">&lt;</span><a href="min.html">T</a><span class="token operator">&gt;</span><span class="token operator">&gt; </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-pair/index.html">Pair</a><span class="token operator">&lt;</span><a href="min.html">T</a><span class="token punctuation">, </span><a href="min.html">T</a><span class="token operator">&gt;</span><span class="token punctuation">.</span><a href="min.html">min</a><span class="token operator">: </span><a href="min.html">T</a></div></div></div>
                 </div>
               </div>
             </div>
           </div>
 <a data-name="1087022194%2FProperties%2F1209998627" anchor-label="ticks" id="1087022194%2FProperties%2F1209998627" data-filterable-set=":silk-core:dokkaHtmlPartial/main"></a>
-          <div class="table-row" data-togglable="EXTENSION_PROPERTY" data-filterable-current=":silk-core:dokkaHtmlPartial/main" data-filterable-set=":silk-core:dokkaHtmlPartial/main">
+          <div class="table-row" data-filterable-current=":silk-core:dokkaHtmlPartial/main" data-filterable-set=":silk-core:dokkaHtmlPartial/main">
             <div class="main-subrow keyValue ">
               <div class=""><span class="inline-flex">
                   <div><a href="ticks.html"><span><span>ticks</span></span></a></div>
@@ -134,7 +143,7 @@
                   </span></span></div>
               <div>
                 <div class="title">
-                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":silk-core:dokkaHtmlPartial/main"><div class="symbol monospace"><span class="token keyword"></span><span class="token keyword">val </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-int/index.html">Int</a><span class="token punctuation">.</span><a href="ticks.html">ticks</a><span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin.time/-duration/index.html">Duration</a></div><div class="brief "><p class="paragraph">Returns a <a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin.time/-duration/index.html">kotlin.time.Duration</a> for the time the given amount of ticks would take <i>in an ideal scenario</i>.</p></div></div></div>
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":silk-core:dokkaHtmlPartial/main"><div class="symbol monospace"><span class="token keyword">val </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-int/index.html">Int</a><span class="token punctuation">.</span><a href="ticks.html">ticks</a><span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin.time/-duration/index.html">Duration</a></div><div class="brief "><p class="paragraph">Returns a <a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin.time/-duration/index.html">kotlin.time.Duration</a> for the time the given amount of ticks would take <i>in an ideal scenario</i>.</p></div></div></div>
                 </div>
               </div>
             </div>
@@ -144,7 +153,7 @@
       <div data-togglable="EXTENSION_FUNCTION">
         <h2 class="">Functions</h2>
         <div class="table"><a data-name="-363986186%2FFunctions%2F1209998627" anchor-label="asKotlinRandom" id="-363986186%2FFunctions%2F1209998627" data-filterable-set=":silk-core:dokkaHtmlPartial/main"></a>
-          <div class="table-row" data-togglable="EXTENSION_FUNCTION" data-filterable-current=":silk-core:dokkaHtmlPartial/main" data-filterable-set=":silk-core:dokkaHtmlPartial/main">
+          <div class="table-row" data-filterable-current=":silk-core:dokkaHtmlPartial/main" data-filterable-set=":silk-core:dokkaHtmlPartial/main">
             <div class="main-subrow keyValue ">
               <div class=""><span class="inline-flex">
                   <div><a href="as-kotlin-random.html"><span>as</span><wbr><span>Kotlin</span><wbr><span><span>Random</span></span></a></div>
@@ -153,13 +162,13 @@
                   </span></span></div>
               <div>
                 <div class="title">
-                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":silk-core:dokkaHtmlPartial/main"><div class="symbol monospace"><span class="token keyword"></span><span class="token keyword">fun </span><span data-unresolved-link="net.minecraft.util/RandomSource///PointingToDeclaration/">RandomSource</span><span class="token punctuation">.</span><a href="as-kotlin-random.html"><span class="token function">asKotlinRandom</span></a><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin.random/-random/index.html">Random</a></div><div class="brief "><p class="paragraph">Returns a Kotlin <a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin.random/-random/index.html">Random</a> wrapping this <span data-unresolved-link="net.minecraft.util/RandomSource///PointingToDeclaration/">RandomSource</span>. This gives you access to the much more polished Kotlin random API.</p></div></div></div>
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":silk-core:dokkaHtmlPartial/main"><div class="symbol monospace"><span class="token keyword">fun </span><span data-unresolved-link="net.minecraft.util/RandomSource///PointingToDeclaration/">RandomSource</span><span class="token punctuation">.</span><a href="as-kotlin-random.html"><span class="token function">asKotlinRandom</span></a><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin.random/-random/index.html">Random</a></div><div class="brief "><p class="paragraph">Returns a Kotlin <a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin.random/-random/index.html">Random</a> wrapping this <span data-unresolved-link="net.minecraft.util/RandomSource///PointingToDeclaration/">RandomSource</span>. This gives you access to the much more polished Kotlin random API.</p></div></div></div>
                 </div>
               </div>
             </div>
           </div>
 <a data-name="-1779987063%2FFunctions%2F1209998627" anchor-label="asMinecraftRandom" id="-1779987063%2FFunctions%2F1209998627" data-filterable-set=":silk-core:dokkaHtmlPartial/main"></a>
-          <div class="table-row" data-togglable="EXTENSION_FUNCTION" data-filterable-current=":silk-core:dokkaHtmlPartial/main" data-filterable-set=":silk-core:dokkaHtmlPartial/main">
+          <div class="table-row" data-filterable-current=":silk-core:dokkaHtmlPartial/main" data-filterable-set=":silk-core:dokkaHtmlPartial/main">
             <div class="main-subrow keyValue ">
               <div class=""><span class="inline-flex">
                   <div><a href="as-minecraft-random.html"><span>as</span><wbr><span>Minecraft</span><wbr><span><span>Random</span></span></a></div>
@@ -168,7 +177,7 @@
                   </span></span></div>
               <div>
                 <div class="title">
-                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":silk-core:dokkaHtmlPartial/main"><div class="symbol monospace"><span class="token keyword"></span><span class="token keyword">fun </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin.random/-random/index.html">Random</a><span class="token punctuation">.</span><a href="as-minecraft-random.html"><span class="token function">asMinecraftRandom</span></a><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token operator">: </span><span data-unresolved-link="net.minecraft.util/RandomSource///PointingToDeclaration/">RandomSource</span></div><div class="brief "><p class="paragraph">Returns a Minecraft <span data-unresolved-link="net.minecraft.util/RandomSource///PointingToDeclaration/">RandomSource</span> wrapped this Kotlin <a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin.random/-random/index.html">Random</a>.</p></div></div></div>
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":silk-core:dokkaHtmlPartial/main"><div class="symbol monospace"><span class="token keyword">fun </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin.random/-random/index.html">Random</a><span class="token punctuation">.</span><a href="as-minecraft-random.html"><span class="token function">asMinecraftRandom</span></a><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token operator">: </span><span data-unresolved-link="net.minecraft.util/RandomSource///PointingToDeclaration/">RandomSource</span></div><div class="brief "><p class="paragraph">Returns a Minecraft <span data-unresolved-link="net.minecraft.util/RandomSource///PointingToDeclaration/">RandomSource</span> wrapped this Kotlin <a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin.random/-random/index.html">Random</a>.</p></div></div></div>
                 </div>
               </div>
             </div>
@@ -179,10 +188,11 @@
   </div>
 </div>
       <div class="footer">
-        <span class="go-to-top-icon"><a href="#content" id="go-to-top-link"></a></span><span>© 2023 Copyright</span><span class="pull-right"><span>Generated by </span><a href="https://github.com/Kotlin/dokka"><span>dokka</span><span class="padded-icon"></span></a></span>
+        <span class="go-to-top-icon"><a href="#content" id="go-to-top-link"></a></span><span>© 2024 Copyright</span><span class="pull-right"><span>Generated by </span><a href="https://github.com/Kotlin/dokka"><span>dokka</span><span class="padded-icon"></span></a></span>
       </div>
+            </div>
+        </div>
     </div>
-</div>
 </body>
 </html>
 

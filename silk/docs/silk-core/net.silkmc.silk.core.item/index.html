@@ -1,9 +1,11 @@
 <!doctype html>
-<html>
+<html class="no-js">
 <head>
     <meta name="viewport" content="width=device-width, initial-scale=1" charset="UTF-8">
     <title>net.silkmc.silk.core.item</title>
-<link href="../../images/logo-icon.svg" rel="icon" type="image/svg"><script>var pathToRoot = "../../";</script>    <script>const storage = localStorage.getItem("dokka-dark-mode")
+<link href="../../images/logo-icon.svg" rel="icon" type="image/svg">    <script>var pathToRoot = "../../";</script>
+    <script>document.documentElement.classList.replace("no-js","js");</script>
+    <script>const storage = localStorage.getItem("dokka-dark-mode")
     if (storage == null) {
         const osDarkSchemePreferred = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches
         if (osDarkSchemePreferred === true) {
@@ -16,12 +18,13 @@
         }
     }
     </script>
+<script type="text/javascript" src="https://unpkg.com/kotlin-playground@1/dist/playground.min.js" async></script>
 <script type="text/javascript" src="../../scripts/sourceset_dependencies.js" async></script>
 <link href="../../styles/style.css" rel="Stylesheet">
-<link href="../../styles/jetbrains-mono.css" rel="Stylesheet">
 <link href="../../styles/main.css" rel="Stylesheet">
 <link href="../../styles/prism.css" rel="Stylesheet">
 <link href="../../styles/logo-styles.css" rel="Stylesheet">
+<link href="../../styles/font-jb-sans-auto.css" rel="Stylesheet">
 <script type="text/javascript" src="../../scripts/clipboard.js" async></script>
 <script type="text/javascript" src="../../scripts/navigation-loader.js" async></script>
 <script type="text/javascript" src="../../scripts/platform-content-handler.js" async></script>
@@ -29,26 +32,32 @@
 <script type="text/javascript" src="../../scripts/prism.js" async></script>
 <script type="text/javascript" src="../../scripts/symbol-parameters-wrapper_deferred.js" defer></script></head>
 <body>
-<div class="navigation-wrapper" id="navigation-wrapper">
-    <div id="leftToggler"><span class="icon-toggler"></span></div>
-    <div class="library-name">
-<a href="../../index.html">
-<span>silk</span>            </a>    </div>
-    <div>1.10.0
-    </div>
-    <div class="pull-right d-flex">
+    <div class="root">
+<nav class="navigation" id="navigation-wrapper">
+    <div class="navigation--inner">
+        <div class="navigation-title">
+            <button class="menu-toggle" id="menu-toggle" type="button">toggle menu</button>
+            <div class="library-name">
+<a class="library-name--link" href="../../index.html">
+                            silk
+                    </a>            </div>
+            <div class="library-version">1.10.4
+            </div>
+        </div>
         <div class="filter-section" id="filter-section">
                 <button class="platform-tag platform-selector jvm-like" data-active="" data-filter=":silk-core:dokkaHtmlPartial/main">jvm</button>
         </div>
-        <button id="theme-toggle-button"><span id="theme-toggle"></span></button>
-        <div id="searchBar"></div>
     </div>
-</div>
-<div id="container">
-    <div id="leftColumn">
-        <div id="sideMenu"></div>
+    <div class="navigation-controls">
+        <button class="navigation-controls--btn navigation-controls--theme" id="theme-toggle-button" type="button">switch theme</button>
+        <div class="navigation-controls--btn navigation-controls--search" id="searchBar" role="button">search in API</div>
     </div>
-    <div id="main">
+</nav>
+        <div id="container">
+            <div class="sidebar" id="leftColumn">
+                <div class="sidebar--inner" id="sideMenu"></div>
+            </div>
+            <div id="main">
 <div class="main-content" data-page-type="package" id="content" pageids="silk-core::net.silkmc.silk.core.item////PointingToDeclaration//1209998627">
   <div class="breadcrumbs"><a href="../index.html">silk-core</a><span class="delimiter">/</span><span class="current">net.silkmc.silk.core.item</span></div>
   <div class="cover ">
@@ -70,22 +79,37 @@
                   </span></span></div>
               <div>
                 <div class="title">
-                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":silk-core:dokkaHtmlPartial/main"><div class="symbol monospace"><span class="token keyword">inline </span><span class="token keyword">fun </span><a href="item-stack.html"><span class="token function">itemStack</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">item<span class="token operator">: </span><span data-unresolved-link="net.minecraft.world.level/ItemLike///PointingToDeclaration/">ItemLike</span><span class="token punctuation">, </span></span><span class="parameter ">amount<span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-int/index.html">Int</a><span class="token operator"> = </span><span class="token constant">1</span><span class="token punctuation">, </span></span><span class="parameter ">builder<span class="token operator">: </span><span class="token keyword"></span><span data-unresolved-link="net.minecraft.world.item/ItemStack///PointingToDeclaration/">ItemStack</span><span class="token punctuation">.</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token operator"> -&gt; </span><span class="token keyword"></span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html">Unit</a></span></span><span class="token punctuation">)</span><span class="token operator">: </span><span data-unresolved-link="net.minecraft.world.item/ItemStack///PointingToDeclaration/">ItemStack</span></div><div class="brief "><p class="paragraph">A utility function for building complex <a href="item-stack.html">item</a> stacks with the given <a href="item-stack.html">amount</a>.</p></div></div></div>
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":silk-core:dokkaHtmlPartial/main"><div class="symbol monospace"><span class="token keyword">inline </span><span class="token keyword">fun </span><a href="item-stack.html"><span class="token function">itemStack</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">item<span class="token operator">: </span><span data-unresolved-link="net.minecraft.world.level/ItemLike///PointingToDeclaration/">ItemLike</span><span class="token punctuation">, </span></span><span class="parameter ">amount<span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-int/index.html">Int</a><span class="token operator"> = </span><span class="token constant">1</span><span class="token punctuation">, </span></span><span class="parameter ">builder<span class="token operator">: </span><span data-unresolved-link="net.minecraft.world.item/ItemStack///PointingToDeclaration/">ItemStack</span><span class="token punctuation">.</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token operator"> -&gt; </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html">Unit</a></span></span><span class="token punctuation">)</span><span class="token operator">: </span><span data-unresolved-link="net.minecraft.world.item/ItemStack///PointingToDeclaration/">ItemStack</span></div><div class="brief "><p class="paragraph">A utility function for building complex <a href="item-stack.html">item</a> stacks with the given <a href="item-stack.html">amount</a>.</p></div></div></div>
                 </div>
               </div>
             </div>
           </div>
-<a data-name="-1214936244%2FFunctions%2F1209998627" anchor-label="setCustomName" id="-1214936244%2FFunctions%2F1209998627" data-filterable-set=":silk-core:dokkaHtmlPartial/main"></a>
+<a data-name="-331275123%2FFunctions%2F1209998627" anchor-label="setCustomName" id="-331275123%2FFunctions%2F1209998627" data-filterable-set=":silk-core:dokkaHtmlPartial/main"></a>
           <div class="table-row" data-togglable="EXTENSION_FUNCTION" data-filterable-current=":silk-core:dokkaHtmlPartial/main" data-filterable-set=":silk-core:dokkaHtmlPartial/main">
             <div class="main-subrow keyValue ">
               <div class=""><span class="inline-flex">
                   <div><a href="set-custom-name.html"><span>set</span><wbr><span>Custom</span><wbr><span><span>Name</span></span></a></div>
-<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1214936244%2FFunctions%2F1209998627"></span>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-331275123%2FFunctions%2F1209998627"></span>
                     <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
                   </span></span></div>
               <div>
                 <div class="title">
-                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":silk-core:dokkaHtmlPartial/main"><div class="symbol monospace"><span class="token keyword">inline </span><span class="token keyword">fun </span><span data-unresolved-link="net.minecraft.world.item/ItemStack///PointingToDeclaration/">ItemStack</span><span class="token punctuation">.</span><a href="set-custom-name.html"><span class="token function">setCustomName</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">baseText<span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html">String</a><span class="token operator"> = </span><span class="token string">""</span><span class="token punctuation">, </span></span><span class="parameter ">builder<span class="token operator">: </span><span class="token keyword"></span><a href="../net.silkmc.silk.core.text/-literal-text-builder/index.html">LiteralTextBuilder</a><span class="token punctuation">.</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token operator"> -&gt; </span><span class="token keyword"></span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html">Unit</a><span class="token operator"> = </span>{}</span></span><span class="token punctuation">)</span><span class="token operator">: </span><span data-unresolved-link="net.minecraft.world.item/ItemStack///PointingToDeclaration/">ItemStack</span></div><div class="brief "><p class="paragraph">Opens a <a href="../net.silkmc.silk.core.text/-literal-text-builder/index.html">LiteralTextBuilder</a> to change the custom name of the item stack. See <a href="../net.silkmc.silk.core.text/literal-text.html">literalText</a>.</p></div></div></div>
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":silk-core:dokkaHtmlPartial/main"><div class="symbol monospace"><span class="token keyword">inline </span><span class="token keyword">fun </span><span data-unresolved-link="net.minecraft.world.item/ItemStack///PointingToDeclaration/">ItemStack</span><span class="token punctuation">.</span><a href="set-custom-name.html"><span class="token function">setCustomName</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">baseText<span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html">String</a><span class="token operator">?</span><span class="token operator"> = </span>null<span class="token punctuation">, </span></span><span class="parameter ">builder<span class="token operator">: </span><a href="../net.silkmc.silk.core.text/-literal-text-builder/index.html">LiteralTextBuilder</a><span class="token punctuation">.</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token operator"> -&gt; </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html">Unit</a><span class="token operator"> = </span>{}</span></span><span class="token punctuation">)</span></div><div class="brief "><p class="paragraph">Opens a <a href="../net.silkmc.silk.core.text/-literal-text-builder/index.html">LiteralTextBuilder</a> to change the custom name of the item stack. Sets <span data-unresolved-link="net.minecraft.core.component/DataComponents/CUSTOM_NAME/#/PointingToDeclaration/">DataComponents.CUSTOM_NAME</span>.</p></div></div></div>
+                </div>
+              </div>
+            </div>
+          </div>
+<a data-name="-716020753%2FFunctions%2F1209998627" anchor-label="setItemName" id="-716020753%2FFunctions%2F1209998627" data-filterable-set=":silk-core:dokkaHtmlPartial/main"></a>
+          <div class="table-row" data-togglable="EXTENSION_FUNCTION" data-filterable-current=":silk-core:dokkaHtmlPartial/main" data-filterable-set=":silk-core:dokkaHtmlPartial/main">
+            <div class="main-subrow keyValue ">
+              <div class=""><span class="inline-flex">
+                  <div><a href="set-item-name.html"><span>set</span><wbr><span>Item</span><wbr><span><span>Name</span></span></a></div>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-716020753%2FFunctions%2F1209998627"></span>
+                    <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
+                  </span></span></div>
+              <div>
+                <div class="title">
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":silk-core:dokkaHtmlPartial/main"><div class="symbol monospace"><span class="token keyword">inline </span><span class="token keyword">fun </span><span data-unresolved-link="net.minecraft.world.item/ItemStack///PointingToDeclaration/">ItemStack</span><span class="token punctuation">.</span><a href="set-item-name.html"><span class="token function">setItemName</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">baseText<span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html">String</a><span class="token operator">?</span><span class="token operator"> = </span>null<span class="token punctuation">, </span></span><span class="parameter ">builder<span class="token operator">: </span><a href="../net.silkmc.silk.core.text/-literal-text-builder/index.html">LiteralTextBuilder</a><span class="token punctuation">.</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token operator"> -&gt; </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-unit/index.html">Unit</a><span class="token operator"> = </span>{}</span></span><span class="token punctuation">)</span></div><div class="brief "><p class="paragraph">Opens a <a href="../net.silkmc.silk.core.text/-literal-text-builder/index.html">LiteralTextBuilder</a> to change the <code class="lang-kotlin">minecraft:item_name</code> item component of the item stack. Names set by <code class="lang-kotlin">minecraft:item_name</code> would behave as the default name of this item (for example it will not show up when hovering an item frame with this item stack in it). Sets <span data-unresolved-link="net.minecraft.core.component/DataComponents/ITEM_NAME/#/PointingToDeclaration/">DataComponents.ITEM_NAME</span>.</p></div></div></div>
                 </div>
               </div>
             </div>
@@ -100,22 +124,22 @@
                   </span></span></div>
               <div>
                 <div class="title">
-                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":silk-core:dokkaHtmlPartial/main"><div class="symbol monospace"><span class="token keyword"></span><span class="token keyword">fun </span><span data-unresolved-link="net.minecraft.world.item/ItemStack///PointingToDeclaration/">ItemStack</span><span class="token punctuation">.</span><a href="set-lore.html"><span class="token function">setLore</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">text<span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin.collections/-collection/index.html">Collection</a><span class="token operator">&lt;</span><span class="token keyword"></span><span data-unresolved-link="net.minecraft.network.chat/Component///PointingToDeclaration/">Component</span><span class="token operator">&gt;</span></span></span><span class="token punctuation">)</span></div><div class="brief "><p class="paragraph">Sets the item lore, which is displayed below the display name of the item stack. Each element of the <a href="set-lore.html">text</a> collection represents one line.</p></div></div></div>
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":silk-core:dokkaHtmlPartial/main"><div class="symbol monospace"><span class="token keyword">fun </span><span data-unresolved-link="net.minecraft.world.item/ItemStack///PointingToDeclaration/">ItemStack</span><span class="token punctuation">.</span><a href="set-lore.html"><span class="token function">setLore</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">text<span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin.collections/-collection/index.html">Collection</a><span class="token operator">&lt;</span><span data-unresolved-link="net.minecraft.network.chat/Component///PointingToDeclaration/">Component</span><span class="token operator">&gt;</span></span></span><span class="token punctuation">)</span></div><div class="brief "><p class="paragraph">Sets the item lore, which is displayed below the display name of the item stack. Each element of the <a href="set-lore.html">text</a> collection represents one line.</p></div></div></div>
                 </div>
               </div>
             </div>
           </div>
-<a data-name="-1172258198%2FFunctions%2F1209998627" anchor-label="setPotion" id="-1172258198%2FFunctions%2F1209998627" data-filterable-set=":silk-core:dokkaHtmlPartial/main"></a>
+<a data-name="464657959%2FFunctions%2F1209998627" anchor-label="setPotion" id="464657959%2FFunctions%2F1209998627" data-filterable-set=":silk-core:dokkaHtmlPartial/main"></a>
           <div class="table-row" data-togglable="EXTENSION_FUNCTION" data-filterable-current=":silk-core:dokkaHtmlPartial/main" data-filterable-set=":silk-core:dokkaHtmlPartial/main">
             <div class="main-subrow keyValue ">
               <div class=""><span class="inline-flex">
                   <div><a href="set-potion.html"><span>set</span><wbr><span><span>Potion</span></span></a></div>
-<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-1172258198%2FFunctions%2F1209998627"></span>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="464657959%2FFunctions%2F1209998627"></span>
                     <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
                   </span></span></div>
               <div>
                 <div class="title">
-                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":silk-core:dokkaHtmlPartial/main"><div class="symbol monospace"><span class="token keyword"></span><span class="token keyword">fun </span><span data-unresolved-link="net.minecraft.world.item/ItemStack///PointingToDeclaration/">ItemStack</span><span class="token punctuation">.</span><a href="set-potion.html"><span class="token function">setPotion</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">potion<span class="token operator">: </span><span data-unresolved-link="net.minecraft.world.item.alchemy/Potion///PointingToDeclaration/">Potion</span></span></span><span class="token punctuation">)</span></div><div class="brief "><p class="paragraph">Sets the given potion for this <span data-unresolved-link="net.minecraft.world.item/ItemStack///PointingToDeclaration/">ItemStack</span>.</p></div></div></div>
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":silk-core:dokkaHtmlPartial/main"><div class="symbol monospace"><span class="token keyword">fun </span><span data-unresolved-link="net.minecraft.world.item/ItemStack///PointingToDeclaration/">ItemStack</span><span class="token punctuation">.</span><a href="set-potion.html"><span class="token function">setPotion</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">potionHolder<span class="token operator">: </span><span data-unresolved-link="net.minecraft.core/Holder///PointingToDeclaration/">Holder</span><span class="token operator">&lt;</span><span data-unresolved-link="net.minecraft.world.item.alchemy/Potion///PointingToDeclaration/">Potion</span><span class="token operator">&gt;</span></span></span><span class="token punctuation">)</span></div><div class="brief "><p class="paragraph">Sets the given potion for this <span data-unresolved-link="net.minecraft.world.item/ItemStack///PointingToDeclaration/">ItemStack</span>.</p></div><div class="symbol monospace"><span class="token keyword">fun </span><span data-unresolved-link="net.minecraft.world.item/ItemStack///PointingToDeclaration/">ItemStack</span><span class="token punctuation">.</span><a href="set-potion.html"><span class="token function"><strike>setPotion</strike></span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">potion<span class="token operator">: </span><span data-unresolved-link="net.minecraft.world.item.alchemy/Potion///PointingToDeclaration/">Potion</span></span></span><span class="token punctuation">)</span></div></div></div>
                 </div>
               </div>
             </div>
@@ -130,22 +154,22 @@
                   </span></span></div>
               <div>
                 <div class="title">
-                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":silk-core:dokkaHtmlPartial/main"><div class="symbol monospace"><span class="token keyword"></span><span class="token keyword">fun </span><span data-unresolved-link="net.minecraft.world.item/ItemStack///PointingToDeclaration/">ItemStack</span><span class="token punctuation">.</span><a href="set-skull-player.html"><span class="token function">setSkullPlayer</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">player<span class="token operator">: </span><span data-unresolved-link="net.minecraft.server.level/ServerPlayer///PointingToDeclaration/">ServerPlayer</span></span></span><span class="token punctuation">)</span></div><div class="brief "><p class="paragraph">Configures the <code class="lang-kotlin">SkullOwner</code> nbt tag to represent the given player (specified via uuid). The name can be anything, but it <i>should</i> match the actual player name.</p></div></div></div>
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":silk-core:dokkaHtmlPartial/main"><div class="symbol monospace"><span class="token keyword">fun </span><span data-unresolved-link="net.minecraft.world.item/ItemStack///PointingToDeclaration/">ItemStack</span><span class="token punctuation">.</span><a href="set-skull-player.html"><span class="token function">setSkullPlayer</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">player<span class="token operator">: </span><span data-unresolved-link="net.minecraft.server.level/ServerPlayer///PointingToDeclaration/">ServerPlayer</span></span></span><span class="token punctuation">)</span></div><div class="brief "><p class="paragraph">Configures the <code class="lang-kotlin">minecraft:profile</code> item component to represent the given player (specified via uuid in its game profile).</p></div></div></div>
                 </div>
               </div>
             </div>
           </div>
-<a data-name="-659369664%2FFunctions%2F1209998627" anchor-label="setSkullTexture" id="-659369664%2FFunctions%2F1209998627" data-filterable-set=":silk-core:dokkaHtmlPartial/main"></a>
+<a data-name="-252522272%2FFunctions%2F1209998627" anchor-label="setSkullTexture" id="-252522272%2FFunctions%2F1209998627" data-filterable-set=":silk-core:dokkaHtmlPartial/main"></a>
           <div class="table-row" data-togglable="EXTENSION_FUNCTION" data-filterable-current=":silk-core:dokkaHtmlPartial/main" data-filterable-set=":silk-core:dokkaHtmlPartial/main">
             <div class="main-subrow keyValue ">
               <div class=""><span class="inline-flex">
                   <div><a href="set-skull-texture.html"><span>set</span><wbr><span>Skull</span><wbr><span><span>Texture</span></span></a></div>
-<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-659369664%2FFunctions%2F1209998627"></span>
+<span class="anchor-wrapper"><span class="anchor-icon" pointing-to="-252522272%2FFunctions%2F1209998627"></span>
                     <div class="copy-popup-wrapper "><span class="copy-popup-icon"></span><span>Link copied to clipboard</span></div>
                   </span></span></div>
               <div>
                 <div class="title">
-                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":silk-core:dokkaHtmlPartial/main"><div class="symbol monospace"><span class="token keyword"></span><span class="token keyword">fun </span><span data-unresolved-link="net.minecraft.world.item/ItemStack///PointingToDeclaration/">ItemStack</span><span class="token punctuation">.</span><a href="set-skull-texture.html"><span class="token function">setSkullTexture</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">texture<span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html">String</a><span class="token punctuation">, </span></span><span class="parameter ">uuid<span class="token operator">: </span><a href="https://docs.oracle.com/javase/8/docs/api/java/util/UUID.html">UUID</a><span class="token operator"> = </span>UUID(0, 0)</span></span><span class="token punctuation">)</span></div><div class="brief "><p class="paragraph">Configures the <code class="lang-kotlin">SkullOwner</code> nbt tag to have the given <a href="set-skull-texture.html">texture</a>. The <a href="set-skull-texture.html">texture</a> has to be base64 encoded.</p></div></div></div>
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":silk-core:dokkaHtmlPartial/main"><div class="symbol monospace"><span class="token keyword">fun </span><span data-unresolved-link="net.minecraft.world.item/ItemStack///PointingToDeclaration/">ItemStack</span><span class="token punctuation">.</span><a href="set-skull-texture.html"><span class="token function">setSkullTexture</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">texture<span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html">String</a><span class="token operator">?</span><span class="token operator"> = </span>null<span class="token punctuation">, </span></span><span class="parameter ">uuid<span class="token operator">: </span><a href="https://docs.oracle.com/javase/8/docs/api/java/util/UUID.html">UUID</a><span class="token operator">?</span><span class="token operator"> = </span>null<span class="token punctuation">, </span></span><span class="parameter ">name<span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html">String</a><span class="token operator">?</span><span class="token operator"> = </span>null</span></span><span class="token punctuation">)</span></div><div class="brief "><p class="paragraph">Configures the <code class="lang-kotlin">minecraft:profile</code> item component to have the given texture. It can be provided via <a href="set-skull-texture.html">texture</a>, <a href="set-skull-texture.html">uuid</a> or <a href="set-skull-texture.html">name</a>. If provided, the <a href="set-skull-texture.html">texture</a> has to be base64 encoded.</p></div></div></div>
                 </div>
               </div>
             </div>
@@ -156,10 +180,11 @@
   </div>
 </div>
       <div class="footer">
-        <span class="go-to-top-icon"><a href="#content" id="go-to-top-link"></a></span><span>© 2023 Copyright</span><span class="pull-right"><span>Generated by </span><a href="https://github.com/Kotlin/dokka"><span>dokka</span><span class="padded-icon"></span></a></span>
+        <span class="go-to-top-icon"><a href="#content" id="go-to-top-link"></a></span><span>© 2024 Copyright</span><span class="pull-right"><span>Generated by </span><a href="https://github.com/Kotlin/dokka"><span>dokka</span><span class="padded-icon"></span></a></span>
       </div>
+            </div>
+        </div>
     </div>
-</div>
 </body>
 </html>
 

@@ -1,9 +1,11 @@
 <!doctype html>
-<html>
+<html class="no-js">
 <head>
     <meta name="viewport" content="width=device-width, initial-scale=1" charset="UTF-8">
     <title>net.silkmc.silk.core.entity</title>
-<link href="../../images/logo-icon.svg" rel="icon" type="image/svg"><script>var pathToRoot = "../../";</script>    <script>const storage = localStorage.getItem("dokka-dark-mode")
+<link href="../../images/logo-icon.svg" rel="icon" type="image/svg">    <script>var pathToRoot = "../../";</script>
+    <script>document.documentElement.classList.replace("no-js","js");</script>
+    <script>const storage = localStorage.getItem("dokka-dark-mode")
     if (storage == null) {
         const osDarkSchemePreferred = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches
         if (osDarkSchemePreferred === true) {
@@ -16,12 +18,13 @@
         }
     }
     </script>
+<script type="text/javascript" src="https://unpkg.com/kotlin-playground@1/dist/playground.min.js" async></script>
 <script type="text/javascript" src="../../scripts/sourceset_dependencies.js" async></script>
 <link href="../../styles/style.css" rel="Stylesheet">
-<link href="../../styles/jetbrains-mono.css" rel="Stylesheet">
 <link href="../../styles/main.css" rel="Stylesheet">
 <link href="../../styles/prism.css" rel="Stylesheet">
 <link href="../../styles/logo-styles.css" rel="Stylesheet">
+<link href="../../styles/font-jb-sans-auto.css" rel="Stylesheet">
 <script type="text/javascript" src="../../scripts/clipboard.js" async></script>
 <script type="text/javascript" src="../../scripts/navigation-loader.js" async></script>
 <script type="text/javascript" src="../../scripts/platform-content-handler.js" async></script>
@@ -29,26 +32,32 @@
 <script type="text/javascript" src="../../scripts/prism.js" async></script>
 <script type="text/javascript" src="../../scripts/symbol-parameters-wrapper_deferred.js" defer></script></head>
 <body>
-<div class="navigation-wrapper" id="navigation-wrapper">
-    <div id="leftToggler"><span class="icon-toggler"></span></div>
-    <div class="library-name">
-<a href="../../index.html">
-<span>silk</span>            </a>    </div>
-    <div>1.10.0
-    </div>
-    <div class="pull-right d-flex">
+    <div class="root">
+<nav class="navigation" id="navigation-wrapper">
+    <div class="navigation--inner">
+        <div class="navigation-title">
+            <button class="menu-toggle" id="menu-toggle" type="button">toggle menu</button>
+            <div class="library-name">
+<a class="library-name--link" href="../../index.html">
+                            silk
+                    </a>            </div>
+            <div class="library-version">1.10.4
+            </div>
+        </div>
         <div class="filter-section" id="filter-section">
                 <button class="platform-tag platform-selector jvm-like" data-active="" data-filter=":silk-core:dokkaHtmlPartial/main">jvm</button>
         </div>
-        <button id="theme-toggle-button"><span id="theme-toggle"></span></button>
-        <div id="searchBar"></div>
     </div>
-</div>
-<div id="container">
-    <div id="leftColumn">
-        <div id="sideMenu"></div>
+    <div class="navigation-controls">
+        <button class="navigation-controls--btn navigation-controls--theme" id="theme-toggle-button" type="button">switch theme</button>
+        <div class="navigation-controls--btn navigation-controls--search" id="searchBar" role="button">search in API</div>
     </div>
-    <div id="main">
+</nav>
+        <div id="container">
+            <div class="sidebar" id="leftColumn">
+                <div class="sidebar--inner" id="sideMenu"></div>
+            </div>
+            <div id="main">
 <div class="main-content" data-page-type="package" id="content" pageids="silk-core::net.silkmc.silk.core.entity////PointingToDeclaration//1209998627">
   <div class="breadcrumbs"><a href="../index.html">silk-core</a><span class="delimiter">/</span><span class="current">net.silkmc.silk.core.entity</span></div>
   <div class="cover ">
@@ -61,7 +70,7 @@
       <div data-togglable="EXTENSION_PROPERTY">
         <h2 class="">Properties</h2>
         <div class="table"><a data-name="779078321%2FProperties%2F1209998627" anchor-label="blockPos" id="779078321%2FProperties%2F1209998627" data-filterable-set=":silk-core:dokkaHtmlPartial/main"></a>
-          <div class="table-row" data-togglable="EXTENSION_PROPERTY" data-filterable-current=":silk-core:dokkaHtmlPartial/main" data-filterable-set=":silk-core:dokkaHtmlPartial/main">
+          <div class="table-row" data-filterable-current=":silk-core:dokkaHtmlPartial/main" data-filterable-set=":silk-core:dokkaHtmlPartial/main">
             <div class="main-subrow keyValue ">
               <div class=""><span class="inline-flex">
                   <div><a href="block-pos.html"><span>block</span><wbr><span><span>Pos</span></span></a></div>
@@ -70,13 +79,13 @@
                   </span></span></div>
               <div>
                 <div class="title">
-                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":silk-core:dokkaHtmlPartial/main"><div class="symbol monospace"><span class="token keyword"></span><span class="token keyword">val </span><span data-unresolved-link="net.minecraft.world.entity/Entity///PointingToDeclaration/">Entity</span><span class="token punctuation">.</span><a href="block-pos.html">blockPos</a><span class="token operator">: </span><span data-unresolved-link="net.minecraft.core/BlockPos///PointingToDeclaration/">BlockPos</span></div><div class="brief "><p class="paragraph">Shortcut property accessor for <span data-unresolved-link="net.minecraft.world.entity/Entity/blockPosition/#/PointingToDeclaration/">Entity.blockPosition</span>.</p></div></div></div>
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":silk-core:dokkaHtmlPartial/main"><div class="symbol monospace"><span class="token keyword">val </span><span data-unresolved-link="net.minecraft.world.entity/Entity///PointingToDeclaration/">Entity</span><span class="token punctuation">.</span><a href="block-pos.html">blockPos</a><span class="token operator">: </span><span data-unresolved-link="net.minecraft.core/BlockPos///PointingToDeclaration/">BlockPos</span></div><div class="brief "><p class="paragraph">Shortcut property accessor for <span data-unresolved-link="net.minecraft.world.entity/Entity/blockPosition/#/PointingToDeclaration/">Entity.blockPosition</span>.</p></div></div></div>
                 </div>
               </div>
             </div>
           </div>
 <a data-name="-587122218%2FProperties%2F1209998627" anchor-label="directionVector" id="-587122218%2FProperties%2F1209998627" data-filterable-set=":silk-core:dokkaHtmlPartial/main"></a>
-          <div class="table-row" data-togglable="EXTENSION_PROPERTY" data-filterable-current=":silk-core:dokkaHtmlPartial/main" data-filterable-set=":silk-core:dokkaHtmlPartial/main">
+          <div class="table-row" data-filterable-current=":silk-core:dokkaHtmlPartial/main" data-filterable-set=":silk-core:dokkaHtmlPartial/main">
             <div class="main-subrow keyValue ">
               <div class=""><span class="inline-flex">
                   <div><a href="direction-vector.html"><span>direction</span><wbr><span><span>Vector</span></span></a></div>
@@ -85,13 +94,13 @@
                   </span></span></div>
               <div>
                 <div class="title">
-                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":silk-core:dokkaHtmlPartial/main"><div class="symbol monospace"><span class="token keyword"></span><span class="token keyword">val </span><span data-unresolved-link="net.minecraft.world.entity/Entity///PointingToDeclaration/">Entity</span><span class="token punctuation">.</span><a href="direction-vector.html">directionVector</a><span class="token operator">: </span><span data-unresolved-link="net.minecraft.world.phys/Vec3///PointingToDeclaration/">Vec3</span></div><div class="brief "><p class="paragraph">Returns a unit-vector pointing in the direction the entity is looking.</p></div></div></div>
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":silk-core:dokkaHtmlPartial/main"><div class="symbol monospace"><span class="token keyword">val </span><span data-unresolved-link="net.minecraft.world.entity/Entity///PointingToDeclaration/">Entity</span><span class="token punctuation">.</span><a href="direction-vector.html">directionVector</a><span class="token operator">: </span><span data-unresolved-link="net.minecraft.world.phys/Vec3///PointingToDeclaration/">Vec3</span></div><div class="brief "><p class="paragraph">Returns a unit-vector pointing in the direction the entity is looking.</p></div></div></div>
                 </div>
               </div>
             </div>
           </div>
 <a data-name="1195440008%2FProperties%2F1209998627" anchor-label="pos" id="1195440008%2FProperties%2F1209998627" data-filterable-set=":silk-core:dokkaHtmlPartial/main"></a>
-          <div class="table-row" data-togglable="EXTENSION_PROPERTY" data-filterable-current=":silk-core:dokkaHtmlPartial/main" data-filterable-set=":silk-core:dokkaHtmlPartial/main">
+          <div class="table-row" data-filterable-current=":silk-core:dokkaHtmlPartial/main" data-filterable-set=":silk-core:dokkaHtmlPartial/main">
             <div class="main-subrow keyValue ">
               <div class=""><span class="inline-flex">
                   <div><a href="pos.html"><span><span>pos</span></span></a></div>
@@ -100,13 +109,13 @@
                   </span></span></div>
               <div>
                 <div class="title">
-                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":silk-core:dokkaHtmlPartial/main"><div class="symbol monospace"><span class="token keyword"></span><span class="token keyword">val </span><span data-unresolved-link="net.minecraft.world.entity/Entity///PointingToDeclaration/">Entity</span><span class="token punctuation">.</span><a href="pos.html">pos</a><span class="token operator">: </span><span data-unresolved-link="net.minecraft.world.phys/Vec3///PointingToDeclaration/">Vec3</span></div><div class="brief "><p class="paragraph">Shortcut property accessor for <span data-unresolved-link="net.minecraft.world.entity/Entity/position/#/PointingToDeclaration/">Entity.position</span>.</p></div></div></div>
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":silk-core:dokkaHtmlPartial/main"><div class="symbol monospace"><span class="token keyword">val </span><span data-unresolved-link="net.minecraft.world.entity/Entity///PointingToDeclaration/">Entity</span><span class="token punctuation">.</span><a href="pos.html">pos</a><span class="token operator">: </span><span data-unresolved-link="net.minecraft.world.phys/Vec3///PointingToDeclaration/">Vec3</span></div><div class="brief "><p class="paragraph">Shortcut property accessor for <span data-unresolved-link="net.minecraft.world.entity/Entity/position/#/PointingToDeclaration/">Entity.position</span>.</p></div></div></div>
                 </div>
               </div>
             </div>
           </div>
 <a data-name="-1895656754%2FProperties%2F1209998627" anchor-label="posUnder" id="-1895656754%2FProperties%2F1209998627" data-filterable-set=":silk-core:dokkaHtmlPartial/main"></a>
-          <div class="table-row" data-togglable="EXTENSION_PROPERTY" data-filterable-current=":silk-core:dokkaHtmlPartial/main" data-filterable-set=":silk-core:dokkaHtmlPartial/main">
+          <div class="table-row" data-filterable-current=":silk-core:dokkaHtmlPartial/main" data-filterable-set=":silk-core:dokkaHtmlPartial/main">
             <div class="main-subrow keyValue ">
               <div class=""><span class="inline-flex">
                   <div><a href="pos-under.html"><span>pos</span><wbr><span><span>Under</span></span></a></div>
@@ -115,13 +124,13 @@
                   </span></span></div>
               <div>
                 <div class="title">
-                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":silk-core:dokkaHtmlPartial/main"><div class="symbol monospace"><span class="token keyword"></span><span class="token keyword">val </span><span data-unresolved-link="net.minecraft.world.entity/Entity///PointingToDeclaration/">Entity</span><span class="token punctuation">.</span><a href="pos-under.html">posUnder</a><span class="token operator">: </span><span data-unresolved-link="net.minecraft.core/BlockPos///PointingToDeclaration/">BlockPos</span></div><div class="brief "><p class="paragraph">Returns the pos under the entities "feet".</p></div></div></div>
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":silk-core:dokkaHtmlPartial/main"><div class="symbol monospace"><span class="token keyword">val </span><span data-unresolved-link="net.minecraft.world.entity/Entity///PointingToDeclaration/">Entity</span><span class="token punctuation">.</span><a href="pos-under.html">posUnder</a><span class="token operator">: </span><span data-unresolved-link="net.minecraft.core/BlockPos///PointingToDeclaration/">BlockPos</span></div><div class="brief "><p class="paragraph">Returns the pos under the entities "feet".</p></div></div></div>
                 </div>
               </div>
             </div>
           </div>
 <a data-name="-725244150%2FProperties%2F1209998627" anchor-label="serverWorld" id="-725244150%2FProperties%2F1209998627" data-filterable-set=":silk-core:dokkaHtmlPartial/main"></a>
-          <div class="table-row" data-togglable="EXTENSION_PROPERTY" data-filterable-current=":silk-core:dokkaHtmlPartial/main" data-filterable-set=":silk-core:dokkaHtmlPartial/main">
+          <div class="table-row" data-filterable-current=":silk-core:dokkaHtmlPartial/main" data-filterable-set=":silk-core:dokkaHtmlPartial/main">
             <div class="main-subrow keyValue ">
               <div class=""><span class="inline-flex">
                   <div><a href="server-world.html"><span>server</span><wbr><span><span>World</span></span></a></div>
@@ -130,13 +139,13 @@
                   </span></span></div>
               <div>
                 <div class="title">
-                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":silk-core:dokkaHtmlPartial/main"><div class="symbol monospace"><span class="token keyword"></span><span class="token keyword">val </span><span data-unresolved-link="net.minecraft.server.level/ServerPlayer///PointingToDeclaration/">ServerPlayer</span><span class="token punctuation">.</span><a href="server-world.html">serverWorld</a><span class="token operator">: </span><span data-unresolved-link="net.minecraft.world.level/Level///PointingToDeclaration/">Level</span></div><div class="brief "><p class="paragraph">Shortcut property accessor for <span data-unresolved-link="net.minecraft.server.level/ServerPlayer/serverLevel/#/PointingToDeclaration/">ServerPlayer.serverLevel</span>.</p></div></div></div>
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":silk-core:dokkaHtmlPartial/main"><div class="symbol monospace"><span class="token keyword">val </span><span data-unresolved-link="net.minecraft.server.level/ServerPlayer///PointingToDeclaration/">ServerPlayer</span><span class="token punctuation">.</span><a href="server-world.html">serverWorld</a><span class="token operator">: </span><span data-unresolved-link="net.minecraft.world.level/Level///PointingToDeclaration/">Level</span></div><div class="brief "><p class="paragraph">Shortcut property accessor for <span data-unresolved-link="net.minecraft.server.level/ServerPlayer/serverLevel/#/PointingToDeclaration/">ServerPlayer.serverLevel</span>.</p></div></div></div>
                 </div>
               </div>
             </div>
           </div>
 <a data-name="-1917504583%2FProperties%2F1209998627" anchor-label="touchedBlock" id="-1917504583%2FProperties%2F1209998627" data-filterable-set=":silk-core:dokkaHtmlPartial/main"></a>
-          <div class="table-row" data-togglable="EXTENSION_PROPERTY" data-filterable-current=":silk-core:dokkaHtmlPartial/main" data-filterable-set=":silk-core:dokkaHtmlPartial/main">
+          <div class="table-row" data-filterable-current=":silk-core:dokkaHtmlPartial/main" data-filterable-set=":silk-core:dokkaHtmlPartial/main">
             <div class="main-subrow keyValue ">
               <div class=""><span class="inline-flex">
                   <div><a href="touched-block.html"><span>touched</span><wbr><span><span>Block</span></span></a></div>
@@ -145,13 +154,13 @@
                   </span></span></div>
               <div>
                 <div class="title">
-                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":silk-core:dokkaHtmlPartial/main"><div class="symbol monospace"><span class="token keyword"></span><span class="token keyword">val </span><span data-unresolved-link="net.minecraft.world.entity/Entity///PointingToDeclaration/">Entity</span><span class="token punctuation">.</span><a href="touched-block.html">touchedBlock</a><span class="token operator">: </span><a href="../net.silkmc.silk.core.world.block/-block-info/index.html">BlockInfo</a></div><div class="brief "><p class="paragraph">Returns an instance of <a href="../net.silkmc.silk.core.world.block/-block-info/index.html">BlockInfo</a> of the block the entity is currently standing on or swimming in, else it will be the <a href="../net.silkmc.silk.core.world.block/-block-info/index.html">BlockInfo</a> of air - use <a href="touched-block-no-air.html">touchedBlockNoAir</a> if you don't need any info about air.</p></div></div></div>
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":silk-core:dokkaHtmlPartial/main"><div class="symbol monospace"><span class="token keyword">val </span><span data-unresolved-link="net.minecraft.world.entity/Entity///PointingToDeclaration/">Entity</span><span class="token punctuation">.</span><a href="touched-block.html">touchedBlock</a><span class="token operator">: </span><a href="../net.silkmc.silk.core.world.block/-block-info/index.html">BlockInfo</a></div><div class="brief "><p class="paragraph">Returns an instance of <a href="../net.silkmc.silk.core.world.block/-block-info/index.html">BlockInfo</a> of the block the entity is currently standing on or swimming in, else it will be the <a href="../net.silkmc.silk.core.world.block/-block-info/index.html">BlockInfo</a> of air - use <a href="touched-block-no-air.html">touchedBlockNoAir</a> if you don't need any info about air.</p></div></div></div>
                 </div>
               </div>
             </div>
           </div>
 <a data-name="1824348910%2FProperties%2F1209998627" anchor-label="touchedBlockNoAir" id="1824348910%2FProperties%2F1209998627" data-filterable-set=":silk-core:dokkaHtmlPartial/main"></a>
-          <div class="table-row" data-togglable="EXTENSION_PROPERTY" data-filterable-current=":silk-core:dokkaHtmlPartial/main" data-filterable-set=":silk-core:dokkaHtmlPartial/main">
+          <div class="table-row" data-filterable-current=":silk-core:dokkaHtmlPartial/main" data-filterable-set=":silk-core:dokkaHtmlPartial/main">
             <div class="main-subrow keyValue ">
               <div class=""><span class="inline-flex">
                   <div><a href="touched-block-no-air.html"><span>touched</span><wbr><span>Block</span><wbr><span>No</span><wbr><span><span>Air</span></span></a></div>
@@ -160,13 +169,13 @@
                   </span></span></div>
               <div>
                 <div class="title">
-                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":silk-core:dokkaHtmlPartial/main"><div class="symbol monospace"><span class="token keyword"></span><span class="token keyword">val </span><span data-unresolved-link="net.minecraft.world.entity/Entity///PointingToDeclaration/">Entity</span><span class="token punctuation">.</span><a href="touched-block-no-air.html">touchedBlockNoAir</a><span class="token operator">: </span><a href="../net.silkmc.silk.core.world.block/-block-info/index.html">BlockInfo</a><span class="token operator">?</span></div><div class="brief "><p class="paragraph">Does the same as <a href="touched-block.html">touchedBlock</a>, but returns null if the block is air.</p></div></div></div>
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":silk-core:dokkaHtmlPartial/main"><div class="symbol monospace"><span class="token keyword">val </span><span data-unresolved-link="net.minecraft.world.entity/Entity///PointingToDeclaration/">Entity</span><span class="token punctuation">.</span><a href="touched-block-no-air.html">touchedBlockNoAir</a><span class="token operator">: </span><a href="../net.silkmc.silk.core.world.block/-block-info/index.html">BlockInfo</a><span class="token operator">?</span></div><div class="brief "><p class="paragraph">Does the same as <a href="touched-block.html">touchedBlock</a>, but returns null if the block is air.</p></div></div></div>
                 </div>
               </div>
             </div>
           </div>
 <a data-name="652082694%2FProperties%2F1209998627" anchor-label="world" id="652082694%2FProperties%2F1209998627" data-filterable-set=":silk-core:dokkaHtmlPartial/main"></a>
-          <div class="table-row" data-togglable="EXTENSION_PROPERTY" data-filterable-current=":silk-core:dokkaHtmlPartial/main" data-filterable-set=":silk-core:dokkaHtmlPartial/main">
+          <div class="table-row" data-filterable-current=":silk-core:dokkaHtmlPartial/main" data-filterable-set=":silk-core:dokkaHtmlPartial/main">
             <div class="main-subrow keyValue ">
               <div class=""><span class="inline-flex">
                   <div><a href="world.html"><span><span>world</span></span></a></div>
@@ -175,7 +184,7 @@
                   </span></span></div>
               <div>
                 <div class="title">
-                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":silk-core:dokkaHtmlPartial/main"><div class="symbol monospace"><span class="token keyword"></span><span class="token keyword">val </span><span data-unresolved-link="net.minecraft.world.entity/Entity///PointingToDeclaration/">Entity</span><span class="token punctuation">.</span><a href="world.html">world</a><span class="token operator">: </span><span data-unresolved-link="net.minecraft.world.level/Level///PointingToDeclaration/">Level</span></div><div class="brief "><p class="paragraph">Shortcut property accessor for <span data-unresolved-link="net.minecraft.world.entity/Entity/level/#/PointingToDeclaration/">Entity.level</span>.</p></div></div></div>
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":silk-core:dokkaHtmlPartial/main"><div class="symbol monospace"><span class="token keyword">val </span><span data-unresolved-link="net.minecraft.world.entity/Entity///PointingToDeclaration/">Entity</span><span class="token punctuation">.</span><a href="world.html">world</a><span class="token operator">: </span><span data-unresolved-link="net.minecraft.world.level/Level///PointingToDeclaration/">Level</span></div><div class="brief "><p class="paragraph">Shortcut property accessor for <span data-unresolved-link="net.minecraft.world.entity/Entity/level/#/PointingToDeclaration/">Entity.level</span>.</p></div></div></div>
                 </div>
               </div>
             </div>
@@ -185,7 +194,7 @@
       <div data-togglable="EXTENSION_FUNCTION">
         <h2 class="">Functions</h2>
         <div class="table"><a data-name="-700912586%2FFunctions%2F1209998627" anchor-label="changePos" id="-700912586%2FFunctions%2F1209998627" data-filterable-set=":silk-core:dokkaHtmlPartial/main"></a>
-          <div class="table-row" data-togglable="EXTENSION_FUNCTION" data-filterable-current=":silk-core:dokkaHtmlPartial/main" data-filterable-set=":silk-core:dokkaHtmlPartial/main">
+          <div class="table-row" data-filterable-current=":silk-core:dokkaHtmlPartial/main" data-filterable-set=":silk-core:dokkaHtmlPartial/main">
             <div class="main-subrow keyValue ">
               <div class=""><span class="inline-flex">
                   <div><a href="change-pos.html"><span>change</span><wbr><span><span>Pos</span></span></a></div>
@@ -194,13 +203,13 @@
                   </span></span></div>
               <div>
                 <div class="title">
-                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":silk-core:dokkaHtmlPartial/main"><div class="symbol monospace"><span class="token keyword"></span><span class="token keyword">fun </span><span data-unresolved-link="net.minecraft.world.entity/Entity///PointingToDeclaration/">Entity</span><span class="token punctuation">.</span><a href="change-pos.html"><span class="token function">changePos</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">x<span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-number/index.html">Number</a><span class="token operator"> = </span>this.position().x<span class="token punctuation">, </span></span><span class="parameter ">y<span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-number/index.html">Number</a><span class="token operator"> = </span>this.position().y<span class="token punctuation">, </span></span><span class="parameter ">z<span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-number/index.html">Number</a><span class="token operator"> = </span>this.position().z<span class="token punctuation">, </span></span><span class="parameter ">world<span class="token operator">: </span><span data-unresolved-link="net.minecraft.server.level/ServerLevel///PointingToDeclaration/">ServerLevel</span><span class="token operator">?</span><span class="token operator"> = </span>null<span class="token punctuation">, </span></span><span class="parameter ">yaw<span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-float/index.html">Float</a><span class="token operator">?</span><span class="token operator"> = </span>null<span class="token punctuation">, </span></span><span class="parameter ">pitch<span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-float/index.html">Float</a><span class="token operator">?</span><span class="token operator"> = </span>null</span></span><span class="token punctuation">)</span></div><div class="brief "><p class="paragraph">Correctly handles teleports for all kinds of entities. Differentiates between <span data-unresolved-link="net.minecraft.server.level/ServerPlayer///PointingToDeclaration/">ServerPlayer</span>, <span data-unresolved-link="net.minecraft.world.entity/LivingEntity///PointingToDeclaration/">LivingEntity</span> and <span data-unresolved-link="net.minecraft.world.entity/Entity///PointingToDeclaration/">Entity</span> and calls the correct function for each of them. Handles <span data-unresolved-link="net.minecraft.server.level/ServerLevel///PointingToDeclaration/">ServerLevel</span> and direction changes.</p></div></div></div>
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":silk-core:dokkaHtmlPartial/main"><div class="symbol monospace"><span class="token keyword">fun </span><span data-unresolved-link="net.minecraft.world.entity/Entity///PointingToDeclaration/">Entity</span><span class="token punctuation">.</span><a href="change-pos.html"><span class="token function">changePos</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">x<span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-number/index.html">Number</a><span class="token operator"> = </span>this.position().x<span class="token punctuation">, </span></span><span class="parameter ">y<span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-number/index.html">Number</a><span class="token operator"> = </span>this.position().y<span class="token punctuation">, </span></span><span class="parameter ">z<span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-number/index.html">Number</a><span class="token operator"> = </span>this.position().z<span class="token punctuation">, </span></span><span class="parameter ">world<span class="token operator">: </span><span data-unresolved-link="net.minecraft.server.level/ServerLevel///PointingToDeclaration/">ServerLevel</span><span class="token operator">?</span><span class="token operator"> = </span>null<span class="token punctuation">, </span></span><span class="parameter ">yaw<span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-float/index.html">Float</a><span class="token operator">?</span><span class="token operator"> = </span>null<span class="token punctuation">, </span></span><span class="parameter ">pitch<span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-float/index.html">Float</a><span class="token operator">?</span><span class="token operator"> = </span>null</span></span><span class="token punctuation">)</span></div><div class="brief "><p class="paragraph">Correctly handles teleports for all kinds of entities. Differentiates between <span data-unresolved-link="net.minecraft.server.level/ServerPlayer///PointingToDeclaration/">ServerPlayer</span>, <span data-unresolved-link="net.minecraft.world.entity/LivingEntity///PointingToDeclaration/">LivingEntity</span> and <span data-unresolved-link="net.minecraft.world.entity/Entity///PointingToDeclaration/">Entity</span> and calls the correct function for each of them. Handles <span data-unresolved-link="net.minecraft.server.level/ServerLevel///PointingToDeclaration/">ServerLevel</span> and direction changes.</p></div></div></div>
                 </div>
               </div>
             </div>
           </div>
 <a data-name="581424503%2FFunctions%2F1209998627" anchor-label="executeCommand" id="581424503%2FFunctions%2F1209998627" data-filterable-set=":silk-core:dokkaHtmlPartial/main"></a>
-          <div class="table-row" data-togglable="EXTENSION_FUNCTION" data-filterable-current=":silk-core:dokkaHtmlPartial/main" data-filterable-set=":silk-core:dokkaHtmlPartial/main">
+          <div class="table-row" data-filterable-current=":silk-core:dokkaHtmlPartial/main" data-filterable-set=":silk-core:dokkaHtmlPartial/main">
             <div class="main-subrow keyValue ">
               <div class=""><span class="inline-flex">
                   <div><a href="execute-command.html"><span>execute</span><wbr><span><span>Command</span></span></a></div>
@@ -209,13 +218,13 @@
                   </span></span></div>
               <div>
                 <div class="title">
-                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":silk-core:dokkaHtmlPartial/main"><div class="symbol monospace"><span class="token keyword"></span><span class="token keyword">fun </span><span data-unresolved-link="net.minecraft.world.entity.player/Player///PointingToDeclaration/">Player</span><span class="token punctuation">.</span><a href="execute-command.html"><span class="token function">executeCommand</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">command<span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html">String</a></span></span><span class="token punctuation">)</span></div><div class="brief "><p class="paragraph">Executes the given <a href="execute-command.html">command</a> for this player.</p></div></div></div>
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":silk-core:dokkaHtmlPartial/main"><div class="symbol monospace"><span class="token keyword">fun </span><span data-unresolved-link="net.minecraft.world.entity.player/Player///PointingToDeclaration/">Player</span><span class="token punctuation">.</span><a href="execute-command.html"><span class="token function">executeCommand</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">command<span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-string/index.html">String</a></span></span><span class="token punctuation">)</span></div><div class="brief "><p class="paragraph">Executes the given <a href="execute-command.html">command</a> for this player.</p></div></div></div>
                 </div>
               </div>
             </div>
           </div>
 <a data-name="-1518556516%2FFunctions%2F1209998627" anchor-label="markVelocityDirty" id="-1518556516%2FFunctions%2F1209998627" data-filterable-set=":silk-core:dokkaHtmlPartial/main"></a>
-          <div class="table-row" data-togglable="EXTENSION_FUNCTION" data-filterable-current=":silk-core:dokkaHtmlPartial/main" data-filterable-set=":silk-core:dokkaHtmlPartial/main">
+          <div class="table-row" data-filterable-current=":silk-core:dokkaHtmlPartial/main" data-filterable-set=":silk-core:dokkaHtmlPartial/main">
             <div class="main-subrow keyValue ">
               <div class=""><span class="inline-flex">
                   <div><a href="mark-velocity-dirty.html"><span>mark</span><wbr><span>Velocity</span><wbr><span><span>Dirty</span></span></a></div>
@@ -224,13 +233,13 @@
                   </span></span></div>
               <div>
                 <div class="title">
-                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":silk-core:dokkaHtmlPartial/main"><div class="symbol monospace"><span class="token keyword"></span><span class="token keyword">fun </span><span data-unresolved-link="net.minecraft.world.entity/Entity///PointingToDeclaration/">Entity</span><span class="token punctuation">.</span><a href="mark-velocity-dirty.html"><span class="token function">markVelocityDirty</span></a><span class="token punctuation">(</span><span class="token punctuation">)</span></div><div class="brief "><p class="paragraph">Schedules all necessary updates. Packets will be sent to the players to inform them about the new velocity.</p></div></div></div>
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":silk-core:dokkaHtmlPartial/main"><div class="symbol monospace"><span class="token keyword">fun </span><span data-unresolved-link="net.minecraft.world.entity/Entity///PointingToDeclaration/">Entity</span><span class="token punctuation">.</span><a href="mark-velocity-dirty.html"><span class="token function">markVelocityDirty</span></a><span class="token punctuation">(</span><span class="token punctuation">)</span></div><div class="brief "><p class="paragraph">Schedules all necessary updates. Packets will be sent to the players to inform them about the new velocity.</p></div></div></div>
                 </div>
               </div>
             </div>
           </div>
 <a data-name="-1548917040%2FFunctions%2F1209998627" anchor-label="modifyVelocity" id="-1548917040%2FFunctions%2F1209998627" data-filterable-set=":silk-core:dokkaHtmlPartial/main"></a>
-          <div class="table-row" data-togglable="EXTENSION_FUNCTION" data-filterable-current=":silk-core:dokkaHtmlPartial/main" data-filterable-set=":silk-core:dokkaHtmlPartial/main">
+          <div class="table-row" data-filterable-current=":silk-core:dokkaHtmlPartial/main" data-filterable-set=":silk-core:dokkaHtmlPartial/main">
             <div class="main-subrow keyValue ">
               <div class=""><span class="inline-flex">
                   <div><a href="modify-velocity.html"><span>modify</span><wbr><span><span>Velocity</span></span></a></div>
@@ -239,7 +248,7 @@
                   </span></span></div>
               <div>
                 <div class="title">
-                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":silk-core:dokkaHtmlPartial/main"><div class="symbol monospace"><span class="token keyword">inline </span><span class="token keyword">fun </span><span data-unresolved-link="net.minecraft.world.entity/Entity///PointingToDeclaration/">Entity</span><span class="token punctuation">.</span><a href="modify-velocity.html"><span class="token function">modifyVelocity</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">block<span class="token operator">: </span><span class="token punctuation">(</span><span class="token keyword"></span><span data-unresolved-link="net.minecraft.world.phys/Vec3///PointingToDeclaration/">Vec3</span><span class="token punctuation">)</span><span class="token operator"> -&gt; </span><span class="token keyword"></span><span data-unresolved-link="net.minecraft.world.phys/Vec3///PointingToDeclaration/">Vec3</span></span></span><span class="token punctuation">)</span></div><div class="brief "><p class="paragraph">Changes the velocity of this <span data-unresolved-link="net.minecraft.world.entity/Entity///PointingToDeclaration/">Entity</span> using the given mutation logic in <a href="modify-velocity.html">block</a>. After that, <a href="mark-velocity-dirty.html">markVelocityDirty</a> is called.</p></div><div class="symbol monospace"><span class="token keyword"></span><span class="token keyword">fun </span><span data-unresolved-link="net.minecraft.world.entity/Entity///PointingToDeclaration/">Entity</span><span class="token punctuation">.</span><a href="modify-velocity.html"><span class="token function">modifyVelocity</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">vec<span class="token operator">: </span><span data-unresolved-link="net.minecraft.world.phys/Vec3///PointingToDeclaration/">Vec3</span></span></span><span class="token punctuation">)</span></div><div class="brief "><p class="paragraph">Sets the <span data-unresolved-link="net.minecraft.world.entity/Entity///PointingToDeclaration/">Entity</span>s velocity to <a href="modify-velocity.html">vec</a> and calls <a href="mark-velocity-dirty.html">markVelocityDirty</a>.</p></div><div class="symbol monospace"><span class="token keyword"></span><span class="token keyword">fun </span><span data-unresolved-link="net.minecraft.world.entity/Entity///PointingToDeclaration/">Entity</span><span class="token punctuation">.</span><a href="modify-velocity.html"><span class="token function">modifyVelocity</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">x<span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-number/index.html">Number</a><span class="token operator"> = </span><span class="token constant">0.0</span><span class="token punctuation">, </span></span><span class="parameter ">y<span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-number/index.html">Number</a><span class="token operator"> = </span><span class="token constant">0.0</span><span class="token punctuation">, </span></span><span class="parameter ">z<span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-number/index.html">Number</a><span class="token operator"> = </span><span class="token constant">0.0</span><span class="token punctuation">, </span></span><span class="parameter ">add<span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-boolean/index.html">Boolean</a><span class="token operator"> = </span><span class="token boolean">true</span></span></span><span class="token punctuation">)</span></div><div class="brief "><p class="paragraph">Changes the velocity of this <span data-unresolved-link="net.minecraft.world.entity/Entity///PointingToDeclaration/">Entity</span> and calls <a href="mark-velocity-dirty.html">markVelocityDirty</a>.</p></div></div></div>
+                  <div class="platform-hinted " data-platform-hinted="data-platform-hinted"><div class="content sourceset-dependent-content" data-active="" data-togglable=":silk-core:dokkaHtmlPartial/main"><div class="symbol monospace"><span class="token keyword">inline </span><span class="token keyword">fun </span><span data-unresolved-link="net.minecraft.world.entity/Entity///PointingToDeclaration/">Entity</span><span class="token punctuation">.</span><a href="modify-velocity.html"><span class="token function">modifyVelocity</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">block<span class="token operator">: </span><span class="token punctuation">(</span><span data-unresolved-link="net.minecraft.world.phys/Vec3///PointingToDeclaration/">Vec3</span><span class="token punctuation">)</span><span class="token operator"> -&gt; </span><span data-unresolved-link="net.minecraft.world.phys/Vec3///PointingToDeclaration/">Vec3</span></span></span><span class="token punctuation">)</span></div><div class="brief "><p class="paragraph">Changes the velocity of this <span data-unresolved-link="net.minecraft.world.entity/Entity///PointingToDeclaration/">Entity</span> using the given mutation logic in <a href="modify-velocity.html">block</a>. After that, <a href="mark-velocity-dirty.html">markVelocityDirty</a> is called.</p></div><div class="symbol monospace"><span class="token keyword">fun </span><span data-unresolved-link="net.minecraft.world.entity/Entity///PointingToDeclaration/">Entity</span><span class="token punctuation">.</span><a href="modify-velocity.html"><span class="token function">modifyVelocity</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">vec<span class="token operator">: </span><span data-unresolved-link="net.minecraft.world.phys/Vec3///PointingToDeclaration/">Vec3</span></span></span><span class="token punctuation">)</span></div><div class="brief "><p class="paragraph">Sets the <span data-unresolved-link="net.minecraft.world.entity/Entity///PointingToDeclaration/">Entity</span>s velocity to <a href="modify-velocity.html">vec</a> and calls <a href="mark-velocity-dirty.html">markVelocityDirty</a>.</p></div><div class="symbol monospace"><span class="token keyword">fun </span><span data-unresolved-link="net.minecraft.world.entity/Entity///PointingToDeclaration/">Entity</span><span class="token punctuation">.</span><a href="modify-velocity.html"><span class="token function">modifyVelocity</span></a><span class="token punctuation">(</span><span class="parameters "><span class="parameter ">x<span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-number/index.html">Number</a><span class="token operator"> = </span><span class="token constant">0.0</span><span class="token punctuation">, </span></span><span class="parameter ">y<span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-number/index.html">Number</a><span class="token operator"> = </span><span class="token constant">0.0</span><span class="token punctuation">, </span></span><span class="parameter ">z<span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-number/index.html">Number</a><span class="token operator"> = </span><span class="token constant">0.0</span><span class="token punctuation">, </span></span><span class="parameter ">add<span class="token operator">: </span><a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin/-boolean/index.html">Boolean</a><span class="token operator"> = </span><span class="token boolean">true</span></span></span><span class="token punctuation">)</span></div><div class="brief "><p class="paragraph">Changes the velocity of this <span data-unresolved-link="net.minecraft.world.entity/Entity///PointingToDeclaration/">Entity</span> and calls <a href="mark-velocity-dirty.html">markVelocityDirty</a>.</p></div></div></div>
                 </div>
               </div>
             </div>
@@ -250,10 +259,11 @@
   </div>
 </div>
       <div class="footer">
-        <span class="go-to-top-icon"><a href="#content" id="go-to-top-link"></a></span><span>© 2023 Copyright</span><span class="pull-right"><span>Generated by </span><a href="https://github.com/Kotlin/dokka"><span>dokka</span><span class="padded-icon"></span></a></span>
+        <span class="go-to-top-icon"><a href="#content" id="go-to-top-link"></a></span><span>© 2024 Copyright</span><span class="pull-right"><span>Generated by </span><a href="https://github.com/Kotlin/dokka"><span>dokka</span><span class="padded-icon"></span></a></span>
       </div>
+            </div>
+        </div>
     </div>
-</div>
 </body>
 </html>
 
